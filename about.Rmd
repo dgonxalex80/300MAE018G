@@ -1,5 +1,13 @@
 ---
-title: "About This Website"
+title: "**En construcción**"
+author: "Estadística para la toma de decisiones"
+date: " "
+output: html_document
 ---
 
-More about this website.
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+![](img/enconstruccion.jpg)

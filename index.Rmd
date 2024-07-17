@@ -1,4 +1,13 @@
 ---
-title: "My Website"
+title: "**En construcción**"
+author: "Estadística para la toma de decisiones"
+date: " "
+output: html_document
 ---
 
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+![](img/enconstruccion.jpg)
