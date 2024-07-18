@@ -3,7 +3,7 @@ output_dir: "docs"
 navbar:
   title: " "
   left:
-    - text: "300MEA018 G"
+    - text: ""
       icon: fa-home
       href: index.html
     - text: "Módulo 0"
