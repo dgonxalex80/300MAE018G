@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA)
 
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-knitr::include_graphics("img/banner001.png")
+# knitr::include_graphics("img/banner001.png")
 ```
 
 
