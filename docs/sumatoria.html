@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="dgonzalez" />
 
 
-<title>about.knit</title>
+<title> Sumatoria</title>
 
 <script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -393,11 +394,145 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore"><span style="color:#235784">
+<strong>Sumatoria</strong></span></h1>
+<h3 class="subtitle"><span style="color:#235784"><strong>Módulo
+0</strong></span></h3>
+<h4 class="author">dgonzalez</h4>
 
 </div>
 
 
-<p>More about this website.</p>
+<p><br/><br/></p>
+<p>El <strong>sumatorio</strong> o <strong>sumatoria</strong> también
+conocida como operador de suma, notación sigma o símbolo de suma, es una
+notación matemática que permite representar una suma de varios sumandos,
+n o incluso infinitos sumandos son colocar puntos suspensivos. Se
+expresa mediante la letra sigma mayúscula.</p>
+<p>Wikipedia</p>
+<p>Este operador será utilizado en el curso en la construcción de
+conceptos como media aritmética, varianza, covarianza, correlación,
+estimación de los coeficientes del modelo de regresión entre otros</p>
+<p><br/><br/></p>
+<div id="definición" class="section level2 highlight-box">
+<h2><strong>Definición</strong></h2>
+<p>Se define como</p>
+<p><span class="math display">\[\sum_{i=1}^{n} a_{i} = a_{1} + a_{2} +
+a_{3} + \cdots + a_{n}\]</span></p>
+</div>
+<p><br/></p>
+<p>Esta forma de expresión matemática nos ayuda a resumir la escritura
+de series de sucesiones matemáticas, las cuales puede ser finitas o
+infinitas como:</p>
+<ul>
+<li><p>Finita : <span class="math inline">\(\displaystyle\sum_{i=1}^{n}
+a_{i} = a_{1} + a_{2} + a_{3} + ... + a_{n}\)</span></p></li>
+<li><p>Infinita : <span
+class="math inline">\(\displaystyle\sum_{i=1}^{n} a_{i} = a_{1} + a_{2}
++ a_{3} + ...\)</span></p></li>
+</ul>
+<p>Ahora si se quiere representar la suma de los primeros 100 números
+enteros se escribe:</p>
+<p><span class="math display">\[\sum_{i=1}^{100} x = 1 + 2 + 3 + 4 + 5 +
+\cdots + 99 +100\]</span> <br/><br/></p>
+<pre class="r"><code>sum(1:100)</code></pre>
+<p><br/><br/></p>
+<p><br/><br/></p>
+<p><img src="img/ej1.png" style="width:10.0%" /></p>
+<p>Si se tienen las notas de un examen de 12 estudiantes como:</p>
+<p>3.4, 4.2, 2.5, 4.1, 3.0, 4.2, 4.7, 3.3, 4.5, 5.0, 2.5, 4.8</p>
+<p>Y se desea calcular la media de las notas, primero se deben sumar
+todas las notas y el resultado dividirlo por el numero de notas.</p>
+<p><span class="math display">\[\bar{x} =
+\dfrac{1}{12}\displaystyle\sum_{i=1}^{12} x_{i}\]</span> En este caso
+<span class="math inline">\(3.4\)</span> representa el primer termino de
+la suma <span class="math inline">\(x_1\)</span> , el segundo término
+<span class="math inline">\(x_2 = 4.2\)</span>, asi, hasta el final
+donde <span class="math inline">\(4.8\)</span> representa <span
+class="math inline">\(x_{12}\)</span>. Lo cual equivale a :</p>
+<p><br/><br/></p>
+<p><span class="math display">\[\dfrac{(3.4 + 4.2 + 2.5 + 4.1 + 3.0 +
+4.2 + 4.7 + 3.3 + 4.5 + 5.0 + 2.5 +
+4.8)}{12}=\dfrac{46.2}{12}\]</span></p>
+<pre class="r"><code>x=c(3.4, 4.2, 2.5, 4.1 , 3.0, 4.2, 4.7, 3.3, 4.5, 5.0, 2.5, 4.8)
+sum(x)/12</code></pre>
+<p><br/><br/></p>
+<div id="propiedades" class="section level2">
+<h2><strong>Propiedades</strong></h2>
+<ul>
+<li><p><span class="math inline">\(\displaystyle\sum_{i=1}^{n} k =
+nk\)</span>,</p></li>
+<li><p><span class="math inline">\(\displaystyle\sum_{i=1}^{n} kx_{i} =
+k \displaystyle\sum_{i=1}^{n} x_{i}\)</span>,</p></li>
+<li><p><span class="math inline">\(\displaystyle\sum_{i=1}^{n}
+(ax_{i}+by_{i}) = a\displaystyle\sum_{i=1}^{n} x_{i} +
+b\displaystyle\sum_{i=1}^{n} y_{i}\)</span></p></li>
+</ul>
+<p>donde <span class="math inline">\(k\)</span>, <span
+class="math inline">\(a\)</span> y <span
+class="math inline">\(b\)</span> son constantes y <span
+class="math inline">\(x_i\)</span> y <span
+class="math inline">\(y_{i}\)</span> corresponden a lod terminod i-esimo
+de los conjuntos de datos</p>
+<p><br/><br/></p>
+<p><br/><br/></p>
+<p><img src="img/ej2.png" style="width:10.0%" /></p>
+<p><span class="math inline">\(\displaystyle\sum_{i=1}^{5} 3 =
+15\)</span>, ¿ Porqué ?</p>
+<p><br/><br/></p>
+<p><br/><br/></p>
+<p><img src="img/ej3.png" style="width:10.0%" /></p>
+<p><span class="math inline">\(\displaystyle\sum_{i=1}^{10} 10x =
+550\)</span>, ¿ Porqué ?</p>
+<p><br/><br/></p>
+<p><br/><br/></p>
+<p><img src="img/ej4.png" style="width:10.0%" /></p>
+<p><span class="math inline">\(\displaystyle\sum_{i=1}^{10}
+(3x_{i}+2y_{i}) =475\)</span>, ¿ Porqué ?</p>
+<p>donde <span class="math inline">\(\displaystyle\sum_{i=1}^{10} x_{i}
+=55\)</span> y <span class="math inline">\(\displaystyle\sum_{i=1}^{10}
+y_{i}=155\)</span></p>
+<p><br/><br/></p>
+</div>
+<div id="problemas-propuestos" class="section level2">
+<h2><strong>Problemas propuestos</strong></h2>
+<ol style="list-style-type: decimal">
+<li>Calcular las siguientes sumatorias:</li>
+</ol>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\displaystyle\sum_{i=1}^{10}
+(3i+5)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\sum_{t=0}^{2}
+2^{t}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\sum_{w=0}^{6}
+3w^{2}\)</span></p></li>
+</ol>
+<ol start="2" style="list-style-type: decimal">
+<li>Para los siguientes conjuntos de datos:</li>
+</ol>
+<pre>
+x = c(3.6, 3.5, 3.6, 3.5, 3.0, 4.0, 3.2, 3.8, 3.5, 3.3, 3.4, 3.8, 3.4, 3.4, 3.1)
+y = c(3.4, 4.3, 4.5, 4.1, 4.5, 4.1, 3.4, 4.0, 4.2, 4.6, 3.5, 3.8, 4.5, 3.5, 4.1)
+</pre>
+<pre class="r"><code>x = c(3.6, 3.5, 3.6, 3.5, 3.0, 4.0, 3.2, 3.8, 3.5, 3.3, 3.4, 3.8, 3.4, 3.4, 3.1)
+y = c(3.4, 4.3, 4.5, 4.1, 4.5, 4.1, 3.4, 4.0, 4.2, 4.6, 3.5, 3.8, 4.5, 3.5, 4.1)</code></pre>
+<p>Determine los valores de :</p>
+<ol style="list-style-type: lower-alpha">
+<li><p><span class="math inline">\(\displaystyle\sum_{i=1}^{15}
+x_{i}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\sum_{w=1}^{15}
+y_{i}\)</span></p></li>
+<li><p><span
+class="math inline">\(\dfrac{1}{14}\displaystyle\sum_{i=1}^{15}(y_{i}-4.0)^{2}\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\sum_{i=1}^{15}
+(x_{i}-3.5)\)</span></p></li>
+<li><p><span
+class="math inline">\(\dfrac{1}{14}\displaystyle\sum_{i=1}^{15}(x_{i}-3.5)(y_{i}-4.0)\)</span></p></li>
+<li><p><span class="math inline">\(\displaystyle\sum_{i=1}^{15}
+\dfrac{(x_{i}-3.5)(y_{i}-4.0)}{(x_{i}-3.5)^{2}}\)</span></p></li>
+</ol>
+<p><br/><br/><br/><br/></p>
+</div>
 
 
 

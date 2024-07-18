@@ -1,9 +1,69 @@
-name: ""
+name: " "
 output_dir: "docs"
 navbar:
   title: " "
   left:
-    - text: "Home"
+    - text: "300MEA018 G"
+      icon: fa-home
       href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Módulo 0"
+      menu:
+        - text: "Módulo 0"
+          href: modulo0.html
+        - text: "Sumatoria"
+          href: sumatoria.html
+        - text: "Productoria"
+          href: productoria.html
+        - text: "Conjuntos"
+          href: conjuntos.html
+        - text: "Técnicas de conteo"
+          href: conteo.html         
+        - text: "Funcición exponencial"
+          href: exponencial.html
+        - text: "Función logaritmica"
+          href: logaritmica.html
+        - text: "Derivación"
+          href: derivacion.html
+        - text: "Integración"
+          href: integracion.html
+    - text: "Módulo 1"
+      menu:
+        - text: "Módulo 1"
+          href: modulo1.html
+        - text: "---------"  
+        - text: "Guía 1.1"
+          href: recurso000.html        
+        - text: "Metodología Estadística"
+          href: recurso000.html  
+ 
+    - text: "Módulo 2"
+      menu:
+        - text: "Módulo 2"
+          href: modulo2.html
+
+    - text: "Módulo 3"
+      menu:
+        - text: "Módulo 3"
+          href: modulo3.html
+        - text: "---------" 
+  
+    - text: "Módulo 4"
+      menu:
+        - text: "Módulo 4"
+          href: modulo4.html
+        - text: "---------"   
+ 
+    - text: "Proyecto"
+      menu:
+        - text: "Guía proyecto"
+          href: recurso000.html
+    - text: "Información"
+      menu:
+        - text: "300MAE018A"
+          href: about.html  
+          
+output:  
+ html_document:
+    theme: spacelab
+    css: style.css         
+          

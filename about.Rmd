@@ -1,13 +1,12 @@
 ---
-title: "**En construcción**"
-author: "Estadística para la toma de decisiones"
-date: " "
-output: html_document
+output:
+  html_document:
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+    code_folding: hide
+    theme: flatly
+    css: style.css
 ---
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-
-![](img/enconstruccion.jpg)
+More about this website.

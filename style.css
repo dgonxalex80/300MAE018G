@@ -1,0 +1,179 @@
+/* Estilo general */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #333333;
+}
+
+/* Encabezado */
+header {
+  background-color: #2c5697; /* color azul del encabezado */
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header img {
+  max-height: 50px;
+  vertical-align: middle;
+}
+
+header h1 {
+  display: inline;
+  margin-left: 10px;
+  vertical-align: middle;
+}
+
+/* Navegación */
+nav {
+  background-color: #2c5697; /* color azul para la barra de navegación */
+  padding: 10px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+  font-size: 16px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Contenido principal */
+main {
+  padding: 20px;
+  background-color: white;
+  margin: 20px auto;
+  max-width: 1200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #2c5697; /* color azul para los títulos */
+}
+
+h3 {
+  color: #3b75b2; /* color azul para los subtítulos */
+}
+
+/* Panel lateral */
+aside {
+  background-color: #2c5697;
+  color: white;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+aside h3 {
+  color: white;
+}
+
+/* Botones */
+button {
+  background-color: #3b75b2;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2c5697;
+}
+
+/* Tabla */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table, th, td {
+  border: 1px solid #ddd;
+}
+
+th, td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #2c5697;
+  color: white;
+}
+
+/* Enlaces */
+a {
+  color: #2c5697;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Cambiar el color de fondo de la barra de navegación */
+.navbar {
+  background-color:#2c5697; /* prefigures este valor por el color que prefieras */
+}
+
+/* Cambiar el color del texto en la barra de navegación */
+.navbar .navbar-brand, .navbar .navbar-nav > li > a {
+  color: #ffffff; /* Cambia este valor por el color que prefieras */
+}
+
+
+
+/* Cambiar el color de fondo del menú de navegación */
+.navbar {
+  background-color: #2c5697 !important; /* Color azul */
+}
+
+/* Cambiar el color de los enlaces del menú de navegación */
+.navbar .navbar-nav > li > a {
+  color: #ffffff !important; /* Color de los enlaces */
+}
+
+/* Cambiar el color de fondo de los enlaces del menú al pasar el mouse */
+.navbar .navbar-nav > li > a:hover, 
+.navbar .navbar-nav > li > a:focus {
+  background-color: #3b75b2 !important; /* Color de fondo al pasar el mouse */
+  color: #ffffff !important; /* Color del texto al pasar el mouse */
+}
+
+/* Cambiar el color de fondo del enlace del menú activo (seleccionado) */
+.navbar .navbar-nav > li.active > a {
+  background-color: #3b75b2 !important; /* Cambia este color según tus preferencias */
+  color: #ffffff !important; /* Color del texto del enlace activo */
+}
+
+/* Cambiar el tipo de letra del sitio web */
+body {
+  font-family: 'Arial', sans-serif; /* Tipo de letra */
+}
+
+/* Cambiar el tipo de letra y color de los encabezados */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Arial', sans-serif; /* Tipo de letra */
+  color: #2c5697; /* Color de los encabezados */
+}
+
+
+/* Definir una clase para la caja de contenido */
+.highlight-box {
+  border: 2px solid #2c5697; /* Color azul del borde */
+  padding: 15px; /* Espaciado interior */
+  margin: 15px 0; /* Espaciado exterior */
+  border-radius: 5px; /* Esquinas redondeadas opcional */
+}
+
+/* Opcional: estilizar el texto dentro de la caja */
+.highlight-box h2, .highlight-box p {
+  color: #2c5697; /* Color del texto */
+}
+
+

@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="dgonzalez" />
 
 
-<title>about.knit</title>
+<title> Productoria</title>
 
 <script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -393,11 +394,92 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore"><span style="color:#235784">
+<strong>Productoria</strong></span></h1>
+<h3 class="subtitle"><span style="color:#235784"><strong>Módulo
+0</strong></span></h3>
+<h4 class="author">dgonzalez</h4>
 
 </div>
 
 
-<p>More about this website.</p>
+<p><br/><br/></p>
+<p>El productorio o productoria, también conocido como multiplicatorio,
+multiplicatoria o simplemente producto es una notación matemática que
+representa una multiplicación de una cantidad arbitraria finita o
+infinita.</p>
+<p>Wikipedia</p>
+<p>Este operador será utilizado para desarrollar el método de estimación
+de Máxima Verosimilitud, soporte de la inferencia estadística abordado
+en la Unidad 4.1 del Módulo 4.</p>
+<p><br/><br/><br/></p>
+<div id="definición" class="section level2 highlight-box">
+<h2><strong>Definición</strong></h2>
+<p>Se define como:</p>
+<p><span class="math display">\[\displaystyle\prod_{i=1}^n a_{i}   = a_1
+\times a_2 \times a_3 \times  \cdots \times a_n\]</span></p>
+</div>
+<p><br/></p>
+<p>El operador consiste en multiplicar un numero de veces establecido
+los términos <span class="math inline">\(a_i\)</span> Una de las
+aplicaciones más conocida de la productoria son los números
+factoriales</p>
+<p><span class="math display">\[n! = \displaystyle\prod_{i=1}^n i = 1
+\times 2 \times 3 \cdots \times n\]</span><br />
+Este operador también se utiliza para multiplicar funciones, matrices
+como por ejemplo:</p>
+<p><span class="math display">\[\displaystyle\prod_{i=1}^n f(x_i) =
+f(x_1) \times f(x_2) \times f(x_3) \cdots \times f(x_n)\]</span><br />
+Para el caso de <span class="math inline">\(f(x) = \exp\{x\}\)</span>
+tenemos:</p>
+<p><span class="math display">\[\displaystyle\prod_{i=1}^n \exp\{x_i\} =
+\exp\{x_1\} \times \exp\{x_2\} \times \exp\{x_3\} \cdots \times
+\exp\{x_n\}\]</span></p>
+<p>Al tener la misma base con diferente exponente, el resultado se
+obtiene al colocar la misma base y sumar los exponentes,</p>
+<p><span class="math display">\[\exp\{\displaystyle\sum_{i=1}^{n}
+x_{i}\}\]</span></p>
+<p><br/><br/></p>
+<p><br/><br/></p>
+<p><img src="img/ej1.png" style="width:10.0%" /></p>
+<p>Encontrar la multiplicación de los 10 primeros números</p>
+<p><span class="math display">\[\displaystyle\prod_{x=1}^n x = 1 \times
+2 \times 3 \times 4 \times 5 \times 6 \times 7 \times 8 \times 9 \times
+10 \]</span></p>
+<pre class="r"><code>prod(1:10)</code></pre>
+<pre><code>[1] 3628800</code></pre>
+<p><br/><br/></p>
+<div id="problemas-propuestos" class="section level2">
+<h2><strong>Problemas propuestos</strong></h2>
+<ul>
+<li><span class="math inline">\(\displaystyle\prod_{k=1}^{20}
+2^{k}\)</span></li>
+</ul>
+<p><br/> <br/></p>
+<ul>
+<li><span class="math inline">\(\displaystyle\prod_{i=1}^{20} k
+2^{k}\)</span></li>
+</ul>
+<p><br/> <br/></p>
+<ul>
+<li><span class="math inline">\(\displaystyle\prod_{i=1}^n
+f(x_{i})\)</span></li>
+</ul>
+<p>para las siguientes funciones:</p>
+<ul>
+<li><span class="math inline">\(f(x) = \dfrac{1}{60}\)</span></li>
+</ul>
+<p><br/></p>
+<ul>
+<li><span class="math inline">\(f(x_{i}) =
+\dfrac{1}{x_{i}}\)</span></li>
+</ul>
+<p><br/></p>
+<ul>
+<li><span class="math inline">\(f(x_{i}) = \dfrac{1}{\sqrt{2\pi}}
+\exp\bigg\{\frac{1}{2}x^{2}\bigg\}\)</span></li>
+</ul>
+</div>
 
 
 

@@ -9,9 +9,10 @@
 <meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
 
 
+<meta name="author" content="dgonzalez" />
 
 
-<title>about.knit</title>
+<title> Función exponencial</title>
 
 <script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -393,11 +394,118 @@ $(document).ready(function () {
 
 
 
+<h1 class="title toc-ignore"><span style="color:#235784">
+<strong>Función exponencial</strong></span></h1>
+<h3 class="subtitle"><span style="color:#235784"><strong>Módulo
+0</strong></span></h3>
+<h4 class="author">dgonzalez</h4>
 
 </div>
 
 
-<p>More about this website.</p>
+<p><br/><br/></p>
+<p>La función exponencial es una función matemática fundamental en la
+que el valor de la función crece (o decrece) rápidamente a medida que el
+valor de la variable independiente aumenta. La forma general de la
+función exponencial es :</p>
+<div id="definición" class="section level2 highlight-box">
+<h2><strong>Definición</strong></h2>
+<p><span class="math display">\[
+f(x) = a . b ^{x}
+\]</span> Donde : <br/> * <span class="math inline">\(a\)</span> : Es un
+parámetro que representa el valor inicial de la función cuando <span
+class="math inline">\(x=0\)</span>. Es la ordenada al origen o el valor
+de la función cuando <span class="math inline">\(x=0\)</span>.</p>
+<ul>
+<li><span class="math inline">\(b\)</span> : Es la base de la función
+exponencial. Determina la tasa de crecimiento de la función.
+<ul>
+<li>Si <span class="math inline">\(b&gt;1\)</span>, la función crece
+exponencialmente.</li>
+<li>Si <span class="math inline">\(0&lt;b&lt;1\)</span>, la función
+decrece exponencialmente.</li>
+</ul></li>
+<li><span class="math inline">\(x\)</span> : Es la variable
+independiente. Representa el valor que se evalua para obtener el valor
+de <span class="math inline">\(f(x)\)</span>.</li>
+</ul>
+<p><br/><br/></p>
+<div id="propiedades" class="section level3">
+<h3><strong>Propiedades</strong></h3>
+<ul>
+<li><span class="math inline">\(b^x . b^y = b^{x+y}\)</span></li>
+<li><span class="math inline">\(\dfrac{b^x}{b^y} = b^{x-y}\)</span></li>
+<li><span class="math inline">\((b^x)^y = b^{xy}\)</span></li>
+<li><span class="math inline">\(b^{x+y} \neq b^x + b^y\)</span></li>
+<li><span class="math inline">\(b^0 = 1\)</span></li>
+<li><span class="math inline">\(b^1 = b\)</span></li>
+</ul>
+</div>
+</div>
+<p><br/><br/><br/></p>
+<p>Un caso particular ocurre cuando <span class="math inline">\(b =
+e\)</span></p>
+<p><br/><br/></p>
+<div id="caso-fx-expx" class="section level3">
+<h3><strong>Caso f(x) = exp{x}</strong></h3>
+<pre class="r"><code>library(ggplot2)
+
+# Datos
+x &lt;- seq(-2, 2, by = 0.1)
+y &lt;- exp(x)
+data &lt;- data.frame(x = x, y = y)
+
+# Gráfico
+ggplot(data, aes(x = x, y = y)) +
+  geom_line(color = &quot;darkblue&quot;) +
+  labs(title = &quot;Gráfico de la función exponencial f(x) = exp{x}&quot;,
+       x = &quot;x&quot;,
+       y = &quot;y&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="exponencial_files/figure-html/unnamed-chunk-1-1.png" width="672" /></p>
+<p><br/><br/><br/></p>
+</div>
+<div id="caso-fx-exp-x" class="section level3">
+<h3><strong>Caso f(x) = exp{-x}</strong></h3>
+<pre class="r"><code>library(ggplot2)
+
+# Datos
+x &lt;- seq(-2, 2, by = 0.1)
+y &lt;- exp(-x)
+data &lt;- data.frame(x = x, y = y)
+
+# Gráfico
+ggplot(data, aes(x = x, y = y)) +
+  geom_line(color = &quot;darkblue&quot;) +
+  labs(title = &quot;Gráfico de la función exponencial  f(x) = exp{-x}&quot;,
+       x = &quot;x&quot;,
+       y = &quot;y&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="exponencial_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+<p>Una de las funciones de densidad de probabilidad más conocida en
+estadística es el modelo exponencial</p>
+<p><span class="math display">\[f(x) = \dfrac{1}{\lambda} \hspace{.2cm}
+exp{(-1/\lambda)}\]</span></p>
+<p>Para un valor de <span class="math inline">\(\lambda = 2\)</span>
+tenemos la siguiente función:</p>
+<p><span class="math display">\[f(x) = \dfrac{1}{2} \hspace{.2cm}
+exp{(-x/2)}, \hspace{1cm} x&gt;0\]</span></p>
+<pre class="r"><code>library(ggplot2)
+
+# Datos
+x &lt;- seq(0, 6, by = 0.1)
+y &lt;- 1/2*exp(-x/2)
+data &lt;- data.frame(x = x, y = y)
+
+# Gráfico
+ggplot(data, aes(x = x, y = y)) +
+  geom_line(color = &quot;darkblue&quot;) +
+  labs(title = &quot;Gráfico de la función exponencial  f(x) = exp{-x}&quot;,
+       x = &quot;x&quot;,
+       y = &quot;y&quot;) +
+  theme_minimal()</code></pre>
+<p><img src="exponencial_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
 
 
 

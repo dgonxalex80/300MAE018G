@@ -1,0 +1,45 @@
+---
+output:
+  html_document:
+    toc: no
+    toc_depth: 2
+    toc_float: yes
+    code_folding: hide
+    theme: flatly
+    css: style.css
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, comment = NA)
+```
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("img/banner400.png")
+```
+<br/><br/>
+
+<!-- # **Introducción** -->
+
+<!-- Una de las aplicaciones más utilizadas de la Estadística la conforman los modelos de regresión, los cuales permiten explicar una variable a partir de la combinación  lineal de otro  grupo de variables, pero también  la estimación de  coeficientes que miden la relación  entre dos variables.  Ambas situaciones con un gran número de -->
+
+<!-- <br/><br/><br/> -->
+
+<!-- # **Objetivo** -->
+
+
+<!-- Al finalizar el módulo el estudiante estará en capacidad de PROPONER soluciones a problemas reales mediante la utilización de los MODELOS DE REGRESIÓN a situaciones que permitan la toma de decisiones informadas y la generación de políticas -->
+
+
+<!-- <br/><br/><br/> -->
+
+## **Contenido**
+
+
+* Introducción Modelo de Regresión Lineal 
+
+* Estimación del Modelo de Regresión Lineal Simple
+
+* Análisis del modelo: coeficiente de correlación lineal, validación de supuestos. Prueba F para la bondad de ajuste. 
+
+
