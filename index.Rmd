@@ -1,66 +1,133 @@
 ---
+title: <span style="color:#FFCC00">  </span>
+subtitle: <span style="color:#2C5697"> </span>
+author: "dgonzalez "
 output:
   html_document:
     toc: no
     toc_depth: 2
     toc_float: yes
-    code_folding: hide
     theme: flatly
-    css: style.css
 ---
-
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
 
+# <span style="color:#2C5697">**Estadística para la toma de decisiones**</span>
+
 
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
-# knitr::include_graphics("img/banner001.png")
+ knitr::include_graphics("img/modulos.png")
 ```
 
 
-<br/>
+<br/><br/><br/>
+
+## **Cronograma**
 
 <div class="highlight-box">
-### **Cronograma**
-
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
-# knitr::include_graphics("img/horario-018A.png")
+knitr::include_graphics("img/horario-018G.png")
 ```
 
 </div>
 
+
 <br/><br/>
 
-<div class="highlight-box">
+## **Salones de clase**
+
+<div class="box2">
+
+
+|Curso     | **Grupo** | Horario       | **LUNES**  |                | **MIERCOLES** |                | **JUEVES**  |
+|:---------|:----------|:--------------|:-----------|:---------------|:--------------|:---------------|:------------|
+|          |           |               |            |                |               |                |             |
+|30MAE018  |    G      |11:00 a 13:00  | **AL 1.2** |                |  **PL 4.2**   |                | **AL 1.2**  |
+|          |           |               |  Monitoría |                |  Sesión 1     |                | Sesión 2    |
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+ # knitr::include_graphics("img/salones.png")
+```
+
+</div>
+
+
+
+
+<br/><br/>
+
+## **Metodología**
+
+<div class="box2">
+
+
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+knitr::include_graphics("img/aulainvertida1.png")
+```
+</div>
+
+## **Salones de clase**
+
+<div class="box2">
+
+
+</div>
+
+<br/>
+
+
+<div class="box2">
 
 #### **Profesor** : Daniel Enrique González
 
 * correo : dgonzalez@javerianacali.edu.co
 * oficina : 1.28 Edificio de Ingeniería
 
-#### **Monitor** :
+#### **Monitor** : José Cepeda
 
 </div>
 
 <br/>
 
-<div class="highlight-box">
-
 ### **Horarios de atención**
+
+<div class="box2">
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
 # knitr::include_graphics("img/atencion.png")
 ```
 
+Seŕa publicado en la segunda semana de clases
+
 </div>
+
 
 <br/>
 
-<div class="highlight-box">
-### **Información básica**
+## **Información examenes supletorios**
+
+
+<div class="box2">
+
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+# knitr::include_graphics("img/atencion.png")
+```
+
+Pendiente de publicación por parte del Departamento de Ciencias Naturales y Matemáticas
+
+</div>
+
+
+
+<br/>
+
+## **Información básica**
+
+<div class="box2">
 
 <br/>
 
@@ -82,10 +149,10 @@ knitr::opts_chunk$set(echo = TRUE, comment = NA)
 </div>
 
 <br/>
-<div class="highlight-box">
-#### **Descripción de la asignatura**
 
-<br/>
+## **Descripción de la asignatura**
+
+<div class="box2">
 
 Existe un llamado frecuente de múltiples estamentos nacionales e internacionales hacia la consolidación de bases de datos que permitan el análisis de indicadores cuantitativos que evidencien el estado, las tendencias y la proyección de los aspectos prioritarios en el desarrollo de las regiones. 
 
@@ -96,10 +163,10 @@ En el curso Estadística para la toma de decisiones se propone aportar a los est
 
 <br/>
 
-<div class="highlight-box">
-#### **Intencionalidades formativas**
 
-<br/>
+## **Intencionalidades formativas**
+<div class="box2">
+
 
 | Competencias                    | Indicadores                 |
 |:--------------------------------|:----------------------------|
@@ -114,8 +181,10 @@ En el curso Estadística para la toma de decisiones se propone aportar a los est
 
 <br/>
 
+## **Objetivos**
 
-<div class="highlight-box">
+<div class="box2">
+
 #### **Objetivos de la asignatura**    
 
 <br/>
@@ -156,10 +225,11 @@ Las siguientes son las competencias que priorizan el seguimiento al aprendizaje 
 
 <br/>
 
-<div class="highlight-box">
 
-#### **Contenidos de la asignatura** 
 
+## **Contenidos de la asignatura** 
+
+<div class="box2">
 
 #### **Módulo 1:** Estadística descriptiva 
 
@@ -200,8 +270,11 @@ Las siguientes son las competencias que priorizan el seguimiento al aprendizaje 
 
 <br/>
 
-<div class="highlight-box">
-### **Estrategias pedagógicas** 
+## **Estrategias pedagógicas** 
+
+<div class="box2">
+
+
 
 <br/>
 
@@ -215,11 +288,13 @@ Las siguientes son las competencias que priorizan el seguimiento al aprendizaje 
 
 * Se planea un proyecto de aplicación para desarrollar en por fases donde los estudiantes enfrentan situaciones críticas con la teoría o los métodos estadísticos.
 </div>
+
 <br/>
 
+## **Evaluación** 
 
-<div class="highlight-box">
-### **Evaluación** 
+<div class="box2">
+
 
 <br/>
 
@@ -232,8 +307,11 @@ Las siguientes son las competencias que priorizan el seguimiento al aprendizaje 
 </div>
 <br/>
 
-<div class="highlight-box">
-### **Referencias bibliográficas** 
+
+## **Referencias bibliográficas** 
+
+<div class="box2">
+
 
 * Anderson, D. Sweeney, D. Williams, T. (2016) Estadística para administración y economía. Décima segunda edición. México, Internacional Thomson Editores. Biblioteca General Colección Abierta Semisótano 519.5 E792e
 * Levine, D. Krehbiel, T. Berenson, M. (2014) Estadística para Administración.   Sexta 
