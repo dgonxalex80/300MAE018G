@@ -14,10 +14,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE, comment = NA)
 ```
 
-# <span style="color:#2C5697">**Estadística para la toma de decisiones**</span>
+# <span style="color:#2C5697">**Estadística para la toma de decisiones - G**</span>
 
 
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
  knitr::include_graphics("img/modulos.png")
 ```
 
