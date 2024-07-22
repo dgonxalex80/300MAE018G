@@ -1,4 +1,8 @@
 ---
+title: "**Sobre el grupo**"
+subtitle: " "
+author: "dgonzalez"
+date: ""
 output:
   html_document:
     toc: no
@@ -8,5 +12,87 @@ output:
     theme: flatly
     css: style.css
 ---
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE,comment = NA)
 
-More about this website.
+# colores
+c0= "#FFCC00"
+c1= "#FFAD42"
+c2= "#FF5A42"
+c3= "#E1286F"
+c4= "#4983F6"
+c5= "#783AC7"
+c6= "#2C5697" # AZZUL INSTITUCIONAL
+c7= "#F7F7F7" # FONDO GRIS CLARO WEB
+
+```
+
+
+```{r, echo=FALSE, message=FALSE, warning=FALSE}
+# Instalar y cargar las librerías necesarias
+library(ggplot2)
+
+# Crear el data.frame
+data <- data.frame(
+  Nombre = c("Carlos Barragan Serna", "Lina Calambas Hurtado", "Fernandez Rodriguez", 
+             "Karol Florez Gonzalez", "Sofia Giraldo Corrrea", "Gutierrez Marin", 
+             "Karol Mendez Salazar", "Juan Monroy Avila", "Felipe Otalora Muñoz", 
+             "Alejandro Paz Alvarez", "Maria Perez Fernandez", "Salazar Palacios", 
+             "Maria de Sisa Velasquez", "Ale Terceros Rocabado"),
+  Emplid = c(8968178, 8954438, 8959181, 8970647, 8989901, 8977910, 8980989, 8972167, 
+             8967108, 8978579, 8967581, 8972372, 8967367, 9017762),
+  Carrera = c("Mercadeo", "Negocios Internacionales", "Mercadeo", "Mercadeo", 
+              "Administración de Empresas", "Administración de Empresas", 
+              "Negocios Internacionales", "Administración de Empresas", 
+              "Negocios Internacionales", "Administración de Empresas", 
+              "Administración de Empresas", "Administración de Empresas", 
+              "Mercadeo", "Pregrado Internacional"),
+  Matriculada = c(2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+  Cancelada = c(1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+  Perdida = c(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0),
+  Promedio = c(3.68, 4.75, 4.3, 4.12, 3.96, 3.76, 3.39, 3.73, 4, 3.58, 3.73, 4.41, 4.27, 0)
+)
+
+# Mostrar el data.frame
+# print(data)
+
+# Instalar los paquetes necesarios si no están ya instalados
+if (!require(ggplot2)) install.packages("ggplot2")
+if (!require(dplyr)) install.packages("dplyr")
+if (!require(paletteer)) install.packages("paletteer")
+library(paletteer)
+library(ggplot2)
+library(dplyr)
+
+# Crear una paleta de colores pastel
+# pastel_colors <- c("#FDBFB3", "#FFDDC1", "#FFC8A2", "#FFD8BE", "#FFCB9A", "#FFC3A0", "#FF9AA2", "#FFDAC1")
+# pastel_colors <-c("#d2fbff", "#b7dbe6", "#9cbcce", "#819eb6", "#68819e", "#4e6587", "#354b71", "#19325b")
+
+pastel_colors <- paletteer_c("ggthemes::Orange-Blue-White Diverging",4)
+
+
+# Diagrama circular para la variable Carrera
+carrera_counts <- data %>% 
+  group_by(Carrera) %>% 
+  summarise(count = n())
+
+ggplot(carrera_counts, aes(x = "", y = count, fill = Carrera)) +
+  geom_bar(stat = "identity", width = 1) +
+  coord_polar(theta = "y") +
+  theme_void() +
+  scale_fill_manual(values = pastel_colors) +
+  labs(title = "Distribución de Carrera")
+
+# Diagrama de cajas para la variable Promedio
+ggplot(data, aes(x = Carrera, y = Promedio, fill = Carrera)) +
+  geom_boxplot() +
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) +
+  scale_fill_manual(values = pastel_colors) +
+  labs(title = "Diagrama de Cajas para la Variable Promedio por Carrera")
+
+
+
+
+
+```
+

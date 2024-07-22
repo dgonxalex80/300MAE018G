@@ -57,16 +57,26 @@ Es un lenguaje para la computación  estadística, utilizado para el procesamien
    
 <br/><br/>
 
-<img src="img/Rt.png" width="500">
 
-<br/>
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+knitr::include_graphics("img/Rt.png")
+```
+
+<br/><br/>
+
 En el siguiente enlace se pueden obtener los archivos para su instalación : https://www.r-project.org/
 
 <br/><br/>
 
 Podemos usar este lenguaje utilizando una terminal o mediante la IDE **RStudio**, la cual integra un conjunto de herramientas que facilitan el uso R a los usuarios 
 
-<img src="img/logoRStudio.png" width="200" class="center">
+<br/><br/>
+
+```{r, echo=FALSE, out.width="20%", fig.align='left'}
+knitr::include_graphics("img/logoRStudio.png")
+```
+
+<br/><br/>
 
 Esta interfaz esta conformada por varias ventana como se muestra en la siguiente imagen
 
@@ -101,7 +111,7 @@ En los siguientes enlaces se pueden descargar los programas, dependiendo el sist
 <br/>
 A continuación se relacionan algunas ayudas para la iniciación del lenguaje
 
-<br/><br/>
+<br/><br/><br/>
 
 # **Tipos de datos en R**
 
@@ -207,7 +217,7 @@ En este caso la función es evaluada dentro de un otra función en la construcci
 
 ```{r }
 x=seq(from=2,to=10, by=0.01)  # genera secuencia de numeros entre 2 y 10 con paso 0.01
-plot(x, fx(x), type="l", col=c1) # genera grafica
+plot(x, fx(x), type="l", col=c1, las=1) # genera grafica
 ```
 
 El siguiente ejemplo construye una función para la realización de un gráfico. En este caso los valores de entrada estan conformados por un vector de datos y un color
@@ -265,7 +275,12 @@ Para instalar un paquete lo podemos hacer de dos formas :
 
 1. Utilizando la vengtana **Packages** ubicada en la parte inferior derecha de RStudio
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/D5MfQu__FJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<center>
+
+<iframe width="800" height="450" src="https://www.youtube.com/embed/D5MfQu__FJU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+</center>
 
 <br/><br/>
 
@@ -275,8 +290,12 @@ Para instalar un paquete lo podemos hacer de dos formas :
 install.packages("ggplot2")
 ```
 
+<center>
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/4KY2xFm05JA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="450" src="https://www.youtube.com/embed/4KY2xFm05JA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+</center>
 
 <br/><br/>
 

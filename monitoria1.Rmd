@@ -242,7 +242,7 @@ nivtec=c(12.5,30,17.5)
 names(nivtec)=c("Bajo", "Medio", "Alto")
 barplot(nivtec, 
 main = "Nivel tecnológio",
-col=c(c1,c2,c3), las=1,
+col=c(c1,c4,c6), las=1,
 ylim=c(0,40))
 grid()
 ```

@@ -45,7 +45,7 @@ knitr::include_graphics("img/horario-018G.png")
 |Curso     | **Grupo** | Horario       | **LUNES**  |                | **MIERCOLES** |                | **JUEVES**  |
 |:---------|:----------|:--------------|:-----------|:---------------|:--------------|:---------------|:------------|
 |          |           |               |            |                |               |                |             |
-|30MAE018  |    G      |11:00 a 13:00  | **AL 1.2** |                |  **PL 4.2**   |                | **AL 1.2**  |
+|30MAE018  |    G      |11:00 a 13:00  | **PL 4.7** |                |  **PL 4.2**   |                | **AL 1.2**  |
 |          |           |               |  Monitoría |                |  Sesión 1     |                | Sesión 2    |
 
 
@@ -98,7 +98,7 @@ knitr::include_graphics("img/aulainvertida1.png")
 <div class="box2">
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
-# knitr::include_graphics("img/atencion.png")
+ knitr::include_graphics("img/atencion1.png")
 ```
 
 Seŕa publicado en la segunda semana de clases
