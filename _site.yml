@@ -15,17 +15,17 @@ navbar:
         - text: "Productoria"
           href: productoria.html
         - text: "Conjuntos"
-          href: conjuntos.html
+          href: recurso000.html
         - text: "Técnicas de conteo"
-          href: conteo.html         
+          href: recurso000.html         
         - text: "Funcición exponencial"
-          href: exponencial.html
+          href: recurso000.html
         - text: "Función logaritmica"
-          href: logaritmica.html
+          href: recurso000.html
         - text: "Derivación"
-          href: derivacion.html
+          href: recurso000.html
         - text: "Integración"
-          href: integracion.html
+          href: recurso000.html
     - text: "Módulo 1"
       menu:
         - text: "Módulo 1"
@@ -35,6 +35,8 @@ navbar:
           href: guia11.html        
         - text: "Metodología Estadística"
           href: recurso11.html
+        - text: "Bases de datos"
+          href: basesdatos.html
         - text: "Introducción a R"
           href: introduccionR.html
         - text: "Código 1.1"  

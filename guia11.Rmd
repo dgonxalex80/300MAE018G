@@ -100,7 +100,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 |Actividad111   | Descripción                    | 
 |:--------------|:-----------------------------  |
-|Individual     |  **Metodología estadística:** : Formular un  problema que le permita  desarrollar un  ejercicio académico durante  el  semestre a través de  la recolección  de información (primaria o secundaria), Ademas de establecer los  objetivos y las  variables de  interés asociadas en dicho problema e identificar el tipo de  variable  y su  escala  de medición.  El resultado  de esta actividad deberá se entregado  en **archivo en formato pdf** con  nombre: **actividad101.pdf** en enlace ubicado en la plataforma Bs |
+|Individual     |  **Metodología estadística:** : Formular un  problema que le permita  desarrollar un  ejercicio académico durante  el  semestre a través de  la recolección  de información (primaria o secundaria), Ademas de establecer los  objetivos y las  variables de  interés asociadas en dicho problema e identificar el tipo de  variable  y su  escala  de medición.  El resultado  de esta actividad deberá se entregado  en **archivo en formato pdf** con  nombre: **actividad111.pdf** en enlace ubicado en la plataforma Bs |
 | Fecha         | 31 de julio de 2024 |
 | Hora          | 23:59 hora local    |
 
@@ -108,7 +108,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 |Actividad112   | Descripción                    | 
 |:--------------|:-----------------------------  |
-|Individual     |  **Base de datos** : Cada estudiante deberá  buscar una  base de  datos  de su interés,  depuarla  y  documentarla  si es  necesario. A partir de la información  recolectada deberá construir la ficha técnica de  la base. El resultado  de esta actividad deberá se entregado  en **archivo en formato pdf** con  nombre: **actividad102.pdf** |
+|Individual     |  **Base de datos** : Cada estudiante deberá  buscar una  base de  datos  de su interés,  depuarla  y  documentarla  si es  necesario. A partir de la información  recolectada deberá construir la ficha técnica de  la base. El resultado  de esta actividad deberá se entregado  en **archivo en formato pdf** con  nombre: **actividad112.pdf** |
 | Recurso       | Video: [**Como descargar datos abiertos**](https://youtu.be/lRftK2mL3Sw) 
 |               | Formato ficha : **Ficha técnica** |
 |               | Excel |
@@ -156,13 +156,65 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 |||
 
 
+<br/><br/>
 
+# **Ficha técnica**
 
-<br/> <br/> <br/> 
+<br/> 
+
+<div class="box2 with-label">
+<br/> 
+
+Nombre del estudiante:
+
+<br/> <br/> 
 
 ## **Ficha técnica**
 
+ <br/><br/> 
+ <br/>  
+ 
+#### **Concepto**: (contexto que oriente sobre el tema que aborda la base de datos)
+
+ <br/>  <br/> 
+ 
+#### **Población**: (población de la cual se ha recogido la información)
+
+ <br/>  <br/> 
+ 
+#### **Tamaño de la muestra**: (número de observaciones recogidas en la base de datos)
+
+ <br/>  <br/> 
+ 
+#### **Instrumento de recolección** : (forma en que se recoge la información - puede ser implicito que se trata de un instrumento como encuesta, planilla, formulario)
+
+ <br/>  <br/> 
+ 
+#### **Ubicación espacio-temporal**: (lugar y tiempo en el que se recoge la información)
+
+ <br/>  <br/> 
+ 
+#### **Unidad estadística**: ( persona u objeto del cual se obtiene la información)
+
+ <br/>  <br/> 
+ 
+#### **Variables**
+
+<div class="box2 with-label">
+| Variable                    | Tipo de variable | Tipo de escala        |
+|-----------------------------|------------------|-----------------------|
+| (nombre de la variable)     | (cualitativa     | (nominal/ordinal      |
+|                             | cuantitativa)    | de intervalo/de razón)|
+|                             |                  |                       |
+|                             |                  |                       |
+|                             |                  |                       |
+|                             |                  |                       |
+|                             |                  |                       |
+|                             |                  |                       |
+</div>
+
+</div>
 
 ```{r, echo=FALSE, out.width="50%", fig.align = "center"}
-knitr::include_graphics("img/ficha.png")
+# knitr::include_graphics("img/ficha.png")
 ```
