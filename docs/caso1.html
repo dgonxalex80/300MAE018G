@@ -34,6 +34,15 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="site_libs/datatables-css-0.0.0/datatables-crosstalk.css" rel="stylesheet" />
+<script src="site_libs/datatables-binding-0.33/datatables.js"></script>
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.min.css" rel="stylesheet" />
+<link href="site_libs/dt-core-1.13.6/css/jquery.dataTables.extra.css" rel="stylesheet" />
+<script src="site_libs/dt-core-1.13.6/js/jquery.dataTables.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -421,47 +430,77 @@ $(document).ready(function () {
 
 
 <h1 class="title toc-ignore"><span style="color:#235784"> </span></h1>
-<h3 class="subtitle"><span style="color:#235784">Estadística para la
-toma de decisiones </span></h3>
+<h3 class="subtitle"><span style="color:#235784"><strong>Unidad
+1.1</strong></span></h3>
 <h4 class="author">dgonzalez</h4>
 
 </div>
 
 
-<p><img src="img/banner001.png" /> <br/><br/></p>
-<div id="introducción" class="section level1">
-<h1><strong>Introducción</strong></h1>
-<p>Este primer módulo te permitirá recorrer los pasos de la metodología
-estadística y realizar un análisis descriptivos de tus datos, empleando
-para ellos software estadístico y diversas bases de datos disponibles en
-internet. Para lograrlo se plantean tres unidades : Bases de datos,
-Tablas de frecuencia e indicadores descriptivos y por último la
-representación gráfica o visualización de datos. Requiere revisar los
-conceptos de sumatoria y productoria contenidos en el Modulo 0</p>
-<p><br/><br/></p>
-</div>
-<div id="objetivo" class="section level1">
-<h1><strong>Objetivo</strong></h1>
-<p>Al finalizar este módulo el estudiante estará en capacidad de RESUMIR
-e INTERPRETAR información mediante la construcción de TABLAS DE
-FRECUENCIA, INDICADORES DESCRIPTIVOS Y GRAFICOS para la interpretación y
-construcción de informes estadísticos descriptivos</p>
-<p><br/><br/></p>
-</div>
-<div id="conenido" class="section level1">
-<h1><strong>Conenido</strong></h1>
+<p><img src="img/banner001.png" width="100%" style="display: block; margin: auto;" /></p>
+<div id="enunciado" class="section level2">
+<h2><strong>Enunciado</strong></h2>
+<p><img src="img/cerveza.png" /></p>
+<p>La siguiente información recoge cinco de las principales
+características de un grupo de marcas de cerveza que fue recogida con la
+finalizad de clasificar los productos y además permita realizar un
+análisis descriptivo de las 69 marcas recogidas</p>
+<p>Inicialmente el director de investigación desea su apoyo en una
+primera etapa del análisis que consiste en resumir la información
+suministrada en tablas e indicadores que le permitan validar algunas de
+sus hipótesis.</p>
+<p>La base compartida contiene información sobre 69 marcas de cervezas
+que son distribuidas en la ciudad. Las variables recogidas corresponden
+a:</p>
 <ul>
-<li><p><strong>Conceptos básicos</strong>. Pasos de la metodología
-estadística, diferencia un estudio descriptivo de uno
-inferencial.</p></li>
-<li><p><strong>Análisis univariado</strong>: Resumen de información
-estadística a través de tablas, gráficos de frecuencia, indicadores de
-tendencia central, dispersión y posición.</p></li>
-<li><p><strong>Análisis bivariado</strong>: Análisis de información
-cruzada, frecuencias marginales, conjuntas y condicionales. Análisis de
-la relación lineal entre variables cuantitativas. Gráficos de
-dispersión. Coeficiente de correlación lineal</p></li>
+<li><p><span style="color:#b0394a"><strong>precio</strong></span> de la
+presentación en caja de seis botellas de 12 onzas,</p></li>
+<li><p>contendo de <span
+style="color:#b0394a"><strong>calorias</strong></span> congtenidas en
+una unidad de 12 onzas,</p></li>
+<li><p>porcentaje de contenido de <span
+style="color:#b0394a"><strong>alcohol</strong></span> por 12 onzas de
+contenido,</p></li>
+<li><p><span style="color:#b0394a"><strong>tipo</strong></span> de
+cerveza (1-lager artesanal, 2-clara artesanal, 3-lager importada,
+4-cerveza normal y helada, y 5-cerveza baja en calorías y sin alcohol)
+y</p></li>
+<li><p>país de <span
+style="color:#b0394a"><strong>origen</strong></span> (0-nacional, 1-
+importada).</p></li>
 </ul>
+<p>Su trabajo consiste en escribir un primer informe basado en una
+evaluación descriptiva, que contenga las tablas que resumen la
+información para cada variable de base de datos y resumen de sus
+indicadores estadísticos.</p>
+<p>Finalmente adjunte un análisis de los resultados obtenidos.</p>
+<p><br/><br/></p>
+</div>
+<div id="cargar-datos" class="section level2">
+<h2><strong>Cargar datos</strong></h2>
+<pre>
+install.packages("devtools") # solo una vez
+devtools::install_github("dgonxalex80/paqueteDEG") # descarga paqueteDEG
+library(paqueteDEG) # activa paqueteDEG
+data("beer") # carga la base beer
+</pre>
+<pre class="r"><code>install.packages(&quot;devtools&quot;) # solo una vez
+devtools::install_github(&quot;dgonxalex80/paqueteDEG&quot;) # descarga paqueteDEG
+library(paqueteDEG) # activa paqueteDEG
+data(&quot;beer&quot;) # carga la base beer</code></pre>
+<p><br/><br/></p>
+</div>
+<div id="batos-de-datos" class="section level2">
+<h2><strong>Batos de datos</strong></h2>
+<pre class="r"><code>library(DT)
+library(paqueteDEG)
+data(beer)
+DT::datatable(head(beer, 69),fillContainer = FALSE, options = list(pageLength = 8))</code></pre>
+<div class="datatables html-widget html-fill-item" id="htmlwidget-0ad754f1b2a0f7e4c950" style="width:100%;height:auto;"></div>
+<script type="application/json" data-for="htmlwidget-0ad754f1b2a0f7e4c950">{"x":{"filter":"none","vertical":false,"fillContainer":false,"data":[["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","33","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50","51","52","53","54","55","56","57","58","59","60","61","62","63","64","65","66","67","68","69"],["m1","m2","m3","m4","m5","m6","m7","m8","m9","m10","m11","m12","m13","m14","m15","m16","m17","m18","m19","m20","m21","m22","m23","m24","m25","m26","m27","m28","m29","m30","m31","m32","m33","m34","m35","m36","m37","m38","m39","m40","m41","m42","m43","m44","m45","m46","m47","m48","m49","m50","m51","m52","m53","m54","m55","m56","m57","m58","m59","m60","m61","m62","m63","m64","m65","m66","m67","m68","m69"],[6.24,4.79,5.96,4.7,4.11,3.85,2.52,5.46,6,3.71,6.7,4.99,4.1,5.96,6.31,6.42,7.79,5.05,5.26,5.84,7.22,6.12,7.37,6.47,6.72,7.59,6.36,6.52,6.34,7.1,4.78,4.63,5.41,6.39,5.52,6.38,5.68,5.82,5.83,7.8,2.82,3.2,3.83,4.02,3.88,4.79,4,3.95,3.27,4.02,3.26,3.19,2.9,2.36,3.93,4.25,4.03,4.02,2.86,4.03,4.02,6.49,3.24,3.6,2.99,2.75,3.9,5.42,5.63],[159,160,160,162,157,151,155,135,162,142,146,148,170,160,172,170,184,201,155,170,158,159,150,177,146,151,163,186,168,142,148,150,140,150,160,160,148,148,148,160,145,142,147,148,149,155,159,148,143,137,153,143,144,133,143,143,134,110,110,105,96,95,58,82,60,72,70,71,96],[5.2,5,4.9,4.9,5.5,4.9,4.7,5.1,5.4,4.8,4.4,4.3,5.1,5,5.8,5.9,6,5.6,4.7,5.3,4.9,5.4,5.1,5.6,3.7,4.9,5.3,5.9,5.9,4.7,5,5,5,5,4.8,5,4.6,4.9,4.3,4.1,4.5,4.4,5,4.9,5.5,5.6,5,5.5,4.9,4.6,4.6,5,4.7,4.6,5,4.6,4.3,4.2,4.2,4.2,4.5,3.6,0,0,0,0,0,0,0],[1,1,1,1,1,1,1,1,1,1,1,1,1,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,3,3,3,3,3,3,3,3,3,3,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,5,5,5,5,5,5,5,5,5,5,5,5,5],[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,1,1,1,1,1,0,0]],"container":"<table class=\"display\">\n  <thead>\n    <tr>\n      <th> <\/th>\n      <th>marca<\/th>\n      <th>precio<\/th>\n      <th>calorias<\/th>\n      <th>poralcoh<\/th>\n      <th>tipo<\/th>\n      <th>origen<\/th>\n    <\/tr>\n  <\/thead>\n<\/table>","options":{"pageLength":8,"columnDefs":[{"className":"dt-right","targets":[2,3,4,5,6]},{"orderable":false,"targets":0},{"name":" ","targets":0},{"name":"marca","targets":1},{"name":"precio","targets":2},{"name":"calorias","targets":3},{"name":"poralcoh","targets":4},{"name":"tipo","targets":5},{"name":"origen","targets":6}],"order":[],"autoWidth":false,"orderClasses":false,"lengthMenu":[8,10,25,50,100]}},"evals":[],"jsHooks":[]}</script>
+<p><br/></p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/lVQ5MjSpi4E?si=Rlta13udaInGPPQj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
 </div>
 
 
