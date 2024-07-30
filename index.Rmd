@@ -98,7 +98,7 @@ knitr::include_graphics("img/aulainvertida1.png")
 <div class="box2">
 
 ```{r, echo=FALSE, out.width="70%", fig.align = "center"}
- knitr::include_graphics("img/atencion1.png")
+ knitr::include_graphics("img/atencion2.png")
 ```
 
 Seŕa publicado en la segunda semana de clases
