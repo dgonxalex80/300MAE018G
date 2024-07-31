@@ -101,8 +101,6 @@ knitr::include_graphics("img/aulainvertida1.png")
  knitr::include_graphics("img/atencion2.png")
 ```
 
-Seŕa publicado en la segunda semana de clases
-
 </div>
 
 
