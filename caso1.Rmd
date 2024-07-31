@@ -106,6 +106,6 @@ DT::datatable(head(beer, 69),fillContainer = FALSE, options = list(pageLength = 
 
 <br/>
 
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/lVQ5MjSpi4E?si=Rlta13udaInGPPQj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
+<!-- <center> -->
+<!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/lVQ5MjSpi4E?si=Rlta13udaInGPPQj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
+<!-- </center> -->
