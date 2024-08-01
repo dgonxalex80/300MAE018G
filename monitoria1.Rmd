@@ -268,7 +268,7 @@ De acuerdo con la información anterior, responda falso o verdadero a las siguie
 |:--|:-------------------------------------------------|
 |a. | La variable ventas mensuales se mide en escala de razón |
 |b. | Las ventas de 6.2 millones representan un dato atípico, para la información de Mayo | 
-|c. | Las ventas de Diciembre  son más homogéneas que las de Junio |
+|c. | Las ventas de Mayo  son más homogéneas que las de Junio |
 |d. | La mediana de las ventas en el mes de Junio es de 11.15  |
 |e. | La varianza para el mes de Junio es de 5.21  |
 |f. | Aproximadamente el 68\% de las ventas de Junio están en el intervalo [8.7 ; 13.3]. Nota: el intervalo incluye los valores 8.7 y 13.3.  |
