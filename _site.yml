@@ -46,11 +46,18 @@ navbar:
           href: guia12.html        
         - text: "Construcción de indicadores"
           href: recurso12.html
-        - text: "Código 1.2"
+        - text: "Código 1.1"
           href: codigo12.html
-        - text: "Caso 1"
-          href: caso1.html
-        - text: "--------"       
+        - text: "Caso 1"  
+          href: caso1.html        
+        - text: "--------"    
+        - text: "Guía 1.3"
+          href: guia13.html        
+        - text: "Visualización"
+          href: recurso13.html
+        - text: "Código 1.1"
+          href: codigo13.html      
+        
         - text: "Monitoria 1"
           href: monitoria1.html
  

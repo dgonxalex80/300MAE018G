@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+
+<meta name="author" content="dgonzalez" />
+
+
+<title> </title>
+
+<script src="site_libs/header-attrs-2.27/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<script src="site_libs/navigation-1.1/codefolding.js"></script>
+<link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+
+<style type="text/css">
+  code{white-space: pre-wrap;}
+  span.smallcaps{font-variant: small-caps;}
+  span.underline{text-decoration: underline;}
+  div.column{display: inline-block; vertical-align: top; width: 50%;}
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+  ul.task-list{list-style: none;}
+    </style>
+
+<style type="text/css">code{white-space: pre;}</style>
+<script type="text/javascript">
+if (window.hljs) {
+  hljs.configure({languages: []});
+  hljs.initHighlightingOnLoad();
+  if (document.readyState && document.readyState === "complete") {
+    window.setTimeout(function() { hljs.initHighlighting(); }, 0);
+  }
+}
+</script>
+
+
+
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+
+
+
+<style type = "text/css">
+.main-container {
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+img {
+  max-width:100%;
+}
+.tabbed-pane {
+  padding-top: 12px;
+}
+.html-widget {
+  margin-bottom: 20px;
+}
+button.code-folding-btn:focus {
+  outline: none;
+}
+summary {
+  display: list-item;
+}
+details > summary > p:only-child {
+  display: inline;
+}
+pre code {
+  padding: 0;
+}
+</style>
+
+
+<style type="text/css">
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+  border-radius: 0 6px 6px 6px;
+}
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #cccccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+.dropdown-submenu:hover>a:after {
+  border-left-color: #adb5bd;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+  border-radius: 6px 0 6px 6px;
+}
+</style>
+
+<script type="text/javascript">
+// manage active state of menu based on current page
+$(document).ready(function () {
+  // active menu anchor
+  href = window.location.pathname
+  href = href.substr(href.lastIndexOf('/') + 1)
+  if (href === "")
+    href = "index.html";
+  var menuAnchor = $('a[href="' + href + '"]');
+
+  // mark the anchor link active (and if it's in a dropdown, also mark that active)
+  var dropdown = menuAnchor.closest('li.dropdown');
+  if (window.bootstrap) { // Bootstrap 4+
+    menuAnchor.addClass('active');
+    dropdown.find('> .dropdown-toggle').addClass('active');
+  } else { // Bootstrap 3
+    menuAnchor.parent().addClass('active');
+    dropdown.addClass('active');
+  }
+
+  // Navbar adjustments
+  var navHeight = $(".navbar").first().height() + 15;
+  var style = document.createElement('style');
+  var pt = "padding-top: " + navHeight + "px; ";
+  var mt = "margin-top: -" + navHeight + "px; ";
+  var css = "";
+  // offset scroll position for anchor links (for fixed navbar)
+  for (var i = 1; i <= 6; i++) {
+    css += ".section h" + i + "{ " + pt + mt + "}\n";
+  }
+  style.innerHTML = "body {" + pt + "padding-bottom: 40px; }\n" + css;
+  document.head.appendChild(style);
+});
+</script>
+
+<!-- tabsets -->
+
+<style type="text/css">
+.tabset-dropdown > .nav-tabs {
+  display: inline-table;
+  max-height: 500px;
+  min-height: 44px;
+  overflow-y: auto;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.tabset-dropdown > .nav-tabs > li.active:before, .tabset-dropdown > .nav-tabs.nav-tabs-open:before {
+  content: "\e259";
+  font-family: 'Glyphicons Halflings';
+  display: inline-block;
+  padding: 10px;
+  border-right: 1px solid #ddd;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li.active:before {
+  content: "\e258";
+  font-family: 'Glyphicons Halflings';
+  border: none;
+}
+
+.tabset-dropdown > .nav-tabs > li.active {
+  display: block;
+}
+
+.tabset-dropdown > .nav-tabs > li > a,
+.tabset-dropdown > .nav-tabs > li > a:focus,
+.tabset-dropdown > .nav-tabs > li > a:hover {
+  border: none;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: transparent;
+}
+
+.tabset-dropdown > .nav-tabs.nav-tabs-open > li {
+  display: block;
+  float: none;
+}
+
+.tabset-dropdown > .nav-tabs > li {
+  display: none;
+}
+</style>
+
+<!-- code folding -->
+<style type="text/css">
+.code-folding-btn { margin-bottom: 4px; }
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+<div class="container-fluid main-container">
+
+
+
+
+<div class="navbar navbar-default  navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="index.html"> </a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        <li>
+  <a href="index.html">
+    <span class="fa fa-home"></span>
+     
+    
+  </a>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 0
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="modulo0.html">Módulo 0</a>
+    </li>
+    <li>
+      <a href="sumatoria.html">Sumatoria</a>
+    </li>
+    <li>
+      <a href="productoria.html">Productoria</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Conjuntos</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Técnicas de conteo</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Funcición exponencial</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Función logaritmica</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Derivación</a>
+    </li>
+    <li>
+      <a href="recurso000.html">Integración</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 1
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="modulo1.html">Módulo 1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="guia11.html">Guía 1.1</a>
+    </li>
+    <li>
+      <a href="recurso11.html">Metodología Estadística</a>
+    </li>
+    <li>
+      <a href="basesdatos.html">Bases de datos</a>
+    </li>
+    <li>
+      <a href="introduccionR.html">Introducción a R</a>
+    </li>
+    <li>
+      <a href="codigo11.html">Código 1.1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="guia12.html">Guía 1.2</a>
+    </li>
+    <li>
+      <a href="recurso12.html">Construcción de indicadores</a>
+    </li>
+    <li>
+      <a href="codigo12.html">Código 1.1</a>
+    </li>
+    <li>
+      <a href="caso1.html">Caso 1</a>
+    </li>
+    <li class="divider"></li>
+    <li>
+      <a href="guia13.html">Guía 1.3</a>
+    </li>
+    <li>
+      <a href="recurso13.html">Visualización</a>
+    </li>
+    <li>
+      <a href="codigo13.html">Código 1.1</a>
+    </li>
+    <li>
+      <a href="monitoria1.html">Monitoria 1</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 2
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="modulo2.html">Módulo 2</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 3
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="modulo3.html">Módulo 3</a>
+    </li>
+    <li class="divider"></li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Módulo 4
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="modulo4.html">Módulo 4</a>
+    </li>
+    <li class="divider"></li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Proyecto
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="recurso000.html">Guía proyecto</a>
+    </li>
+  </ul>
+</li>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    Información
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="about.html">300MAE018G</a>
+    </li>
+  </ul>
+</li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div><!--/.container -->
+</div><!--/.navbar -->
+
+<div id="header">
+
+<div class="btn-group pull-right float-right">
+<button type="button" class="btn btn-default btn-xs btn-secondary btn-sm dropdown-toggle" data-toggle="dropdown" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span>Code</span> <span class="caret"></span></button>
+<ul class="dropdown-menu dropdown-menu-right" style="min-width: 50px;">
+<li><a id="rmd-show-all-code" href="#">Show All Code</a></li>
+<li><a id="rmd-hide-all-code" href="#">Hide All Code</a></li>
+</ul>
+</div>
+
+
+
+<h1 class="title toc-ignore"><span style="color:#235784"> </span></h1>
+<h3 class="subtitle"><span style="color:#235784"><strong>Unidad
+1.1</strong></span></h3>
+<h4 class="author">dgonzalez</h4>
+
+</div>
+
+
+<p><br/><br/></p>
+<p><img src="img/recursos1.png" width="100%" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
+<div id="introducción" class="section level2">
+<h2><strong>Introducción</strong></h2>
+<blockquote>
+<p>Una gráfica o una representación gráfica o un gráfico, es un tipo de
+representación de datos, generalmente cuantitativos, mediante recursos
+visuales (líneas, vectores, superficies o símbolos), para que se
+manifieste visualmente la relación matemática o correlación estadística
+que guardan entre sí.</p>
+</blockquote>
+<p>Wikipedia</p>
+</div>
+<div id="paquetes-de-r-para-gráficos" class="section level2">
+<h2><strong>Paquetes de R para gráficos</strong></h2>
+<p>R posee una serie de paquetes construido para la visualización de
+datos que hacen que tengan una excelente presentación. Empezando por
+funciones del núcleo base, hasta paquetes que elaboran gráficos
+interactivos</p>
+<p><img src="img/RStudio.jpeg" width="90">
+<img src="img/ggplot2.png" width="80">
+<img src="img/highcharter.png" width="80">
+<img src="img/shiny.png" width="80">
+<img src="img/plotly.png" width="80">
+<img src="img/dashboard.png" width="80"></p>
+<p>Elegir el gráfico adecuado es muy importante pues existen diferentes
+alternativos y se debe escoger el apropiado para representar los datos.
+El tipo de dato determina el tipo de grafico asi:</p>
+<table>
+<colgroup>
+<col width="23%" />
+<col width="21%" />
+<col width="55%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">Tipo de variable</th>
+<th align="left">Escala</th>
+<th align="left">Gráfico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Cualitativas</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left">Nominal</td>
+<td align="left">torta</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left">Ordinal</td>
+<td align="left">barras</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+<tr class="odd">
+<td align="left">Cuantitativas</td>
+<td align="left">Intervalo-razón</td>
+<td align="left">diagrama de tallos y hojas</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">histograma</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">diagrama de cajas</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">diagrama de densidad</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">diagrama de puntos</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">diagrama de lineas</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">diagrama de radar</td>
+</tr>
+<tr class="even">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">gráfico likert</td>
+</tr>
+<tr class="odd">
+<td align="left"></td>
+<td align="left"></td>
+<td align="left">mapa de calor</td>
+</tr>
+</tbody>
+</table>
+<div id="gráficos-variables-cualitativas-con-r-base"
+class="section level3">
+<h3><strong>Gráficos variables cualitativas con R base</strong></h3>
+<p>Gráfico de tortas</p>
+<pre class="r"><code>a=rep(&quot;Cultutal&quot;, 360145)
+b=rep(&quot;Pastoral&quot;, 61496)
+c=rep(&quot;Bienestar&quot;,49912)
+d=rep(&quot;Deportivo&quot;,11777)
+data=c(a,b,c,d)
+t=table(data)
+lbs=c(&quot;Cultural&quot;, &quot;Pastoral&quot;, &quot;Bienestar&quot;, &quot;Deportivo&quot;)
+pct=round(t/sum(t)*100)
+labs=paste(lbs, pct)
+labs=paste(labs, &quot;%&quot;, sep = &quot; &quot;) 
+pie(t, labels=labs, main=&quot; Participación eventos Medio Universitario&quot;,
+    col = paleta4)</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-2-1.png" width="672" /></p>
+</div>
+<div id="diagrama-de-barras" class="section level3">
+<h3><strong>Diagrama de barras</strong></h3>
+<pre class="r"><code>ev=c(4,  8, 12, 43, 32)
+names(ev)=c(&quot;Muy regular&quot;, &quot;Regular&quot;, &quot;Bueno&quot;, &quot;Muy bueno&quot;,&quot;Excelente&quot;)
+barplot(ev, col=c(&quot;#ff5b00&quot;,&quot;#dcf600&quot;,&quot;#7dbd00&quot;,&quot;#659cef&quot;,&quot;#2956b2&quot;), main = &quot;Evaluación proceso de inducción&quot;)</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-3-1.png" width="672" /></p>
+</div>
+<div id="diagrama-de-barras-dos-variables" class="section level3">
+<h3><strong>Diagrama de barras dos variables</strong></h3>
+<pre class="r"><code>counts &lt;- table(mtcars$vs, mtcars$gear); rownames(counts)=c(&quot;Montor en linea&quot;, &quot;Motor en V&quot;)
+barplot(counts, main=&quot;Numero de cambios adelante por Tipo de motor&quot;,  xlab=&quot;Numero de cambios adelante &quot;,col=c(c6,c2),
+  legend = rownames(counts))</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-4-1.png" width="672" /></p>
+</div>
+<div id="gráficas-variables-cuantitativas-con-r-base"
+class="section level3">
+<h3><strong>Gráficas variables cuantitativas con R base</strong></h3>
+</div>
+<div id="diagrama-de-árbol" class="section level3">
+<h3><strong>Diagrama de árbol</strong></h3>
+<pre class="r"><code>nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
+stem(nf)</code></pre>
+<pre><code>
+  The decimal point is at the |
+
+  1 | 67
+  2 | 00012244444
+  2 | 555677777778
+  3 | 0000000000000011111111222222223344
+  3 | 555555566677777777888999
+  4 | 0111123</code></pre>
+<p>Este diagrama ordena los datos de manera que se puede determinar
+tanto en mínimo (1.6) como el máximo (4.3) , además de visualizar donde
+están la mayor concentración de ellos.</p>
+</div>
+<div id="histograma" class="section level3">
+<h3><strong>Histograma</strong></h3>
+<pre class="r"><code>h1=hist(nf, main = &quot;Nota final matemáticas fundamentales&quot;, xlab = &quot;nota&quot;, ylab=&quot;frecuencias absolutas&quot;, labels=TRUE, col=c6, ylim = c(0,30))
+abline(v=3,col=&quot;#f6b915&quot;, lwd=2)</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-6-1.png" width="672" /></p>
+<p><br/><br/></p>
+</div>
+<div id="diagrama-de-densidad" class="section level3">
+<h3><strong>Diagrama de densidad</strong></h3>
+<pre class="r"><code>nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
+plot(density(nf), main=&quot;Distribucion de las notas de matematias fundamentales&quot;, col=c6, lwd=2)</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><br/><br/></p>
+</div>
+<div id="diagrama-de-cajas" class="section level3">
+<h3><strong>Diagrama de cajas</strong></h3>
+<pre class="r"><code>nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
+boxplot(nf, main=&quot;Nota final matemáticas fundamentales&quot;,col=c4, las=1)
+abline(h=3, col=&quot;red&quot;)</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-8-1.png" width="672" /></p>
+<p><br/><br/></p>
+</div>
+<div id="diagrama-de-cajas-1" class="section level3">
+<h3><strong>Diagrama de cajas</strong></h3>
+<pre class="r"><code>nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
+cc=c(20, 10, 20, 20, 20, 20, 20, 20, 20, 30, 20, 20, 20, 10, 30, 20, 20, 30, 20, 30, 30, 20, 10, 30, 20, 20, 30, 30, 10, 20, 10, 20, 20, 20, 10, 20, 10, 20, 20, 30, 30, 30, 10, 30, 20, 20, 20, 20, 20, 20, 10, 20, 30, 30, 10, 10, 10, 20, 10, 20, 10, 30, 20, 10, 20, 30, 10, 30, 30, 30, 20, 30, 30, 30, 30, 30, 30, 20, 10, 30, 10, 20, 20, 10, 20, 20, 20, 20, 10, 20)
+labs=c(&quot;Ing. de Sistemas&quot;,&quot;Ing. Industrial&quot;,&quot;Ing. Mecánica&quot;)
+boxplot((nf~cc),main=&quot;Nota final matemáticas fundamentales por carrera&quot;, 
+        col=c(c4,c5,c6), names=labs, xlab = &quot;carrera&quot;, ylab = &quot;nota&quot;)
+abline(h=3, col=c2,  lwd=2)
+abline(h=4, col=c3, lwd=2)</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-9-1.png" width="672" /></p>
+<p><br/><br/></p>
+</div>
+<div id="diagrama-de-dispersión" class="section level3">
+<h3><strong>Diagrama de dispersión</strong></h3>
+<pre class="r"><code>ed=round(rnorm(90,18,1),1)
+plot(ed,nf, main=&quot;Edad vs Nota final matemáticas fundamentales&quot;, ylim = c(0,5), xlab = &quot;Edad&quot;, ylab = &quot;Nota final&quot;,col=&quot;#447270&quot;,pch=19)
+grid()</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-10-1.png" width="672" /></p>
+<p><br/><br/></p>
+</div>
+<div id="gráfica-de-series-de-tiempo" class="section level3">
+<h3><strong>Gráfica de series de tiempo</strong></h3>
+<pre class="r"><code>plot(AirPassengers, main=&quot;Numero de pasajeros por mes&quot;, col=c6, lwd = 2)</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-11-1.png" width="672" /></p>
+<p><br/><br/></p>
+</div>
+<div id="resumen" class="section level3">
+<h3><strong>Resumen</strong></h3>
+<pre class="r"><code>x=rnorm(100,100,20)
+y=rnorm(100,100,25)
+z=rbinom(100,4,0.30)
+t=1:100
+par(mfrow=c(2, 2))
+pie(table(z))
+barplot(table(z))
+stem(x)
+hist(x)
+boxplot(x)
+plot(x,y)
+plot(t,y, type=&quot;l&quot;)
+plot(density(x))
+par(mfrow=c(1, 1))</code></pre>
+<p><br/><br/></p>
+</div>
+</div>
+<div id="gráficos-con-ggplot2" class="section level2">
+<h2><strong>Gráficos con ggplot2</strong></h2>
+<p><img src="img/ge_themes.png" /></p>
+<ul>
+<li><p><strong>Data</strong>: capa de los datos</p></li>
+<li><p><strong>Aesthetics</strong>: capa estética
+(<strong>aes</strong>), definimos las variables a utilizar en el
+gráfico</p></li>
+<li><p><strong>Geometries</strong>: capa de geometrías, se define el
+tipo de gráfica a realizar</p></li>
+<li><p><strong>Facets</strong>: capa de facetas, permite detallar la
+gráfica por categorías</p></li>
+<li><p><strong>Statistics</strong>: capa de estadística, permite agregar
+modelos</p></li>
+<li><p><strong>Coordinates</strong>: capa de coordenadas, permite
+ajustar las escalas de los ejes</p></li>
+<li><p><strong>Theme</strong>: capas de características del gráfico que
+no dependen de los datos</p></li>
+</ul>
+<p><br/><br/></p>
+<p><a
+href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">Visualizacion
+de datos con ggplot2</a></p>
+<p></br></br></p>
+<pre class="r"><code>library(readr)
+library(ggplot2)
+clasificacion=read.csv(&quot;data/spi_global_rankings_intl.csv&quot;)
+ggplot(clasificacion, aes(x=off , y=def))</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-13-1.png" width="672" /></p>
+<p></br></br></p>
+<pre class="r"><code>ggplot(clasificacion, aes(x=off , y=def))+
+  geom_point()</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-14-1.png" width="672" /></p>
+<p></br></br></p>
+<pre class="r"><code>ggplot(clasificacion, aes(x=off , y=def))+
+  geom_point()</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-15-1.png" width="672" /></p>
+<p></br></br></p>
+<table>
+<colgroup>
+<col width="23%" />
+<col width="24%" />
+<col width="25%" />
+<col width="26%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left">geo_point()</td>
+<td align="left">geom_bar()</td>
+<td align="left">geom_col()</td>
+<td align="left">stat_count()</td>
+</tr>
+<tr class="even">
+<td align="left">geom_boxplot()</td>
+<td align="left">stat_boxplot()</td>
+<td align="left">geom_density()</td>
+<td align="left">stat_density()</td>
+</tr>
+<tr class="odd">
+<td align="left">geom_histogram()</td>
+<td align="left">geom_violin()</td>
+<td align="left"></td>
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+<p></br></br></p>
+<pre class="r"><code>ggplot(clasificacion, aes(x=off , y=def))+
+  geom_point()+
+  facet_wrap(~ confed)</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-16-1.png" width="672" /></p>
+<p></br></br></p>
+<pre class="r"><code>ggplot(clasificacion, aes(x=off , y=def))+  geom_point()+
+  facet_wrap(~ confed)+ stat_smooth(method = &quot;loess&quot; , formula =y ~ x)</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<p></br></br></p>
+<pre class="r"><code>ggplot(clasificacion, aes(x=off , y=def))+  geom_point()+  facet_wrap(~ confed)+ stat_smooth(method = &quot;loess&quot; , formula =y ~ x)+
+    coord_cartesian(ylim = c(0, 10))</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p></br></br></p>
+<pre class="r"><code>library(ggplot2)
+data=data.frame(carrera=c(&quot;biologia&quot;,&quot;biomedica&quot;,&quot;civil&quot;,&quot;electronica&quot;,&quot;mecanica&quot;,  &quot;sistemas&quot;),frecuencia=c(8, 9,10,2, 3,7))
+
+ggplot(data, aes(x=carrera, y=frecuencia)) +
+  geom_bar(stat=&quot;identity&quot;, fill=&quot;#203c3d&quot;)+
+  geom_text(aes(label=frecuencia), vjust=2.5, color=&quot;white&quot;, size=7)+
+  theme_minimal()</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-19-1.png" width="672" /></p>
+<p></br></br></p>
+<pre class="r"><code>library(ggplot2)
+ggplot(mtcars, aes(x=mpg, y=wt, colour = cyl)) + 
+  geom_point()</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-20-1.png" width="672" /></p>
+<p></br></br></p>
+<pre class="r"><code>ggplot(iris, aes(Sepal.Length)) +
+       geom_histogram(bins = 7,fill=&quot;#447270&quot;, color=&quot;#e9ecef&quot;, alpha=0.9)+
+       theme_minimal() +
+       labs(x = &quot;cm&quot;, y = &quot;frecuencia absoluta&quot;) +
+       ggtitle(&quot;Longitud del sepalo&quot;)</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p></br></br></p>
+<pre class="r"><code>ggplot(iris, aes(x=Sepal.Length, y=Species)) +
+  geom_boxplot(fill=c(&quot;#faf0ca&quot;,&quot;#f4d35e&quot;,&quot;#ee964d&quot;),  # color de relleno
+               color=&quot;#0d3b66&quot;,    # color de lineas
+               alpha=0.5)+
+  geom_point(color=c6,alpha=0.2)     # color puntos</code></pre>
+<p><img src="recurso13_files/figure-html/unnamed-chunk-22-1.png" width="672" /></p>
+<p></br></br></p>
+</div>
+<div id="gráficos-con-gganimate" class="section level2">
+<h2><strong>Gráficos con gganimate</strong></h2>
+<pre class="r"><code>library(gapminder) # paquete contiene data Gapminder
+library(gganimate) # paquete para animacion grafica
+
+ggplot(gapminder, aes(gdpPercap, lifeExp, size = pop, colour = country)) +
+  geom_point(alpha = 0.7, show.legend = FALSE) +
+  scale_colour_manual(values = country_colors) +
+  scale_size(range = c(2, 12)) +
+  scale_x_log10() +
+  facet_wrap(~continent) +
+  # especificación del la transición animada - gganimate
+  labs(title = &#39;AñoYear: {frame_time}&#39;, x = &#39;GDP per capita&#39;, y = &#39;life expectancy&#39;) +
+  transition_time(year) +
+  ease_aes(&#39;linear&#39;)</code></pre>
+<p><a href="https://gganimate.com/"
+class="uri">https://gganimate.com/</a></p>
+<p><a href="https://rafalab.github.io/dslibro/ggplot2.html">Anàlisis de
+datos con R Cap,7 ggplot2</a><br/> <a
+href="https://rstudio.com/wp-content/uploads/2015/03/ggplot2-cheatsheet.pdf">ggplot2
+resumen</a></p>
+</div>
+<div id="graficos-con-highcharter" class="section level2">
+<h2><strong>Graficos con highcharter</strong></h2>
+<p><a href="https://jkunst.com/highcharter/"
+class="uri">https://jkunst.com/highcharter/</a></p>
+<p><a
+href="https://rstudio-pubs-static.s3.amazonaws.com/320413_6ab300527e8548b1a3cbd0d4c6200fcc.html"
+class="uri">https://rstudio-pubs-static.s3.amazonaws.com/320413_6ab300527e8548b1a3cbd0d4c6200fcc.html</a></p>
+</div>
+<div id="graficos-con-plotly" class="section level2">
+<h2><strong>Graficos con plotly</strong></h2>
+<p><a href="https://plotly.com/r/"
+class="uri">https://plotly.com/r/</a></p>
+<p><a href="https://plotly-r.com/"
+class="uri">https://plotly-r.com/</a></p>
+<p></br></br></p>
+</div>
+<div id="graficos-con-shiny" class="section level2">
+<h2><strong>Graficos con Shiny</strong></h2>
+<ul>
+<li><p><a
+href="https://shiny.rstudio.com/gallery/genome-browser.html">Genoma
+humano</a></p></li>
+<li><p><a href="https://gallery.shinyapps.io/087-crandash/">Paquetes de
+R</a></p></li>
+<li><p><a href="https://shiny.rstudio.com/gallery/">Galeria</a></p></li>
+</ul>
+<p></br></br></p>
+<div id="rmarkdown" class="section level3">
+<h3><strong>RMarkdown</strong></h3>
+<p><a
+href="https://rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf">RMarkdown
+resumen</a><br/></p>
+<p><a href="https://rpubs.com/joscani/flexdashboard_examples">R
+flexdashboard - ejemplo</a><br/> <a
+href="https://geoprocesamiento-2020i.github.io/tutorial-flexdashboard/">R
+flexdashboard - implementaciòn</a></p>
+<p></br></br></p>
+<p><img src="img/pujcali.jpeg" /></p>
+<p></br></br></p>
+</div>
+<div id="una-imagen-dice-mas-que-mil-palabras" class="section level3">
+<h3><strong>Una imagen dice mas que mil palabras…</strong></h3>
+<p>Daniel Enrique González Gómez</p>
+<p>Imagen tomada de :<a
+href="https://javerianacali.edu.co/noticias/la-javeriana-bogota-y-cali-1-de-colombia"
+class="uri">https://javerianacali.edu.co/noticias/la-javeriana-bogota-y-cali-1-de-colombia</a></p>
+</div>
+</div>
+
+
+
+
+</div>
+
+<script>
+
+// add bootstrap table styles to pandoc tables
+function bootstrapStylePandocTables() {
+  $('tr.odd').parent('tbody').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
+});
+
+
+</script>
+
+<!-- tabsets -->
+
+<script>
+$(document).ready(function () {
+  window.buildTabsets("TOC");
+});
+
+$(document).ready(function () {
+  $('.tabset-dropdown > .nav-tabs > li').click(function () {
+    $(this).parent().toggleClass('nav-tabs-open');
+  });
+});
+</script>
+
+<!-- code folding -->
+<script>
+$(document).ready(function () {
+  window.initializeCodeFolding("hide" === "show");
+});
+</script>
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
