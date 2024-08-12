@@ -1334,7 +1334,7 @@ Problema 20
 <p>Describa la relación existente entre la media y la mediana para los
 siguientes casos :</p>
 <ul>
-<li>Forma de los datos acamapnada</li>
+<li>Forma de los datos acampanada</li>
 <li>Forma de los datos rectangular</li>
 <li>Forma de los datos asimétrica positiva</li>
 <li>Forma de los datos asimétrica negativa</li>
@@ -1381,6 +1381,62 @@ head(datosENE)</code></pre>
 5  5   46.1   39.0     23.0        16       5
 6  6   67.4   34.8     26.4        22       4</code></pre>
 </div>
+</div>
+<p><br/><br/><br/></p>
+<div class="box1 with-label">
+<div class="label">
+Problema 22
+</div>
+<p>Una característica de calidad importante en un proceso de llenado
+automático es el peso del producto. Las empresas cuidan que el producto
+final no tenga pesos por debajo del anunciado en su etiqueta, pues de
+hacerlo puede incurrir en multas y pérdida de algunos de sus clientes.
+Por el contrario, si el producto se empaca muy por encima del peso
+especificado, se estará incurriendo en sobrecostos para la empresa.</p>
+<p>Una empresa que comercializa café instantáneo descafeinado, en
+presentación de 6.5 gramos, tiene dentro sus directrices, al comenzar el
+día, tomar una muestra de 50 bolsas y medir su peso. Se espera que los
+resultados estén entre más o menos 1.5 gramos alrededor del valor
+especificado en la etiqueta. Si el porcentaje de bolsas en la muestra es
+superior al 95 %, se da inicio al proceso. Si alcanza porcentajes entre
+el 85 % y 95 %, se debe llamar al ingeniero de planta para que realice
+los ajustes necesarios. Y finalmente, si se encuentran porcentajes
+inferiores al 85 % se debe reportar a la empresa de mantenimiento, para
+que realicen ajustes mayores.</p>
+<p>El día de hoy se recogió información de una muestra de 50 bolsas. A
+continuación se presentan los datos y su representación gráfica.</p>
+<p><strong>Realice un breve análisis de la información suministrada y a
+partir de ellos realice recomendaciones.</strong></p>
+<pre class="r"><code>   # Diagrama de tallos y hojas, peso del paquete de café instantáneo en gramos
+   stem(c(4.3, 4.7, 4.8, 4.8, 4.9, 5.0, 5.1, 5.2, 5.4, 5.5, 5.7, 5.7, 5.8, 5.8, 5.9, 5.9, 6.0, 6.0, 6.1, 6.1, 6.1, 6.1, 6.2, 6.2, 6.2, 6.3, 6.3, 6.4, 6.4, 6.5, 6.5, 6.6, 6.7, 7.0, 7.2, 7.3, 7.4, 7.6, 7.7, 7.8, 8.2, 8.5, 8.7, 8.9))</code></pre>
+<pre><code>
+  The decimal point is at the |
+
+  4 | 3
+  4 | 7889
+  5 | 0124
+  5 | 5778899
+  6 | 0011112223344
+  6 | 5567
+  7 | 0234
+  7 | 678
+  8 | 2
+  8 | 579</code></pre>
+<pre class="r"><code># Datos de los pesos de los paquetes de café instantáneo
+pesos &lt;- c(4.3, 4.7, 4.8, 4.8, 4.9, 5.0, 5.1, 5.2, 5.4, 5.5, 5.7, 5.7, 5.8, 5.8, 5.9, 5.9, 6.0, 6.0, 6.1, 6.1, 6.1, 6.1, 6.2, 6.2, 6.2, 6.3, 6.3, 6.4, 6.4, 6.5, 6.5, 6.6, 6.7, 7.0, 7.2, 7.3, 7.4, 7.6, 7.7, 7.8, 8.2, 8.5, 8.7, 8.9)
+
+# Construcción de la tabla de frecuencias acumuladas
+tabla_frecuencias &lt;- table(cut(pesos, breaks = seq(4.0, 9.0, by = 0.5), right = TRUE))
+frecuencia_acumulada &lt;- cumsum(tabla_frecuencias)
+
+# Creación de la ojiva
+plot(seq(4.25, 8.75, by = 0.5), frecuencia_acumulada, type = &quot;o&quot;, 
+     xlab = &quot;Peso del paquete de café (gramos)&quot;, ylab = &quot;Frecuencia acumulada&quot;, 
+     main = &quot;Ojiva del Peso de Paquetes de Café Instantáneo&quot;,
+     xlim = c(4, 9), ylim = c(0, max(frecuencia_acumulada) + 5),
+     col = &quot;blue&quot;, pch = 16, las=1)
+grid()</code></pre>
+<p><img src="monitoria1_files/figure-html/unnamed-chunk-15-1.png" width="960" style="display: block; margin: auto;" /></p>
 </div>
 </div>
 </div>

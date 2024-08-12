@@ -624,7 +624,7 @@ Una persona que viaja en un vehículo de una ciudad A a una ciudad B, en el viaj
 
 Describa la relación existente entre la media y la mediana para los siguientes casos :
 
-* Forma de los datos acamapnada
+* Forma de los datos acampanada
 * Forma de los datos rectangular
 * Forma de los datos asimétrica positiva
 * Forma de los datos asimétrica negativa
@@ -667,3 +667,73 @@ head(datosENE)
 
 
 </div>
+
+
+<br/><br/><br/>
+
+
+
+<div class="box1 with-label">
+<div class="label">Problema 22</div> 
+  
+ Una característica de calidad importante en un proceso de llenado automático es el peso del producto. Las empresas cuidan que el producto final no tenga pesos por debajo del anunciado en su etiqueta, pues de hacerlo puede incurrir en multas y pérdida de algunos de sus clientes. Por el contrario, si el producto se empaca muy por encima del peso especificado, se estará incurriendo en sobrecostos para la empresa.  
+   
+Una empresa que comercializa café instantáneo descafeinado, en presentación de 6.5 gramos, tiene dentro sus directrices, al comenzar el día, tomar una muestra de 50 bolsas y medir su peso. Se espera que los resultados estén entre más o menos 1.5 gramos alrededor del valor especificado en la etiqueta. Si el porcentaje de bolsas en la muestra es superior al 95 %, se da inicio al proceso. Si alcanza porcentajes entre el 85 % y 95 %, se debe llamar al ingeniero de planta para que realice los ajustes necesarios. Y finalmente, si se encuentran porcentajes inferiores al 85 % se debe reportar a la empresa de mantenimiento, para que realicen ajustes mayores.  
+   
+El día de hoy se recogió información de una muestra de 50 bolsas. A continuación se presentan los datos y su representación gráfica.  
+   
+   **Realice un breve análisis de la información suministrada y a partir de ellos realice recomendaciones.**
+
+```{r}
+   # Diagrama de tallos y hojas, peso del paquete de café instantáneo en gramos
+   stem(c(4.3, 4.7, 4.8, 4.8, 4.9, 5.0, 5.1, 5.2, 5.4, 5.5, 5.7, 5.7, 5.8, 5.8, 5.9, 5.9, 6.0, 6.0, 6.1, 6.1, 6.1, 6.1, 6.2, 6.2, 6.2, 6.3, 6.3, 6.4, 6.4, 6.5, 6.5, 6.6, 6.7, 7.0, 7.2, 7.3, 7.4, 7.6, 7.7, 7.8, 8.2, 8.5, 8.7, 8.9))
+
+```
+
+
+```{r, fig.width=10, fig.align='center'}
+# Datos de los pesos de los paquetes de café instantáneo
+pesos <- c(4.3, 4.7, 4.8, 4.8, 4.9, 5.0, 5.1, 5.2, 5.4, 5.5, 5.7, 5.7, 5.8, 5.8, 5.9, 5.9, 6.0, 6.0, 6.1, 6.1, 6.1, 6.1, 6.2, 6.2, 6.2, 6.3, 6.3, 6.4, 6.4, 6.5, 6.5, 6.6, 6.7, 7.0, 7.2, 7.3, 7.4, 7.6, 7.7, 7.8, 8.2, 8.5, 8.7, 8.9)
+
+# Construcción de la tabla de frecuencias acumuladas
+tabla_frecuencias <- table(cut(pesos, breaks = seq(4.0, 9.0, by = 0.5), right = TRUE))
+frecuencia_acumulada <- cumsum(tabla_frecuencias)
+
+# Creación de la ojiva
+plot(seq(4.25, 8.75, by = 0.5), frecuencia_acumulada, type = "o", 
+     xlab = "Peso del paquete de café (gramos)", ylab = "Frecuencia acumulada", 
+     main = "Ojiva del Peso de Paquetes de Café Instantáneo",
+     xlim = c(4, 9), ylim = c(0, max(frecuencia_acumulada) + 5),
+     col = "blue", pch = 16, las=1)
+grid()
+```
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
