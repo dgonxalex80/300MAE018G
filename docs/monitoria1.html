@@ -1492,6 +1492,93 @@ a un día laboral).</li>
 <p>El responsable de la auditoría le pide revise cada uno de los
 lineamientos y su cumplimiento y realizar un breve informe.</p>
 </div>
+<p><br/><br/><br/></p>
+<div class="box1 with-label">
+<div class="label">
+Problema 24
+</div>
+<p>Una entidad financiera está interesado en mejorar la eficiencia en el
+tiempo de procesamiento de solicitudes de préstamos. Con este fin, ha
+seleccionado una muestra de los tiempos de procesamiento (en horas) de
+100 solicitudes recientes. Los resultados se muestran a continuación,
+junto con un análisis gráfico.</p>
+<pre class="r"><code># Simulando los datos para tiempos de procesamiento de préstamos
+set.seed(123)
+tiempos &lt;- round(rnorm(100, mean = 18, sd = 4),1)
+
+# Mostrando el diagrama de tallo y hojas
+stem(tiempos)</code></pre>
+<pre><code>
+  The decimal point is at the |
+
+   8 | 8
+  10 | 138
+  12 | 9914577999
+  14 | 1222355688
+  16 | 001124557788911111247889
+  18 | 023455679002345567788
+  20 | 0223688134567
+  22 | 0014689045
+  24 | 11291
+  26 | 277</code></pre>
+<pre class="r"><code># Imprimiendo los datos simulados
+tiempos</code></pre>
+<pre><code>  [1] 15.8 17.1 24.2 18.3 18.5 24.9 19.8 12.9 15.3 16.2 22.9 19.4 19.6 18.4 15.8
+ [16] 25.1 20.0 10.1 20.8 16.1 13.7 17.1 13.9 15.1 15.5 11.3 21.4 18.6 13.4 23.0
+ [31] 19.7 16.8 21.6 21.5 21.3 20.8 20.2 17.8 16.8 16.5 15.2 17.2 12.9 26.7 22.8
+ [46] 13.5 16.4 16.1 21.1 17.7 19.0 17.9 17.8 23.5 17.1 24.1 11.8 20.3 18.5 18.9
+ [61] 19.5 16.0 16.7 13.9 13.7 19.2 19.8 18.2 21.7 26.2 16.0  8.8 22.0 15.2 15.2
+ [76] 22.1 16.9 13.1 18.7 17.4 18.0 19.5 16.5 20.6 17.1 19.3 22.4 19.7 16.7 22.6
+ [91] 22.0 20.2 19.0 15.5 23.4 15.6 26.7 24.1 17.1 13.9</code></pre>
+<pre class="r"><code># Generando una gráfica simple para visualizar la distribución de los tiempos
+plot(tiempos, type = &quot;b&quot;, main = &quot;Distribución de Tiempos de Procesamiento de Préstamos&quot;, xlab = &quot;Número de Solicitud&quot;, ylab = &quot;Tiempo de Procesamiento (horas)&quot;)</code></pre>
+<p><img src="monitoria1_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
+<pre class="r"><code>summarytools::descr(tiempos)</code></pre>
+<pre><code>Descriptive Statistics  
+value  
+N: 100  
+
+                     value
+----------------- --------
+             Mean    18.36
+          Std.Dev     3.65
+              Min     8.80
+               Q1    16.00
+           Median    18.25
+               Q3    20.80
+              Max    26.70
+              MAD     3.56
+              IQR     4.80
+               CV     0.20
+         Skewness     0.06
+      SE.Skewness     0.24
+         Kurtosis    -0.22
+          N.Valid   100.00
+        Pct.Valid   100.00</code></pre>
+<p>Criterios establecidos por el banco:</p>
+<ul>
+<li>No poseer tiempos de procesamiento extremadamente largos
+(outliers).</li>
+<li>El tiempo promedio de procesamiento no debe exceder las 24 horas.
+Solo se permite que un 10% de las solicitudes superen este tiempo.</li>
+<li>Al menos el 70% de los tiempos deben estar por debajo de las 15
+horas.</li>
+<li>La distribución del tiempo de procesamiento debe mostrar una
+tendencia hacia tiempos más cortos (simetría).</li>
+<li>El coeficiente de variación (CV) no debe superar el 20%. Esto
+asegura que la variabilidad de los tiempos de procesamiento en relación
+con la media no sea excesiva.</li>
+<li>No más del 5% de los tiempos debe ser menor a 6 horas. Esto evitaría
+tiempos de procesamiento demasiado rápidos que podrían indicar un
+procesamiento inadecuado o apresurado.</li>
+</ul>
+<p>El director de operaciones del banco ha solicitado una revisión de
+estos criterios y un informe breve sobre el cumplimiento y posibles
+mejoras en el proceso.</p>
+</div>
+<!-- <br/><br/><br/> -->
+<!-- <div class="box1 with-label"> <div class="label">Problema 25</div> -->
+<!-- </div> -->
 </div>
 </div>
 

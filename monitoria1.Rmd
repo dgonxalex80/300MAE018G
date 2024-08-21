@@ -769,15 +769,52 @@ El responsable de la auditoría le pide revise cada uno de los lineamientos y su
 
 
 
+<br/><br/><br/>
+
+<div class="box1 with-label">
+<div class="label">Problema 24</div> 
+
+Una entidad financiera está interesado en mejorar la eficiencia en el tiempo de procesamiento de solicitudes de préstamos. Con este fin, ha seleccionado una muestra de los tiempos de procesamiento (en horas) de 100 solicitudes recientes. Los resultados se muestran a continuación, junto con un análisis gráfico.
+
+```{r}
+# Simulando los datos para tiempos de procesamiento de préstamos
+set.seed(123)
+tiempos <- round(rnorm(100, mean = 18, sd = 4),1)
+
+# Mostrando el diagrama de tallo y hojas
+stem(tiempos)
+
+# Imprimiendo los datos simulados
+tiempos
+
+# Generando una gráfica simple para visualizar la distribución de los tiempos
+plot(tiempos, type = "b", main = "Distribución de Tiempos de Procesamiento de Préstamos", xlab = "Número de Solicitud", ylab = "Tiempo de Procesamiento (horas)")
+
+summarytools::descr(tiempos)
+
+```
+
+
+Criterios establecidos por el banco:
+
+* No poseer tiempos de procesamiento extremadamente largos (outliers).
+* El tiempo promedio de procesamiento no debe exceder las 24 horas. Solo se permite que un 10% de las solicitudes superen este tiempo.
+* Al menos el 70% de los tiempos deben estar por debajo de las 15 horas.
+* La distribución del tiempo de procesamiento debe mostrar una tendencia hacia tiempos más cortos (simetría).
+* El coeficiente de variación (CV) no debe superar el 20%. Esto asegura que la variabilidad de los tiempos de procesamiento en relación con la media no sea excesiva.
+* No más del 5% de los tiempos debe ser menor a 6 horas. Esto evitaría tiempos de procesamiento demasiado rápidos que podrían indicar un procesamiento inadecuado o apresurado.
+
+El director de operaciones del banco ha solicitado una revisión de estos criterios y un informe breve sobre el cumplimiento y posibles mejoras en el proceso.
 
 
 
+</div>
 
 
 
-
-
-
+<!-- <br/><br/><br/> -->
+<!-- <div class="box1 with-label"> <div class="label">Problema 25</div> -->
+<!-- </div> -->
 
 
 
