@@ -75,6 +75,19 @@ knitr::include_graphics("img/aulainvertida1.png")
 <div class="box2">
 
 
+|Curso     | **Grupo** | Horario       | **LUNES**  |                | **MIERCOLES** |                | **VIERNES** |
+|:---------|:----------|:--------------|:-----------|:---------------|:--------------|:---------------|:------------|
+|          |           |               |            |                |               |                |             |
+|30MAE018  |    A      |11:00 a 13:00  | **PL 4.7** |                |  **LG 1.0 **  |                | **AL 2.2**  |
+|          |           |               | Monitoría  |                |  Sesión 1     |                | Sesión 2    |
+
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+ # knitr::include_graphics("img/salones.png")
+```
+
+
+
 </div>
 
 <br/>
@@ -104,24 +117,35 @@ knitr::include_graphics("img/aulainvertida1.png")
 </div>
 
 
-<br/>
+<br/><br/><br/>
 
-## **Información examenes supletorios**
-
-
+## **Información supletorios**
 <div class="box2">
 
-```{r, echo=FALSE, out.width="70%", fig.align = "center"}
-# knitr::include_graphics("img/atencion.png")
-```
+### **DPTO. DE CIENCIAS NATURALES Y MATEMÁTICAS**
+#### **EXÁMENES SUPLETORIOS - 1er corte**
 
-Pendiente de publicación por parte del Departamento de Ciencias Naturales y Matemáticas
+**DIURNOS**
+
+- **Fecha:** Lunes 9 de septiembre de 2024
+- **Hora:** 4:00 P.m. a 6:00 P.m.
+- **Lugar:** Edificio Lago, salón 2.4 (Fac. Ing.) - salón 2.7 (demás Facultades)
+
+**NOCTURNOS (solo carreras nocturnas)**
+
+- **Fecha:** Lunes 9 de septiembre de 2024
+- **Hora:** 6:30 p.m. a 8:30 p.m.
+- **Lugar:** Edificio Lago, Salón 2.7
+
+
+```{r, echo=FALSE, out.width="70%", fig.align = "center"}
+ # knitr::include_graphics("img/supletorio1.png")
+```
 
 </div>
 
 
-
-<br/>
+<br/><br/><br/>
 
 ## **Información básica**
 
