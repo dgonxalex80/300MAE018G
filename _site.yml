@@ -65,6 +65,13 @@ navbar:
       menu:
         - text: "Módulo 2"
           href: modulo2.html
+        - text: "--------"              
+        - text: "Guía 2.1"
+          href: guia21.html        
+        - text: "Probabilidad"
+          href: recurso21.html
+        - text: "Código 2.1"
+          href: codigo21.html  
 
     - text: "Módulo 3"
       menu:

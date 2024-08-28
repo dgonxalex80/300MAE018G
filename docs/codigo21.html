@@ -359,6 +359,16 @@ $(document).ready(function () {
     <li>
       <a href="modulo2.html">Módulo 2</a>
     </li>
+    <li class="divider"></li>
+    <li>
+      <a href="guia21.html">Guía 2.1</a>
+    </li>
+    <li>
+      <a href="recurso21.html">Probabilidad</a>
+    </li>
+    <li>
+      <a href="codigo21.html">Código 2.1</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -508,17 +518,17 @@ barplot(table(suma), las=1,cex.axis=0.7, col= c1)</code></pre>
 <p><img src="codigo21_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
 <pre class="r"><code>data.frame(prop.table(table(suma)))</code></pre>
 <pre><code>   suma  Freq
-1     2 0.035
-2     3 0.060
-3     4 0.070
-4     5 0.095
-5     6 0.140
-6     7 0.185
-7     8 0.180
-8     9 0.085
-9    10 0.085
-10   11 0.040
-11   12 0.025</code></pre>
+1     2 0.025
+2     3 0.050
+3     4 0.110
+4     5 0.090
+5     6 0.180
+6     7 0.165
+7     8 0.120
+8     9 0.090
+9    10 0.070
+10   11 0.060
+11   12 0.040</code></pre>
 <p></br></p>
 <p>Procedimiento alternativo</p>
 <pre class="r"><code>t=sapply(1:200, function(x){sum(sample(1:6,2,rep=T))})
@@ -540,10 +550,10 @@ siguiente ejemplo :</p>
 </ul></li>
 </ul>
 <pre class="r"><code>sample(c(1,2,3),2,rep=T,prob=c(3,5,4))</code></pre>
-<pre><code>[1] 2 3</code></pre>
+<pre><code>[1] 2 1</code></pre>
 <p>La misma simulación con palabras</p>
 <pre class="r"><code>sample(c(&quot;Blanca&quot;,&quot;Roja&quot;,&quot;Azul&quot;),2,rep=T,prob=c(3,5,4))</code></pre>
-<pre><code>[1] &quot;Blanca&quot; &quot;Blanca&quot;</code></pre>
+<pre><code>[1] &quot;Roja&quot; &quot;Azul&quot;</code></pre>
 <p></br></br><br/></p>
 </div>
 </div>
@@ -659,7 +669,7 @@ tabla_estilizada &lt;- kable(tabla_cruzada) %&gt;%
   kable_styling(bootstrap_options = &quot;striped&quot;, full_width = FALSE)
 
 tabla_estilizada</code></pre>
-<table class="table table-striped" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped" style="width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="text-align:left;">
