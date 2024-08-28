@@ -15,9 +15,9 @@ navbar:
         - text: "Productoria"
           href: productoria.html
         - text: "Conjuntos"
-          href: recurso000.html
+          href: conjuntos.html
         - text: "Técnicas de conteo"
-          href: recurso000.html         
+          href: conteo.html         
         - text: "Funcición exponencial"
           href: recurso000.html
         - text: "Función logaritmica"
