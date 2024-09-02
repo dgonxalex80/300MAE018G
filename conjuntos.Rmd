@@ -151,7 +151,7 @@ $$B-A =\{ 8,10,12,14,16,18,20 \}$$
 
 <br/><br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 1: Letras del alfabeto español y vocales</div>
 
 Consideremos los siguientes conjuntos:
@@ -173,7 +173,7 @@ Consideremos los siguientes conjuntos:
 
 <br/><br/><br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 2: Cartas de una baraja de póker</div>
 
 Consideremos los siguientes conjuntos:
@@ -195,7 +195,7 @@ Consideremos los siguientes conjuntos:
 
 <br/><br/><br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 3: Conjuntos de números</div>
 
 
