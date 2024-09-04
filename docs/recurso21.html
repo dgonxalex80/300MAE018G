@@ -34,6 +34,8 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<script src="site_libs/kePrint-0.0.1/kePrint.js"></script>
+<link href="site_libs/lightable-0.0.1/lightable.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -366,6 +368,9 @@ $(document).ready(function () {
     </li>
     <li>
       <a href="codigo21.html">Código 2.1</a>
+    </li>
+    <li>
+      <a href="monitoria2.html">Monitoria 2</a>
     </li>
   </ul>
 </li>
@@ -882,7 +887,241 @@ probabilidad de que ocurra A y NO ocurra B</p></li>
 <li><p><span class="math inline">\(P(A&#39; \cap B&#39;)\)</span> :
 probabilidad de que NO ocurra A ni B</p></li>
 </ul>
-<p><br/><br/></p>
+<p><br/><br/><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Ejemplo 1
+</div>
+<pre class="r"><code>library(kableExtra)
+x = c(180, 114, 145, 128, 162, 165, 43, 36, 27)
+m=matrix(x, nrow = 3)
+colnames(m) = c(&quot;incremento&quot;, &quot;estables&quot;, &quot;disminución&quot;)
+rownames(m) = c(&quot;Facebook&quot;, &quot;Instagram&quot;, &quot;TicTok&quot;)
+
+# Crear tabla bonita con kableExtra
+# Instala los paquetes necesarios si no los tienes
+#install.packages(&quot;kableExtra&quot;)
+
+
+# Crear tabla con estilo y encabezado adicional &quot;Ventas&quot;
+kable(m, format = &quot;html&quot;, col.names = c(&quot;Incremento&quot;, &quot;Estables&quot;, &quot;Disminución&quot;)) %&gt;%
+  add_header_above(c(&quot; &quot; = 1, &quot;Ventas&quot; = 3)) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;),
+                full_width = F, position = &quot;center&quot;)</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Ventas
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+</th>
+<th style="text-align:right;">
+Incremento
+</th>
+<th style="text-align:right;">
+Estables
+</th>
+<th style="text-align:right;">
+Disminución
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+Facebook
+</td>
+<td style="text-align:right;">
+180
+</td>
+<td style="text-align:right;">
+128
+</td>
+<td style="text-align:right;">
+43
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+Instagram
+</td>
+<td style="text-align:right;">
+114
+</td>
+<td style="text-align:right;">
+162
+</td>
+<td style="text-align:right;">
+36
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+TicTok
+</td>
+<td style="text-align:right;">
+145
+</td>
+<td style="text-align:right;">
+165
+</td>
+<td style="text-align:right;">
+27
+</td>
+</tr>
+</tbody>
+</table>
+<p>La tabla corresponde a los resultados obtenidos en un estudio de
+mercado sobre el efecto sobre las ventas de los medios digitales en los
+pautan un grupo de compañias</p>
+<p>Determine el conjunto de probabilidades simples o marginales y el
+conjunto de las probabilidades conjuntas. En todos los casos escriba las
+probabilidades en forma simbolica y con palabras.</p>
+<p>Represente los valores en un diagrama de Venn</p>
+</div>
+<p><br/><br/><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Ejemplo 2
+</div>
+<pre class="r"><code># Cargar el paquete kableExtra
+library(kableExtra)
+
+# Datos ajustados para reflejar conteo por oficinas
+set.seed(123)  # Para reproducibilidad
+n &lt;- 200  # Número de observaciones
+
+# Generar valores aleatorios para los indicadores
+productividad &lt;- sample(60:100, n, replace = TRUE)      # Productividad simulada
+cumplimiento &lt;- sample(70:110, n, replace = TRUE)       # Cumplimiento de metas simulado
+satisfaccion &lt;- sample(75:105, n, replace = TRUE)       # Satisfacción del cliente simulada
+
+# Crear un data frame simulando oficinas
+oficinas &lt;- c(&quot;CO&quot;, &quot;PE&quot;, &quot;BR&quot;, &quot;EC&quot;, &quot;AR&quot;)
+
+# Crear el data frame final con los datos simulados
+df &lt;- data.frame(Oficina = oficinas, 
+                 Productividad = productividad, 
+                 Cumplimiento = cumplimiento, 
+                 Satisfacción = satisfaccion)
+
+# Mostrar tabla bonita con una muestra de las primeras 10 observaciones y encabezado
+kable(head(df, 5), format = &quot;html&quot;, col.names = c(&quot;Pais&quot;, &quot;Productividad&quot;, &quot;Cumplimiento&quot;, &quot;Satisfacción&quot;)) %&gt;%
+  add_header_above(c(&quot; &quot; = 1, &quot;Indicadores de desempeño tiendas por pais&quot; = 3)) %&gt;%
+  kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), 
+                full_width = F, position = &quot;center&quot;)</code></pre>
+<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
+</th>
+<th style="border-bottom:hidden;padding-bottom:0; padding-left:3px;padding-right:3px;text-align: center; " colspan="3">
+<div style="border-bottom: 1px solid #ddd; padding-bottom: 5px; ">
+Indicadores de desempeño tiendas por pais
+</div>
+</th>
+</tr>
+<tr>
+<th style="text-align:left;">
+Pais
+</th>
+<th style="text-align:right;">
+Productividad
+</th>
+<th style="text-align:right;">
+Cumplimiento
+</th>
+<th style="text-align:right;">
+Satisfacción
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+CO
+</td>
+<td style="text-align:right;">
+90
+</td>
+<td style="text-align:right;">
+76
+</td>
+<td style="text-align:right;">
+76
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+PE
+</td>
+<td style="text-align:right;">
+74
+</td>
+<td style="text-align:right;">
+95
+</td>
+<td style="text-align:right;">
+98
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+BR
+</td>
+<td style="text-align:right;">
+73
+</td>
+<td style="text-align:right;">
+110
+</td>
+<td style="text-align:right;">
+82
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+EC
+</td>
+<td style="text-align:right;">
+62
+</td>
+<td style="text-align:right;">
+89
+</td>
+<td style="text-align:right;">
+85
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+AR
+</td>
+<td style="text-align:right;">
+96
+</td>
+<td style="text-align:right;">
+75
+</td>
+<td style="text-align:right;">
+95
+</td>
+</tr>
+</tbody>
+</table>
+<p>La tabla corresponde a la clasificación de los indicadores de
+desempeño de tiendas de la compañia SAT para cinco paises</p>
+<p>Determine el conjunto de probabilidades simples o marginales y el
+conjunto de las probabilidades conjuntas. En todos los casos escriba las
+probabilidades en forma simbolica y con palabras.</p>
+</div>
 </div>
 </div>
 </div>

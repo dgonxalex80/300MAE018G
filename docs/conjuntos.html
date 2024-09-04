@@ -367,6 +367,9 @@ $(document).ready(function () {
     <li>
       <a href="codigo21.html">Código 2.1</a>
     </li>
+    <li>
+      <a href="monitoria2.html">Monitoria 2</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -457,11 +460,15 @@ en el momento de abordar los conceptos básicos de probabilidad que serán
 expuestos en el Modulo 2.</p>
 <p>En pesaremos con su definición</p>
 <p><br/><br/></p>
+<div class="box1 with-label">
+<div class="label">
+Definición:
 </div>
-<div id="conjunto" class="section level1 highlight-box">
+<div id="conjunto" class="section level1">
 <h1><strong>Conjunto</strong></h1>
 <p>Un conjunto es una colección de objetos que se denota con una letra
 mayúscula (comúnmente las primeras letras del alfabeto A,B,C..) .</p>
+</div>
 </div>
 <p><br/><br/><br/></p>
 <p>Se pueden escribir por:</p>
@@ -479,6 +486,7 @@ y operaciones, dentro de las cuales se encuentran <span
 class="math inline">\(A \cup B\)</span>, <span class="math inline">\(A
 \cap B\)</span>,</p>
 <p><br/><br/><br/></p>
+</div>
 <div id="unión-del-conjunto" class="section level1">
 <h1><strong>Unión del conjunto</strong></h1>
 <p>Unión del <span class="math inline">\(A\)</span> con el conjunto
@@ -564,7 +572,7 @@ sombreada en la siguiente figura</p>
 <p><br/><br/></p>
 <div class="box1 with-label">
 <div class="label">
-Ejemplo
+Ejemplo 4
 </div>
 <p>Supongamos los siguientes conjuntos</p>
 <ul>
@@ -575,110 +583,7 @@ Ejemplo
 <p><span class="math display">\[B-A =\{ 8,10,12,14,16,18,20
 \}\]</span></p>
 </div>
-<p><br/><br/><br/></p>
-<div id="problemas-propuestos" class="section level2">
-<h2><strong>Problemas propuestos</strong></h2>
 <p><br/><br/></p>
-<div class="box2 with-label">
-<div class="label">
-Problema 1: Letras del alfabeto español y vocales
-</div>
-<p>Consideremos los siguientes conjuntos:</p>
-<ul>
-<li><strong>U</strong>: El conjunto de todas las letras del alfabeto
-español.
-<code>U = {A, B, C, D, E, F, G, H, I, J, K, L, M, N, Ñ, O, P, Q, R, S, T, U, V, W, X, Y, Z}</code></li>
-<li><strong>V</strong>: El conjunto de todas las vocales en el alfabeto
-español. <code>V = {A, E, I, O, U}</code></li>
-<li><strong>C</strong>: El conjunto de todas las consonantes en el
-alfabeto español.
-<code>C = {B, C, D, F, G, H, J, K, L, M, N, Ñ, P, Q, R, S, T, V, W, X, Y, Z}</code></li>
-<li><strong>F</strong>: El conjunto de letras que forman la palabra
-“FELICIDAD”. <code>F = {F, E, L, I, C, D, A}</code></li>
-</ul>
-<p><br/><br/></p>
-<ol style="list-style-type: decimal">
-<li>Encuentra la unión de los conjuntos <strong>V</strong> y
-<strong>F</strong>. ¿Qué letras están presentes en al menos uno de estos
-conjuntos?</li>
-<li>¿Cuál es la intersección de los conjuntos <strong>F</strong> y
-<strong>C</strong>? ¿Qué letras en la palabra “FELICIDAD” son
-consonantes?</li>
-<li>Halla el complemento de <strong>V</strong> en <strong>U</strong>.
-¿Qué letras no son vocales?</li>
-<li>Encuentra la diferencia entre los conjuntos <strong>C</strong> y
-<strong>F</strong>. ¿Qué consonantes no están presentes en la palabra
-“FELICIDAD”?</li>
-<li>Encuentra la unión de los conjuntos <strong>V</strong> y
-<strong>C</strong>. ¿Qué observas sobre esta unión en relación con el
-conjunto <strong>U</strong>?</li>
-</ol>
-</div>
-<p><br/><br/><br/></p>
-<div class="box2 with-label">
-<div class="label">
-Problema 2: Cartas de una baraja de póker
-</div>
-<p>Consideremos los siguientes conjuntos:</p>
-<ul>
-<li><strong>U</strong>: El conjunto de todas las cartas en una baraja de
-póker estándar (sin comodines).
-<code>U = {A♠, 2♠, ..., K♠, A♥, ..., K♥, A♣, ..., K♣, A♦, ..., K♦}</code></li>
-<li><strong>R</strong>: El conjunto de todas las cartas rojas.
-<code>R = {A♥, 2♥, ..., K♥, A♦, ..., K♦}</code></li>
-<li><strong>N</strong>: El conjunto de todas las cartas negras.
-<code>N = {A♠, 2♠, ..., K♠, A♣, ..., K♣}</code></li>
-<li><strong>F</strong>: El conjunto de todas las figuras (J, Q, K) en la
-baraja.
-<code>F = {J♠, Q♠, K♠, J♥, Q♥, K♥, J♣, Q♣, K♣, J♦, Q♦, K♦}</code></li>
-</ul>
-<p><br/><br/></p>
-<ol style="list-style-type: decimal">
-<li>Encuentra la unión de los conjuntos <strong>R</strong> y
-<strong>F</strong>. ¿Cuántas cartas son rojas o figuras o ambas?</li>
-<li>¿Cuál es la intersección de los conjuntos <strong>N</strong> y
-<strong>F</strong>? ¿Cuántas cartas son negras y figuras?</li>
-<li>Halla el complemento de <strong>R</strong> en <strong>U</strong>.
-¿Qué cartas no son rojas?</li>
-<li>Encuentra la diferencia entre los conjuntos <strong>R</strong> y
-<strong>F</strong>. ¿Qué cartas son rojas pero no figuras?</li>
-<li>¿La unión de <strong>R</strong> y <strong>N</strong> es igual a
-<strong>U</strong>? Justifica tu respuesta.</li>
-</ol>
-</div>
-<p><br/><br/><br/></p>
-<div class="box2 with-label">
-<div class="label">
-Problema 3: Conjuntos de números
-</div>
-<p>Consideremos los siguientes conjuntos:</p>
-<ul>
-<li><strong>U</strong>: El conjunto de los primeros 20 números
-naturales. <code>U = {1, 2, 3, ..., 20}</code></li>
-<li><strong>A</strong>: El conjunto de números pares menores o iguales a
-20. <code>A = {2, 4, 6, ..., 20}</code></li>
-<li><strong>B</strong>: El conjunto de números impares menores o iguales
-a 20. <code>B = {1, 3, 5, ..., 19}</code></li>
-<li><strong>P</strong>: El conjunto de números primos menores o iguales
-a 20. <code>P = {2, 3, 5, 7, 11, 13, 17, 19}</code></li>
-</ul>
-<p><br/><br/></p>
-<ol style="list-style-type: decimal">
-<li>Encuentra la unión de los conjuntos <strong>A</strong> y
-<strong>P</strong>. ¿Cuántos números son pares o primos?</li>
-<li>¿Cuál es la intersección de los conjuntos <strong>B</strong> y
-<strong>P</strong>? ¿Cuántos números son impares y primos?</li>
-<li>Halla el complemento de <strong>P</strong> en <strong>U</strong>.
-¿Cuáles son los números que no son primos?</li>
-<li>Encuentra la diferencia entre los conjuntos <strong>A</strong> y
-<strong>P</strong>. ¿Qué números son pares pero no primos?</li>
-<li>Encuentra la unión de los conjuntos <strong>A</strong> y
-<strong>B</strong>. ¿Qué observas sobre esta unión en relación con el
-conjunto <strong>U</strong>?</li>
-</ol>
-</div>
-<p><br/><br/><br/></p>
-</div>
 </div>
 
 

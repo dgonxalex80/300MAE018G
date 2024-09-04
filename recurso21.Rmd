@@ -448,8 +448,88 @@ knitr::include_graphics("img/diagrama5_22.png")
 
 + $P(A' \cap B')$ : probabilidad de que NO ocurra A ni B 
 
-<br/><br/>
+<br/><br/><br/><br/>
+
+
+<div class="box2 with-label">
+<div class="label">Ejemplo 1</div>  
+
+
+```{r}
+library(kableExtra)
+x = c(180, 114, 145, 128, 162, 165, 43, 36, 27)
+m=matrix(x, nrow = 3)
+colnames(m) = c("incremento", "estables", "disminución")
+rownames(m) = c("Facebook", "Instagram", "TicTok")
+
+# Crear tabla bonita con kableExtra
+# Instala los paquetes necesarios si no los tienes
+#install.packages("kableExtra")
+
+
+# Crear tabla con estilo y encabezado adicional "Ventas"
+kable(m, format = "html", col.names = c("Incremento", "Estables", "Disminución")) %>%
+  add_header_above(c(" " = 1, "Ventas" = 3)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"),
+                full_width = F, position = "center")
+
+
+```
+
+La tabla corresponde a los resultados obtenidos en un estudio de mercado sobre el efecto sobre las ventas de los medios digitales en los pautan un grupo de compañias 
+
+Determine el conjunto de probabilidades simples o marginales y el conjunto de las probabilidades conjuntas.
+En todos los casos escriba las probabilidades en forma simbolica y con palabras.
+
+Represente los valores en un diagrama de Venn
+
+
+</div>
+
+
+<br/><br/><br/><br/>
+
+
+<div class="box2 with-label">
+<div class="label">Ejemplo 2</div>  
+
+
+```{r}
+# Cargar el paquete kableExtra
+library(kableExtra)
+
+# Datos ajustados para reflejar conteo por oficinas
+set.seed(123)  # Para reproducibilidad
+n <- 200  # Número de observaciones
+
+# Generar valores aleatorios para los indicadores
+productividad <- sample(60:100, n, replace = TRUE)      # Productividad simulada
+cumplimiento <- sample(70:110, n, replace = TRUE)       # Cumplimiento de metas simulado
+satisfaccion <- sample(75:105, n, replace = TRUE)       # Satisfacción del cliente simulada
+
+# Crear un data frame simulando oficinas
+oficinas <- c("CO", "PE", "BR", "EC", "AR")
+
+# Crear el data frame final con los datos simulados
+df <- data.frame(Oficina = oficinas, 
+                 Productividad = productividad, 
+                 Cumplimiento = cumplimiento, 
+                 Satisfacción = satisfaccion)
+
+# Mostrar tabla bonita con una muestra de las primeras 10 observaciones y encabezado
+kable(head(df, 5), format = "html", col.names = c("Pais", "Productividad", "Cumplimiento", "Satisfacción")) %>%
+  add_header_above(c(" " = 1, "Indicadores de desempeño tiendas por pais" = 3)) %>%
+  kable_styling(bootstrap_options = c("striped", "hover", "condensed", "responsive"), 
+                full_width = F, position = "center")
+
+```
+
+
+La tabla corresponde a la clasificación de los indicadores de desempeño de tiendas de la compañia SAT para cinco paises
+
+Determine el conjunto de probabilidades simples o marginales y el conjunto de las probabilidades conjuntas.
+En todos los casos escriba las probabilidades en forma simbolica y con palabras.
 
 
 
-
+</div>
