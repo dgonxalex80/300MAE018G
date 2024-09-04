@@ -476,6 +476,8 @@ kable(m, format = "html", col.names = c("Incremento", "Estables", "Disminución"
 
 ```
 
+<br/>
+
 La tabla corresponde a los resultados obtenidos en un estudio de mercado sobre el efecto de los medios digitales en los pautan un grupo de compañias sobre el total de sus ventas
 
 Determine el conjunto de probabilidades simples o marginales y el conjunto de las probabilidades conjuntas.
@@ -486,18 +488,42 @@ Represente los valores en un diagrama de Venn
 
 </div>
 
+<br/><br/>
+
 
 ```{r, echo=FALSE}
 x = c(180, 114, 145, 128, 162, 165, 43, 36, 27)/1000
 m=matrix(x, nrow = 3)
-colnames(m) = c("incremento", "estables", "disminución")
-rownames(m) = c("Facebook", "Instagram", "TicTok")
+colnames(m) = c("incremento (IV)", "estables (EV)", "disminución (DV)")
+rownames(m) = c("Facebook (F) ", "Instagram (I)", "TicTok (T)")
 addmargins(m)
 
 
 ```
 
+<br/><br/>
 
+#### Probabilidades simples o marginales
+
+* $P(F) = 0.351$
+* $P(I) = ?$
+* $P(T) = ?$
+* $P(IV) = ?$
+* $P(EV) = ?$
+* $P(DV) = ?$
+
+* $P(IV  \cap F ) = 0.180$
+* $P(IV \cap I ) = ?$
+* $P(IV \cap T) = ?$
+
+* $P(EV \cap F) = ?$
+* $P(EV \cap I) = ?$
+* $P(EV \cap T) = ?$
+
+
+* $P(DV \cap F) = ?$
+* $P(DV \cap I) = ?$
+* $P(DV \cap T) = ?$
 
 
 <br/><br/><br/><br/>
@@ -537,12 +563,13 @@ kable(head(df, 5), format = "html", col.names = c("Pais", "Productividad", "Cump
 
 ```
 
+<br/>
 
 La tabla corresponde a la clasificación de los indicadores de desempeño de tiendas de la compañia SAT para cinco paises
 
 Determine el conjunto de probabilidades simples o marginales y el conjunto de las probabilidades conjuntas.
 En todos los casos escriba las probabilidades en forma simbolica y con palabras.
 
-
-
 </div>
+
+<br/><br/><br/><br/>

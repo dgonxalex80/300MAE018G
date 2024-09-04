@@ -912,7 +912,7 @@ kable(m, format = &quot;html&quot;, col.names = c(&quot;Incremento&quot;, &quot;
   add_header_above(c(&quot; &quot; = 1, &quot;Ventas&quot; = 3)) %&gt;%
   kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;),
                 full_width = F, position = &quot;center&quot;)</code></pre>
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped table-hover table-condensed table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
@@ -982,6 +982,7 @@ TicTok
 </tr>
 </tbody>
 </table>
+<p><br/></p>
 <p>La tabla corresponde a los resultados obtenidos en un estudio de
 mercado sobre el efecto de los medios digitales en los pautan un grupo
 de compañias sobre el total de sus ventas</p>
@@ -990,11 +991,33 @@ conjunto de las probabilidades conjuntas. En todos los casos escriba las
 probabilidades en forma simbolica y con palabras.</p>
 <p>Represente los valores en un diagrama de Venn</p>
 </div>
-<pre><code>          incremento estables disminución   Sum
-Facebook       0.180    0.128       0.043 0.351
-Instagram      0.114    0.162       0.036 0.312
-TicTok         0.145    0.165       0.027 0.337
-Sum            0.439    0.455       0.106 1.000</code></pre>
+<p><br/><br/></p>
+<pre><code>              incremento (IV) estables (EV) disminución (DV)   Sum
+Facebook (F)            0.180         0.128            0.043 0.351
+Instagram (I)           0.114         0.162            0.036 0.312
+TicTok (T)              0.145         0.165            0.027 0.337
+Sum                     0.439         0.455            0.106 1.000</code></pre>
+<p><br/><br/></p>
+<div id="probabilidades-simples-o-marginales" class="section level4">
+<h4>Probabilidades simples o marginales</h4>
+<ul>
+<li><p><span class="math inline">\(P(F) = 0.351\)</span></p></li>
+<li><p><span class="math inline">\(P(I) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(T) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(IV) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(EV) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(DV) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(IV  \cap F ) =
+0.180\)</span></p></li>
+<li><p><span class="math inline">\(P(IV \cap I ) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(IV \cap T) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(EV \cap F) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(EV \cap I) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(EV \cap T) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(DV \cap F) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(DV \cap I) = ?\)</span></p></li>
+<li><p><span class="math inline">\(P(DV \cap T) = ?\)</span></p></li>
+</ul>
 <p><br/><br/><br/><br/></p>
 <div class="box2 with-label">
 <div class="label">
@@ -1026,7 +1049,7 @@ kable(head(df, 5), format = &quot;html&quot;, col.names = c(&quot;Pais&quot;, &q
   add_header_above(c(&quot; &quot; = 1, &quot;Indicadores de desempeño tiendas por pais&quot; = 3)) %&gt;%
   kable_styling(bootstrap_options = c(&quot;striped&quot;, &quot;hover&quot;, &quot;condensed&quot;, &quot;responsive&quot;), 
                 full_width = F, position = &quot;center&quot;)</code></pre>
-<table class="table table-striped table-hover table-condensed table-responsive" style="width: auto !important; margin-left: auto; margin-right: auto;">
+<table class="table table-striped table-hover table-condensed table-responsive" style="color: black; width: auto !important; margin-left: auto; margin-right: auto;">
 <thead>
 <tr>
 <th style="empty-cells: hide;border-bottom:hidden;" colspan="1">
@@ -1125,11 +1148,14 @@ AR
 </tr>
 </tbody>
 </table>
+<p><br/></p>
 <p>La tabla corresponde a la clasificación de los indicadores de
 desempeño de tiendas de la compañia SAT para cinco paises</p>
 <p>Determine el conjunto de probabilidades simples o marginales y el
 conjunto de las probabilidades conjuntas. En todos los casos escriba las
 probabilidades en forma simbolica y con palabras.</p>
+</div>
+<p><br/><br/><br/><br/></p>
 </div>
 </div>
 </div>
