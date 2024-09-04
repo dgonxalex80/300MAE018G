@@ -476,7 +476,7 @@ kable(m, format = "html", col.names = c("Incremento", "Estables", "Disminución"
 
 ```
 
-La tabla corresponde a los resultados obtenidos en un estudio de mercado sobre el efecto sobre las ventas de los medios digitales en los pautan un grupo de compañias 
+La tabla corresponde a los resultados obtenidos en un estudio de mercado sobre el efecto de los medios digitales en los pautan un grupo de compañias sobre el total de sus ventas
 
 Determine el conjunto de probabilidades simples o marginales y el conjunto de las probabilidades conjuntas.
 En todos los casos escriba las probabilidades en forma simbolica y con palabras.
@@ -485,6 +485,19 @@ Represente los valores en un diagrama de Venn
 
 
 </div>
+
+
+```{r, echo=FALSE}
+x = c(180, 114, 145, 128, 162, 165, 43, 36, 27)/1000
+m=matrix(x, nrow = 3)
+colnames(m) = c("incremento", "estables", "disminución")
+rownames(m) = c("Facebook", "Instagram", "TicTok")
+addmargins(m)
+
+
+```
+
+
 
 
 <br/><br/><br/><br/>

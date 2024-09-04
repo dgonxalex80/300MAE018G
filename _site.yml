@@ -72,6 +72,9 @@ navbar:
           href: recurso21.html
         - text: "Código 2.1"
           href: codigo21.html  
+        - text: "Taller 211"
+          href: taller211.html
+        - text: "--------"                
         - text: "Monitoria 2"
           href: monitoria2.html
           
