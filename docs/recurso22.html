@@ -34,6 +34,11 @@
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/viz-1.8.2/viz.js"></script>
+<link href="site_libs/DiagrammeR-styles-0.2/styles.css" rel="stylesheet" />
+<script src="site_libs/grViz-binding-1.0.11/grViz.js"></script>
 <link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
 <link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
 
@@ -690,8 +695,10 @@ valorar las diferentes posibilidades</p>
 <li><strong>E</strong> : El pago se realiza en efectivo</li>
 <li><strong>TC</strong> : El pago se realiza con tarjeta de crédito</li>
 <li><strong>TD</strong> : El pago se realiza con tarjeta débito</li>
-<li><strong>+5</strong> : El pago es por una cantidad superior a $500
+<li><strong>MQ</strong> : El pago es por una cantidad superior a $500
 mil pesos</li>
+<li><strong>mQ</strong> : El pago es por una cantidad menor a $500 mil
+pesos</li>
 </ul>
 <p><br/></p>
 <p><strong>Información :</strong></p>
@@ -711,29 +718,82 @@ mil pesos</li>
 <tbody>
 <tr class="odd">
 <td align="left"><span class="math inline">\(P(E) = 0.30\)</span></td>
-<td align="left"><span class="math inline">\(P(+5 | E) =
+<td align="left"><span class="math inline">\(P(MQ | E) =
 0.20\)</span></td>
-<td align="left"><span class="math inline">\(P(-5 | E) =
+<td align="left"><span class="math inline">\(P(mQ | E) =
 0.80\)</span></td>
 </tr>
 <tr class="even">
 <td align="left"><span class="math inline">\(P(TC) = 0.40\)</span></td>
-<td align="left"><span class="math inline">\(P(+5 | TC) =
+<td align="left"><span class="math inline">\(P(MQ | TC) =
 0.70\)</span></td>
-<td align="left"><span class="math inline">\(P(-5 | TC) =
+<td align="left"><span class="math inline">\(P(mQ | TC) =
 0.30\)</span></td>
 </tr>
 <tr class="odd">
 <td align="left"><span class="math inline">\(P(TD) = 0.30\)</span></td>
-<td align="left"><span class="math inline">\(P(+5 | TD) =
+<td align="left"><span class="math inline">\(P(MQ | TD) =
 0.80\)</span></td>
-<td align="left"><span class="math inline">\(P(-5 | TD) =
+<td align="left"><span class="math inline">\(P(mQ | TD) =
 0.20\)</span></td>
 </tr>
 </tbody>
 </table>
 <p><br/><br/></p>
-<p><img src="img/diagrama6_22.png" width="50%" style="display: block; margin: auto;" /></p>
+<pre class="r"><code># r, echo=FALSE, out.width=&quot;50%&quot;, fig.align = &quot;center&quot;
+# knitr::include_graphics(&quot;img/diagrama6_22.png&quot;)
+
+# Instalar DiagrammeR si no lo tienes instalado
+# install.packages(&quot;DiagrammeR&quot;)
+
+library(DiagrammeR)
+
+grViz(&quot;
+digraph decision_tree {
+  # Configurar el gráfico
+  graph [layout = dot, rankdir = LR]
+
+  # Definir nodos sin bordes (sin cajas)
+  node [shape = plaintext]
+
+  # Nodo invisible central
+  invisible_root [label = &#39;&#39;, shape = point, width = 0]
+
+  # Nodos principales
+  E [label = &#39;P(E) = 0.30&#39;]
+  TC [label = &#39;P(TC) = 0.40&#39;]
+  TD [label = &#39;P(TD) = 0.30&#39;]
+
+  # Nodos para E
+  E_pos [label = &#39;PMQ|E) = 0.20&#39;]
+  E_neg [label = &#39;P(mQ5|E) = 0.80&#39;]
+
+  # Nodos para TC
+  TC_pos [label = &#39;P(MQ5|TC) = 0.70&#39;]
+  TC_neg [label = &#39;P(mQ|TC) = 0.30&#39;]
+
+  # Nodos para TD
+  TD_pos [label = &#39;P(MQ|TD) = 0.80&#39;]
+  TD_neg [label = &#39;P(mQ|TD) = 0.20&#39;]
+
+  # Conectar el nodo invisible con los nodos principales
+  invisible_root -&gt; E
+  invisible_root -&gt; TC
+  invisible_root -&gt; TD
+
+  # Conectar nodos
+  E -&gt; E_pos
+  E -&gt; E_neg
+
+  TC -&gt; TC_pos
+  TC -&gt; TC_neg
+
+  TD -&gt; TD_pos
+  TD -&gt; TD_neg
+}
+&quot;)</code></pre>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-feaa2c6500fbfd3c212d" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-feaa2c6500fbfd3c212d">{"x":{"diagram":"\ndigraph decision_tree {\n  # Configurar el gráfico\n  graph [layout = dot, rankdir = LR]\n\n  # Definir nodos sin bordes (sin cajas)\n  node [shape = plaintext]\n\n  # Nodo invisible central\n  invisible_root [label = \"\", shape = point, width = 0]\n\n  # Nodos principales\n  E [label = \"P(E) = 0.30\"]\n  TC [label = \"P(TC) = 0.40\"]\n  TD [label = \"P(TD) = 0.30\"]\n\n  # Nodos para E\n  E_pos [label = \"PMQ|E) = 0.20\"]\n  E_neg [label = \"P(mQ5|E) = 0.80\"]\n\n  # Nodos para TC\n  TC_pos [label = \"P(MQ5|TC) = 0.70\"]\n  TC_neg [label = \"P(mQ|TC) = 0.30\"]\n\n  # Nodos para TD\n  TD_pos [label = \"P(MQ|TD) = 0.80\"]\n  TD_neg [label = \"P(mQ|TD) = 0.20\"]\n\n  # Conectar el nodo invisible con los nodos principales\n  invisible_root -> E\n  invisible_root -> TC\n  invisible_root -> TD\n\n  # Conectar nodos\n  E -> E_pos\n  E -> E_neg\n\n  TC -> TC_pos\n  TC -> TC_neg\n\n  TD -> TD_pos\n  TD -> TD_neg\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><br/></p>
 <table>
 <colgroup>
@@ -742,8 +802,8 @@ mil pesos</li>
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><span class="math inline">\(P(E|+5) = \dfrac{P(E \cap
-+5)}{P(+5)} = \dfrac{0.06}{0.58} = 0.1034\)</span></td>
+<td align="left"><span class="math inline">\(P(E|MQ) = \dfrac{P(E \cap
+MQ)}{P(MQ)} = \dfrac{0.06}{0.58} = 0.1034\)</span></td>
 <td align="left"><strong>TERCERO</strong></td>
 </tr>
 <tr class="even">
@@ -751,8 +811,8 @@ mil pesos</li>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left"><span class="math inline">\(P(TC | +5)  =  \dfrac{P(TC
-\cap +5)}{P(+5)} = \dfrac{0.28}{0.58} = 0.4827\)</span></td>
+<td align="left"><span class="math inline">\(P(TC | MQ)  =  \dfrac{P(TC
+\cap MQ)}{P(MQ)} = \dfrac{0.28}{0.58} = 0.4827\)</span></td>
 <td align="left"><strong>PRIMERO</strong></td>
 </tr>
 <tr class="even">
@@ -760,8 +820,8 @@ mil pesos</li>
 <td align="left"></td>
 </tr>
 <tr class="odd">
-<td align="left"><span class="math inline">\(P(TD | +5)  =  \dfrac{P(TD
-\cap +5)}{P(+5)} = \dfrac{0.24}{0.58} = 0.4138\)</span></td>
+<td align="left"><span class="math inline">\(P(TD | MQ)  =  \dfrac{P(TD
+\cap MQ)}{P(MQ)} = \dfrac{0.24}{0.58} = 0.4138\)</span></td>
 <td align="left"><strong>SEGUNDO</strong></td>
 </tr>
 </tbody>
@@ -842,15 +902,15 @@ P(E_{k})P(A|E_{k})\]</span></p>
 Ejemplo 5
 </div>
 <p>En el caso que en el ejemplo anterior se requiere calcular la
-probabilidad <span class="math inline">\(P(+5)\)</span> utilizamos la
+probabilidad <span class="math inline">\(P(MQ)\)</span> utilizamos la
 regla de la probabilidad total:</p>
-<p><span class="math display">\[P(+5) = P(E)P(+5|E) +
-P(TC)P(+5|TC)  +P(TD)P(+5|TD)\]</span></p>
-<p><span class="math display">\[P(+5) = P(E)P(+5|E) +
-P(TC)P(+5|TC)  +P(TD)P(+5|TD)\]</span></p>
-<p><span class="math display">\[P(+5) = 0.30 \times 0.20 + 0.40 \times
+<p><span class="math display">\[P(MQ) = P(E)P(MQ|E) +
+P(TC)P(MQ|TC)  +P(TD)P(MQ|TD)\]</span></p>
+<p><span class="math display">\[P(MQ) = P(E)P(MQ|E) +
+P(TC)P(MQ|TC)  +P(TD)P(MQ|TD)\]</span></p>
+<p><span class="math display">\[P(MQ) = 0.30 \times 0.20 + 0.40 \times
 0.70 + 0.30 \times 0.80\]</span></p>
-<p><span class="math display">\[P(+5) = 0.06 + 0.28 +0.24 =
+<p><span class="math display">\[P(MQ) = 0.06 + 0.28 +0.24 =
 0.58\]</span></p>
 </div>
 <p><br/><br/><br/></p>
@@ -910,12 +970,12 @@ Ejemplo 6
 </div>
 <p><br/></p>
 <p>Continuando con el ejemplo anterior puede ser necesario calcular la
-probabilidad : <span class="math inline">\(P(E|+5)\)</span> para lo cual
+probabilidad : <span class="math inline">\(P(E|MQ)\)</span> para lo cual
 utilizamos el Teorema de Bayes</p>
-<p><span class="math display">\[P(E|+5) = \dfrac{P(E \cap +5)}{P(+5)} =
-\dfrac{P(E)P(+5|E)}{P(E)P(+5|E) +
-P(TC)P(+5|TC)  +P(TD)P(+5|TD)}\]</span></p>
-<p><span class="math display">\[P(E|+5) = \dfrac{0.30 \times 0.20}{0.30
+<p><span class="math display">\[P(E|MQ) = \dfrac{P(E \cap MQ)}{P(MQ)} =
+\dfrac{P(E)P(MQ|E)}{P(E)P(MQ|E) +
+P(TC)P(MQ|TC)  +P(TD)P(MQ|TD)}\]</span></p>
+<p><span class="math display">\[P(E|MQ) = \dfrac{0.30 \times 0.20}{0.30
 \times 0.20 + 0.40 \times 0.70 + 0.30 \times 0.80} = \dfrac{0.06}{0.58}
 = 0.1034\]</span></p>
 </div>

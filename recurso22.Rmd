@@ -295,7 +295,8 @@ Definimos los siguientes eventos :
 + **E**  : El pago se realiza en efectivo
 + **TC** : El pago se realiza con tarjeta de crédito
 + **TD** : El pago se realiza con tarjeta débito
-+ **+5** : El pago es por una cantidad superior a $500 mil pesos
++ **MQ** : El pago es por una cantidad superior a $500 mil pesos
++ **mQ** : El pago es por una cantidad menor a $500 mil pesos
 
 <br/>
 
@@ -303,28 +304,86 @@ Definimos los siguientes eventos :
 
 |                        |                        | por diferencia      |
 |:-----------------------|:-----------------------|:--------------------|
-|$P(E) = 0.30$           | $P(+5 | E) = 0.20$     |  $P(-5 | E) = 0.80$ | 
-|$P(TC) = 0.40$          | $P(+5 | TC) = 0.70$    | $P(-5 | TC) = 0.30$ | 
-|$P(TD) = 0.30$          | $P(+5 | TD) = 0.80$    | $P(-5 | TD) = 0.20$ |
+|$P(E) = 0.30$           | $P(MQ | E) = 0.20$     |  $P(mQ | E) = 0.80$ | 
+|$P(TC) = 0.40$          | $P(MQ | TC) = 0.70$    | $P(mQ | TC) = 0.30$ | 
+|$P(TD) = 0.30$          | $P(MQ | TD) = 0.80$    | $P(mQ | TD) = 0.20$ |
 
 
 
 
 <br/><br/>
 
-```{r, echo=FALSE, out.width="50%", fig.align = "center"}
-knitr::include_graphics("img/diagrama6_22.png")
+
+
+```{r}
+# r, echo=FALSE, out.width="50%", fig.align = "center"
+# knitr::include_graphics("img/diagrama6_22.png")
+
+# Instalar DiagrammeR si no lo tienes instalado
+# install.packages("DiagrammeR")
+
+library(DiagrammeR)
+
+grViz("
+digraph decision_tree {
+  # Configurar el gráfico
+  graph [layout = dot, rankdir = LR]
+
+  # Definir nodos sin bordes (sin cajas)
+  node [shape = plaintext]
+
+  # Nodo invisible central
+  invisible_root [label = '', shape = point, width = 0]
+
+  # Nodos principales
+  E [label = 'P(E) = 0.30']
+  TC [label = 'P(TC) = 0.40']
+  TD [label = 'P(TD) = 0.30']
+
+  # Nodos para E
+  E_pos [label = 'PMQ|E) = 0.20']
+  E_neg [label = 'P(mQ5|E) = 0.80']
+
+  # Nodos para TC
+  TC_pos [label = 'P(MQ5|TC) = 0.70']
+  TC_neg [label = 'P(mQ|TC) = 0.30']
+
+  # Nodos para TD
+  TD_pos [label = 'P(MQ|TD) = 0.80']
+  TD_neg [label = 'P(mQ|TD) = 0.20']
+
+  # Conectar el nodo invisible con los nodos principales
+  invisible_root -> E
+  invisible_root -> TC
+  invisible_root -> TD
+
+  # Conectar nodos
+  E -> E_pos
+  E -> E_neg
+
+  TC -> TC_pos
+  TC -> TC_neg
+
+  TD -> TD_pos
+  TD -> TD_neg
+}
+")
+
+
+
+
+
 ```
 
 <br/>
 
 |                                                            |                            |
 |:-----------------------------------------------------------|:---------------------------|
-|$P(E|+5) = \dfrac{P(E \cap +5)}{P(+5)} = \dfrac{0.06}{0.58} = 0.1034$ | **TERCERO**      |
+|$P(E|MQ) = \dfrac{P(E \cap MQ)}{P(MQ)} = \dfrac{0.06}{0.58} = 0.1034$ | **TERCERO**      |
 |                                                                      |                  |    
-|$P(TC | +5)  =  \dfrac{P(TC \cap +5)}{P(+5)} = \dfrac{0.28}{0.58} = 0.4827$ | **PRIMERO**|
+|$P(TC | MQ)  =  \dfrac{P(TC \cap MQ)}{P(MQ)} = \dfrac{0.28}{0.58} = 0.4827$ | **PRIMERO**|
 |                                                                            |            |                                
-|$P(TD | +5)  =  \dfrac{P(TD \cap +5)}{P(+5)} = \dfrac{0.24}{0.58} = 0.4138$ | **SEGUNDO**|
+|$P(TD | MQ)  =  \dfrac{P(TD \cap MQ)}{P(MQ)} = \dfrac{0.24}{0.58} = 0.4138$ | **SEGUNDO**|
 
 <br/><br/><br/>
 
@@ -413,16 +472,16 @@ $$P(A)=P(E_{1})P(A|E_{1})+ P(E_{2})P(A|E_{2})+ P(E_{3})P(A|E_{3})+ \dots P(E_{k}
 
 
 
-En el caso que en el ejemplo anterior se requiere calcular la probabilidad $P(+5)$ utilizamos la regla de la probabilidad total:
+En el caso que en el ejemplo anterior se requiere calcular la probabilidad $P(MQ)$ utilizamos la regla de la probabilidad total:
 
 
-$$P(+5) = P(E)P(+5|E) + P(TC)P(+5|TC)  +P(TD)P(+5|TD)$$
+$$P(MQ) = P(E)P(MQ|E) + P(TC)P(MQ|TC)  +P(TD)P(MQ|TD)$$
 
-$$P(+5) = P(E)P(+5|E) + P(TC)P(+5|TC)  +P(TD)P(+5|TD)$$
+$$P(MQ) = P(E)P(MQ|E) + P(TC)P(MQ|TC)  +P(TD)P(MQ|TD)$$
 
-$$P(+5) = 0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \times 0.80$$
+$$P(MQ) = 0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \times 0.80$$
 
-$$P(+5) = 0.06 + 0.28 +0.24 = 0.58$$
+$$P(MQ) = 0.06 + 0.28 +0.24 = 0.58$$
 
 
 </div>
@@ -469,12 +528,12 @@ $$P(E_{i}|A)=\dfrac{P(E_{i} \cap A)}{P(A)}= \dfrac{P(E_{i}) P(A|E_{i})}{\display
 
 <br/>
 
-Continuando con el ejemplo anterior puede ser necesario calcular la probabilidad : $P(E|+5)$ para lo cual utilizamos el Teorema de Bayes
+Continuando con el ejemplo anterior puede ser necesario calcular la probabilidad : $P(E|MQ)$ para lo cual utilizamos el Teorema de Bayes
 
 
-$$P(E|+5) = \dfrac{P(E \cap +5)}{P(+5)} = \dfrac{P(E)P(+5|E)}{P(E)P(+5|E) + P(TC)P(+5|TC)  +P(TD)P(+5|TD)}$$
+$$P(E|MQ) = \dfrac{P(E \cap MQ)}{P(MQ)} = \dfrac{P(E)P(MQ|E)}{P(E)P(MQ|E) + P(TC)P(MQ|TC)  +P(TD)P(MQ|TD)}$$
 
-$$P(E|+5) = \dfrac{0.30 \times 0.20}{0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \times 0.80} = \dfrac{0.06}{0.58} = 0.1034$$
+$$P(E|MQ) = \dfrac{0.30 \times 0.20}{0.30 \times 0.20 + 0.40 \times 0.70 + 0.30 \times 0.80} = \dfrac{0.06}{0.58} = 0.1034$$
 </div>
 
 </br>
