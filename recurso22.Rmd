@@ -341,7 +341,7 @@ digraph decision_tree {
   TD [label = 'P(TD) = 0.30']
 
   # Nodos para E
-  E_pos [label = 'PMQ|E) = 0.20']
+  E_pos [label = 'P(MQ|E) = 0.20']
   E_neg [label = 'P(mQ5|E) = 0.80']
 
   # Nodos para TC

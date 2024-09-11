@@ -765,7 +765,7 @@ digraph decision_tree {
   TD [label = &#39;P(TD) = 0.30&#39;]
 
   # Nodos para E
-  E_pos [label = &#39;PMQ|E) = 0.20&#39;]
+  E_pos [label = &#39;P(MQ|E) = 0.20&#39;]
   E_neg [label = &#39;P(mQ5|E) = 0.80&#39;]
 
   # Nodos para TC
@@ -792,8 +792,8 @@ digraph decision_tree {
   TD -&gt; TD_neg
 }
 &quot;)</code></pre>
-<div class="grViz html-widget html-fill-item" id="htmlwidget-feaa2c6500fbfd3c212d" style="width:672px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-feaa2c6500fbfd3c212d">{"x":{"diagram":"\ndigraph decision_tree {\n  # Configurar el gráfico\n  graph [layout = dot, rankdir = LR]\n\n  # Definir nodos sin bordes (sin cajas)\n  node [shape = plaintext]\n\n  # Nodo invisible central\n  invisible_root [label = \"\", shape = point, width = 0]\n\n  # Nodos principales\n  E [label = \"P(E) = 0.30\"]\n  TC [label = \"P(TC) = 0.40\"]\n  TD [label = \"P(TD) = 0.30\"]\n\n  # Nodos para E\n  E_pos [label = \"PMQ|E) = 0.20\"]\n  E_neg [label = \"P(mQ5|E) = 0.80\"]\n\n  # Nodos para TC\n  TC_pos [label = \"P(MQ5|TC) = 0.70\"]\n  TC_neg [label = \"P(mQ|TC) = 0.30\"]\n\n  # Nodos para TD\n  TD_pos [label = \"P(MQ|TD) = 0.80\"]\n  TD_neg [label = \"P(mQ|TD) = 0.20\"]\n\n  # Conectar el nodo invisible con los nodos principales\n  invisible_root -> E\n  invisible_root -> TC\n  invisible_root -> TD\n\n  # Conectar nodos\n  E -> E_pos\n  E -> E_neg\n\n  TC -> TC_pos\n  TC -> TC_neg\n\n  TD -> TD_pos\n  TD -> TD_neg\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
+<div class="grViz html-widget html-fill-item" id="htmlwidget-dc45195de49354980c0f" style="width:672px;height:480px;"></div>
+<script type="application/json" data-for="htmlwidget-dc45195de49354980c0f">{"x":{"diagram":"\ndigraph decision_tree {\n  # Configurar el gráfico\n  graph [layout = dot, rankdir = LR]\n\n  # Definir nodos sin bordes (sin cajas)\n  node [shape = plaintext]\n\n  # Nodo invisible central\n  invisible_root [label = \"\", shape = point, width = 0]\n\n  # Nodos principales\n  E [label = \"P(E) = 0.30\"]\n  TC [label = \"P(TC) = 0.40\"]\n  TD [label = \"P(TD) = 0.30\"]\n\n  # Nodos para E\n  E_pos [label = \"P(MQ|E) = 0.20\"]\n  E_neg [label = \"P(mQ5|E) = 0.80\"]\n\n  # Nodos para TC\n  TC_pos [label = \"P(MQ5|TC) = 0.70\"]\n  TC_neg [label = \"P(mQ|TC) = 0.30\"]\n\n  # Nodos para TD\n  TD_pos [label = \"P(MQ|TD) = 0.80\"]\n  TD_neg [label = \"P(mQ|TD) = 0.20\"]\n\n  # Conectar el nodo invisible con los nodos principales\n  invisible_root -> E\n  invisible_root -> TC\n  invisible_root -> TD\n\n  # Conectar nodos\n  E -> E_pos\n  E -> E_neg\n\n  TC -> TC_pos\n  TC -> TC_neg\n\n  TD -> TD_pos\n  TD -> TD_neg\n}\n","config":{"engine":"dot","options":null}},"evals":[],"jsHooks":[]}</script>
 <p><br/></p>
 <table>
 <colgroup>
