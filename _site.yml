@@ -74,7 +74,14 @@ navbar:
           href: codigo21.html  
         - text: "Taller 211"
           href: taller211.html
-        - text: "--------"                
+        - text: "--------"              
+        - text: "Guía 2.2"
+          href: guia22.html        
+        - text: "Probabilidad Condicional"
+          href: recurso22.html
+        - text: "Taller 221"
+          href: taller221.html
+        - text: "--------"            
         - text: "Monitoria 2"
           href: monitoria2.html
           
