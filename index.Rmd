@@ -70,26 +70,6 @@ knitr::include_graphics("img/aulainvertida1.png")
 ```
 </div>
 
-## **Salones de clase**
-
-<div class="box2">
-
-
-|Curso     | **Grupo** | Horario       | **LUNES**  |                | **MIERCOLES** |                | **VIERNES** |
-|:---------|:----------|:--------------|:-----------|:---------------|:--------------|:---------------|:------------|
-|          |           |               |            |                |               |                |             |
-|30MAE018  |    A      |11:00 a 13:00  | **PL 4.7** |                |  **LG 1.0 **  |                | **AL 2.2**  |
-|          |           |               | Monitoría  |                |  Sesión 1     |                | Sesión 2    |
-
-
-```{r, echo=FALSE, out.width="100%", fig.align = "center"}
- # knitr::include_graphics("img/salones.png")
-```
-
-
-
-</div>
-
 <br/>
 
 
