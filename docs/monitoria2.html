@@ -12,7 +12,7 @@
 <meta name="author" content="dgonzalez" />
 
 
-<title> </title>
+<title>Problemas</title>
 
 <script src="site_libs/header-attrs-2.28/header-attrs.js"></script>
 <script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
@@ -30,6 +30,9 @@
        h6 {font-size: 12px;}
        code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
        pre:not([class]) { background-color: white }</style>
+<script src="site_libs/jqueryui-1.13.2/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script src="site_libs/navigation-1.1/codefolding.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
@@ -227,6 +230,69 @@ $(document).ready(function () {
 
 
 
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+@media print {
+.toc-content {
+  /* see https://github.com/w3c/csswg-drafts/issues/4434 */
+  float: right;
+}
+}
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+
 
 </head>
 
@@ -234,6 +300,16 @@ $(document).ready(function () {
 
 
 <div class="container-fluid main-container">
+
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
 
 
 
@@ -382,6 +458,19 @@ $(document).ready(function () {
     </li>
     <li class="divider"></li>
     <li>
+      <a href="guia23.html">Guía 2.3</a>
+    </li>
+    <li>
+      <a href="recurso23.html">Variable aleatoria</a>
+    </li>
+    <li>
+      <a href="codigo23.html">Código 2.3</a>
+    </li>
+    <li>
+      <a href="taller231.html">Taller 231</a>
+    </li>
+    <li class="divider"></li>
+    <li>
       <a href="monitoria2.html">Monitoria 2</a>
     </li>
   </ul>
@@ -456,7 +545,8 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore"><span style="color:#235784"> </span></h1>
+<h1 class="title toc-ignore"><span
+style="color:#235784"><strong>Problemas</strong></span></h1>
 <h3 class="subtitle"><span style="color:#235784"><strong>Módulo
 2</strong></span></h3>
 <h4 class="author">dgonzalez</h4>
@@ -466,10 +556,10 @@ $(document).ready(function () {
 
 <p><img src="img/monitorias2.png" width="100%" style="display: block; margin: auto;" /></p>
 <p></br></br></br></p>
-<div id="problemas" class="section level1">
-<h1><span style="color:#2C5697"> <strong>Problemas</strong></span></h1>
+<div id="unidad-2.1-y-2.2" class="section level1">
+<h1><strong>Unidad 2.1 y 2.2</strong></h1>
 <p><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 1
 </div>
@@ -493,7 +583,7 @@ Venn-1880)</li>
 </ul>
 </div>
 <p></br></br></br></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 2
 </div>
@@ -514,7 +604,7 @@ definidos como:</p>
 </ul>
 </div>
 <p></br></br></br></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 3
 </div>
@@ -530,7 +620,7 @@ defectuosos?</li>
 </ol>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 4
 </div>
@@ -539,7 +629,7 @@ la urna dos fichas numeradas <code>(X,Y)</code> una y otra a la vez sin
 sustitución. ¿Cuál es la probabilidad de que <code>X+Y=10</code> ?</p>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 5
 </div>
@@ -553,7 +643,7 @@ probabilidad de que :</p>
 </ul>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 6
 </div>
@@ -567,7 +657,7 @@ de tales mecanismos en un sistema.</p>
 </ul>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 7
 </div>
@@ -576,7 +666,7 @@ se escoge un número al azar. ¿Cuál es la probabilidad de que el número
 escogido sea divisible por <code>6</code> o por <code>8</code>?</p>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 8
 </div>
@@ -587,7 +677,7 @@ pone en la urna 2. Entonces se escoge una bola al azar de la urna 2.
 ¿Cuál es la probabilidad de que esta bola sea blanca?</p>
 </div>
 <p><br/><br/><br/></p>
-<!-- <div class="box1 with-label"> -->
+<!-- <div class="box2 with-label"> -->
 <!-- <div class="label">Problema 9</div>   -->
 <!-- En las siguientes figuras (a) y (b) se supone que la probabilidad de que cada interruptor  este cerrado es `p`  y que cada  interruptor se abre o se cierra independientemente de cualquier otro. Encontrar en cada caso la probabilidad de la corriente pase de *Izquierda* a *Derecha* -->
 <!-- ```{r, echo=FALSE, out.width="70%", fig.align = "center"} -->
@@ -596,12 +686,12 @@ pone en la urna 2. Entonces se escoge una bola al azar de la urna 2.
 <!-- *Ejercicios tomados de Meyer( 1986)    * -->
 <!-- </div> -->
 <!-- <br/><br/><br/> -->
-<!-- <div class="box1 with-label"> -->
+<!-- <div class="box2 with-label"> -->
 <!-- <div class="label">Problema 10</div>   -->
 <!-- Los contaminantes más comunes de las aguas son de origen orgánico. Puesto que la mayor parte de los materiales orgánicos se descompone por acción de bacterias que requieren oxígeno, un exceso de materia orgánica puede significar una disminución en la cantidad de oxígeno disponible. Ello afecta eventualmente a otros organismos presentes en el agua. La demanda de oxígeno por parte de una bacteria se llama demanda biológica de oxígeno (DBO). Un estudio de las corrientes acuáticas que circulan en las proximidades de un complejo industrial revela que el 35% tiene una alta DBO, el 10%  muestra una acidez elevada y un 4% presenta ambas características. ¿Son independientes los sucesos «la corriente tiene una alta DBO» y «la corriente posee una acidez elevada»? Calcular la probabilidad de que la corriente tenga una acidez elevada, dado que presenta una alta DBO. -->
 <!-- </div> -->
 <!-- <br/><br/><br/> -->
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 9
 </div>
@@ -616,14 +706,14 @@ tres primeros son mujeres?</li>
 </ul>
 </div>
 <!-- <br/><br/><br/> -->
-<!-- <div class="box1 with-label"> -->
+<!-- <div class="box2 with-label"> -->
 <!-- <div class="label">Problema 12</div>   -->
 <!-- Unos estudios muestran que los ejemplares de una cierta raza de liebres de alta montaña (liebre esquiadora) mueren antes de lo normal, aun en ausencia de depredadores o de    enfermedad conocida alguna. Dos de las causas de muerte identificadas son: baja cantidad de azúcar en sangre y convulsiones. Se estima que el 7% de los animales presenta ambos síntomas, el 40% tiene bajo nivel de azúcar en sangre, y el 25% sufre convulsiones.  -->
 <!-- + ¿Cuál es el porcentaje de muertes producidas por causas que no sean las que hemos mencionado?  -->
 <!-- + ¿Cuál es la probabilidad de que un animal elegido aleatoriamente que tiene bajo nivel de azúcar en sangre sufra también convulsiones? -->
 <!-- </div> -->
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 10
 </div>
@@ -642,7 +732,7 @@ de que tal grupo sea ciertamente el suyo?</p>
 <p><em>Tomados de J. Susan Milto (2001)</em></p>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 11
 </div>
@@ -657,7 +747,7 @@ evento independiente de estudiar francés. ¿usted que opina respecto a
 esta afirmación? (justifique su respuesta)</p>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 12
 </div>
@@ -717,14 +807,14 @@ son selecionados de maneta aletatoria de toda la población tiene la
 mayor probabilidad de ver cumplido sus deseos?</p>
 </div>
 <!-- <br/><br/><br/> -->
-<!-- <div class="box1 with-label"> -->
+<!-- <div class="box2 with-label"> -->
 <!-- <div class="label">Problema 16</div>   -->
 <!-- Un miembro de la comunidad universitaria se somete a una prueba para detectar el Covid19. Si la persona está enferma, el test dá positivo con un 96% de certeza. Si la persona está sana, el test será negativo con un 94% de certeza. Se sabe que 1 de cada 100 personas de esta comunidad está enferma -->
 <!-- + Sabemos que el test resultó positivo. Que tan probable es que la persona a la que le realizaron la prueba esté enferna? -->
 <!-- + El test resultó negativo. ¿Cual será la probabilidad de que la persona examinada este sana? -->
 <!-- </div> -->
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 13
 </div>
@@ -735,7 +825,7 @@ seleccionadas sea defectuosa. c. Por lo menos una de las lámparas
 seleccionadas no sea defectuosa</p>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 14
 </div>
@@ -762,7 +852,7 @@ examen</li>
 </ol>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 15
 </div>
@@ -777,7 +867,7 @@ las compras realizadas con tarjeta débito, son realizadas por más de
 crédito o que lo halla hecho con tarjeta débito?</p>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 16
 </div>
@@ -793,7 +883,7 @@ paquete no muestra la fecha de caducidad. ¿Cuál de los empleados es el
 más probable culpable de esta omisión?</p>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 17
 </div>
@@ -811,7 +901,7 @@ transporte. Bajo este esquema, ¿qué tan probable es que un pedido sea
 aceptado?</p>
 </div>
 <p><br/><br/><br/></p>
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 18
 </div>
@@ -836,7 +926,7 @@ menos una prueba).</p></li>
 </ol>
 </div>
 <p><br/><br/><br/></p>
-<!-- <div class="box1 with-label"> -->
+<!-- <div class="box2 with-label"> -->
 <!-- <div class="label">Problema 23</div>  -->
 <!-- Genética vegetal Gregor Mendel fue un monje que sugirió una teoría de la herencia en 1865 con base en la ciencia de la genética; identificó a los individuos heterocigotos por el color de la flor que tenían dos alelos (uno *r* = alelo recesivo color blanco y uno *𝑅* = alelo dominante color rojo). Cuando se acoplaron estas individuos, se observó que 3/4 de la descendencia tenía flores rojas y 1/4 flores blancas. En la tabla se resume este acoplamiento; cada padre da uno de sus alelos para formar el gen de la descendencia. -->
 <!-- ```{r} -->
@@ -860,7 +950,7 @@ menos una prueba).</p></li>
 <!-- c. ¿Cuál es la probabilidad de que una descendencia tenga un alelo recesivo, dado que tiene las flores rojas? -->
 <!-- </div> -->
 <!-- <br/><br/><br/> -->
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">
 Problema 19
 </div>
@@ -932,9 +1022,671 @@ mayor probabilidad de ver cumplido sus deseos?</p>
 </div>
 <p><br/><br/><br/></p>
 </div>
+<div id="unidad-2.3" class="section level1">
+<h1><strong>Unidad 2.3</strong></h1>
+<div class="box2 with-label">
+<div class="label">
+Problema 20
+</div>
+<p>Clasifique las siguientes variables aleatorias como discretas o
+continuas:</p>
+<ul>
+<li><span class="math inline">\(X\)</span> : el número de accidentes
+automovilísticos que ocurren al año en una ciudad determinada</li>
+<li><span class="math inline">\(Y\)</span> : el tiempo que dura un
+partido de futbol - tiempo real de juego en minutos-</li>
+<li><span class="math inline">\(M\)</span> : la cantidad de leche que
+una vaca determinada produce anualmente</li>
+<li><span class="math inline">\(N\)</span> : el número de huevos que una
+gallina pone mensualmente</li>
+<li><span class="math inline">\(P\)</span> : el número de permisos para
+construcción que los funcionarios de una ciudad emiten cada mes</li>
+<li><span class="math inline">\(Q\)</span> : el peso del grano maiz
+producido por hectarea</li>
+<li><span class="math inline">\(R\)</span> : la edad de un estudiante
+que ingresa a la universidad</li>
+<li><span class="math inline">\(S\)</span> : el número de zapatos que
+tiene un adolescente</li>
+<li><span class="math inline">\(T\)</span> : el número de crias que
+tiene una tortuga</li>
+<li><span class="math inline">\(U\)</span> : el consumo mensual de
+energía de un hogar en Cali</li>
+<li><span class="math inline">\(V\)</span> : el número de hijos por
+hagar en Colombia</li>
+<li><span class="math inline">\(W\)</span> : el número de pasajeros de
+un bus de servicio publico MIO</li>
+<li><span class="math inline">\(X\)</span> : el gasto diario de un
+estudiante universitario de la Javeriana Cali</li>
+<li><span class="math inline">\(Y\)</span> : la cantidad de calorías que
+un adulto con actividad moderada gasta diariamente</li>
+<li><span class="math inline">\(Z\)</span> : la utilidad mensual de una
+microempresa</li>
+</ul>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 21
+</div>
+<p>Una empresa de envíos de productos está interesada en medir el tiempo
+que pasa entre la recepción de pedidos urgentes (por ejemplo, pedidos
+que necesitan ser entregados en menos de 24 horas). El tiempo que pasa,
+en horas, entre la llegada de estos pedidos urgentes sigue una
+distribución de probabilidad con la siguiente función de distribución
+acumulada:</p>
+<p><span class="math display">\[F_{_{X}}(x) = \left \{
+                \begin{matrix}
+                 0  &amp; \mbox{ , }    x \leq 0\\
+                 1-exp\{-8x \}  &amp; x \geq 0
+                \end{matrix}\right.  
+                \]</span></p>
+<p>Calcule la probabilidad de que el tiempo que transcurre entre la
+llegadas de dos pedidos urgentes consecutivos sea menor a 12
+minutos.</p>
+<ul>
+<li>usando la función de distribución de probabilidad acumulada de <span
+class="math inline">\(X\)</span></li>
+<li>utilizando la función de densidad de probabilidad de <span
+class="math inline">\(X\)</span></li>
+<li>Represente las función <span class="math inline">\(f(x)\)</span>
+gráficamente</li>
+</ul>
+</div>
+<pre class="r"><code># Cargar ggplot2
+library(ggplot2)
+
+# Definir la función F(x)
+Fx &lt;- function(x) {
+  ifelse(x &lt;= 0, 0, 1 - exp(-8 * x))
+}
+
+# Crear un rango de valores para x
+x_values &lt;- seq(0, 1, length.out = 500)
+
+# Calcular los valores de F(x)
+Fx_values &lt;- Fx(x_values)
+
+# Crear un dataframe con los valores
+data &lt;- data.frame(x = x_values, Fx = Fx_values)
+
+# Graficar usando ggplot2
+ggplot(data, aes(x = x, y = Fx)) +
+  geom_line(color = c3, size = 1.2) +
+  labs(x = &quot;x&quot;, y = &quot;F(x)&quot;, title = expression(F[x](x))) +
+  theme_minimal() +
+  xlim(0, 1) +
+  ylim(0, 1) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;) + 
+  geom_vline(xintercept = 0, linetype = &quot;dashed&quot;)</code></pre>
+<p><img src="monitoria2_files/figure-html/unnamed-chunk-3-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 22
+</div>
+<p>Una variable aleatoria continua <span
+class="math inline">\(X\)</span>, que puede tomar valores entre <span
+class="math inline">\(x=2\)</span> y <span
+class="math inline">\(x=5\)</span>, tiene una función de densidad data
+por <span class="math inline">\(f(x)=2(1*x)/27\)</span>.</p>
+<p>Calcule: * <span class="math inline">\(P(X &lt; 4)\)</span> * <span
+class="math inline">\(P(3 \leq X &lt; 4)\)</span> * Represente la
+función <span class="math inline">\(f(x)\)</span> gráficamente</p>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 23
+</div>
+<p>Suponga que cierto tipo de pequeñas empresas de procesamiento de
+datos están tan especializadas que algunas tienen dificultades para
+obtener utilidades durante su primer año de operación. La función de
+densidad de probabilidad está dada por:</p>
+<p><span class="math display">\[f_{_{Y}}(y) = \left \{
+                \begin{matrix}
+                ky^4 (1-y)^3 &amp; \mbox{ , }   0 \leq y \leq 1\\
+                0  &amp; \mbox{en otro caso }
+                \end{matrix}\right.  
+                \]</span></p>
+<ul>
+<li>¿Cuál es el valor de <span class="math inline">\(k\)</span> que hace
+de la anterior una función de densidad de probabilidad válida?</li>
+<li>Calcule la probabilidad de que al menos 50% de las empresas tengan
+utilidades durante el primer año</li>
+<li>Calcule la probabilidad de que al menos el 80% de las empresas
+tengan utilidad durante el primer año</li>
+<li>Represente la función <span class="math inline">\(f(x)\)</span>
+gráficamente</li>
+</ul>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 24
+</div>
+<p>Calcule la distribución de probabilidad par el número de discos
+compactos de jazz, de una colección que consta de 5 de jazz, 2 de música
+clásica y 3 de rock, al seleccionar de esta colección 4 de manera
+aleatoria. Explique sus resultados utilizando una fórmula.</p>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 25
+</div>
+<p>De una caja que contiene 4 monedad de 10 centavos y 2 monedas de 5
+centavos se seleccionan 3 monedas de manera aleatoria y sin reemplazo.
+calcule la distribución de probabilidad para el total <span
+class="math inline">\(T\)</span> de las 3 monedas . Exprese la
+distribución de probabilidad de forma gráfica</p>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 26
+</div>
+<p>Con base en las pruebas extensas, el fabricante de una lavadora
+determinó que el tiempo <span class="math inline">\(Y\)</span> (en años)
+para que el electrodoméstico requiera una reparación mayor se obtiene
+mediante la siguiente función de densidad de probabilidad :</p>
+<p><span class="math display">\[f_{_{Y}}(y) = \left \{
+                \begin{matrix}
+                \dfrac{1}{4} exp\{-y/4\} &amp; \mbox{ , }   y \geq 0\\
+                0  &amp; \mbox{en otro caso }
+                \end{matrix}\right.  
+                \]</span></p>
+<ul>
+<li><p>Los críticos considerarían que la lavadora es una ganga si no hay
+una probabilidad de que requiera una reparación mayor antes del sexto
+año. ¿Se puede considerar la lavadora como una ganga?</p></li>
+<li><p>¿Cuál es la probabilidad de que a lavadora requiera una
+reparación mayor durante el primer año?</p></li>
+<li><p>Represente la función <span class="math inline">\(f(x)\)</span>
+gráficamente</p></li>
+</ul>
+</div>
+<pre class="r"><code># Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_Y(y)
+fy &lt;- function(y) {
+  ifelse(y &gt;= 0, (1 / 4) * exp(-y / 4), 0)
+}
+
+# Crear un rango de valores para y
+y_values &lt;- seq(0, 20, length.out = 500)
+
+# Calcular los valores de f_Y(y)
+fy_values &lt;- fy(y_values)
+
+# Crear un dataframe con los valores
+data_fy &lt;- data.frame(y = y_values, fy = fy_values)
+
+# Graficar usando ggplot2
+ggplot(data_fy, aes(x = y, y = fy)) +
+  geom_line(color = c3, size = 1.2) +
+  labs(x = &quot;y&quot;, y = &quot;f(y)&quot;, title = expression(f[Y](y))) +
+  theme_minimal() +
+  xlim(0, 20) +
+  ylim(0, 0.3) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;) + 
+  geom_vline(xintercept = 0, linetype = &quot;dashed&quot;)</code></pre>
+<p><img src="monitoria2_files/figure-html/unnamed-chunk-4-1.png" width="384" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 27
+</div>
+<p>Sea el número de llamadas telefónicas que recibe un conmutador
+durante un intervalo de 5 minutos una variable aleatoria <span
+class="math inline">\(X\)</span> con la siguiente función de
+distribución de probabilidad:</p>
+<p><span class="math display">\[f(x)= \dfrac{exp\{-2\}\hspace{.2cm}
+2^x}{x!}\hspace{.3cm} \mbox{ , para }\hspace{.3cm} x = 01,2,3,4,5....
+\]</span></p>
+<ul>
+<li>Determine la probabilidad de que <span
+class="math inline">\(X\)</span> sea igual a <span
+class="math inline">\(0, 1, 2, 3, 4, 5\)</span> y <span
+class="math inline">\(6\)</span></li>
+<li>Grafique la función de distribución de probabilidad para estos
+valores de <span class="math inline">\(X\)</span></li>
+<li>Determine la función de distribución acumulada para estos valores de
+<span class="math inline">\(X\)</span>.</li>
+<li>Represente la función <span class="math inline">\(f(x)\)</span>
+gráficamente</li>
+</ul>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 28
+</div>
+<p>El congestionamiento de pasajeros es un problema de servicio en los
+aeropuertos, en los cuales se instalan trenes para reducir la
+congestión. cuando se usa el tren el tiempo <span
+class="math inline">\(X\)</span>, en minutos, que toma viajar desde la
+terminal principal hasta una explanada específica tiene la siguiente
+función de densidad:</p>
+<p><span class="math display">\[f_{_{X}}(x) = \left \{
+                \begin{matrix}
+                \dfrac{1}{10} &amp; \mbox{ , }  0 \leq y \leq 10\\
+                0  &amp; \mbox{en otro caso }
+                \end{matrix}\right.  
+                \]</span></p>
+<ul>
+<li>Determine que la función de densidad de probabilidad anterior es
+válida</li>
+<li>Calcule la probabilidad de que el tiempo que le toma a un pasajero
+viajar desde la terminal principal hasta la explanada no exceda los 7
+minutos</li>
+<li>Represente la función <span class="math inline">\(f(x)\)</span>
+gráficamente</li>
+</ul>
+</div>
+<pre class="r"><code># Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_X(x)
+fx &lt;- function(x) {
+  ifelse(x &gt;= 0 &amp; x &lt;= 10, 1/10, 0)
+}
+
+# Crear un rango de valores para x
+x_values &lt;- seq(0, 10, length.out = 500)
+
+# Calcular los valores de f_X(x)
+fx_values &lt;- fx(x_values)
+
+# Crear un dataframe con los valores
+data_fx &lt;- data.frame(x = x_values, fx = fx_values)
+
+# Graficar usando ggplot2
+ggplot(data_fx, aes(x = x, y = fx)) +
+  geom_line(color = c6, size = 1.2) +
+  labs(x = &quot;x&quot;, y = &quot;f(x)&quot;, title = expression(f[X](x))) +
+  theme_minimal() +
+  xlim(0, 10) +
+  ylim(0, 0.12) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = &quot;dashed&quot;) + 
+  geom_vline(xintercept = 0, linetype = &quot;dashed&quot;)</code></pre>
+<p><img src="monitoria2_files/figure-html/unnamed-chunk-5-1.png" width="384" style="display: block; margin: auto;" /></p>
+<p><br/></p>
+<p>Problemas tomado de walpole (2006)</p>
+<p><br/><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 29
+</div>
+<p><strong>10.</strong> Suponga que <span
+class="math inline">\(f(x)=exp\{-x\}\)</span>, para <span
+class="math inline">\(0 \leq x \leq 1\)</span>, <span
+class="math inline">\(0\)</span> para cualquier otro caso.</p>
+<p>Determine : * <span class="math inline">\(P(1 &lt; X)\)</span> *
+<span class="math inline">\(P(1 &lt; X &lt; 2.5\)</span> * <span
+class="math inline">\(P(X = 3\)</span> * <span class="math inline">\(P(X
+&lt; 4)\)</span> * Los valores de <span
+class="math inline">\(Me\)</span>, <span
+class="math inline">\(Q_{1}\)</span> y <span
+class="math inline">\(Q_{3}\)</span></p>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 30
+</div>
+<p>Para una variable aleatoria con función de densidad : <span
+class="math inline">\(f(x)= x/8\)</span> para <span
+class="math inline">\(3 &lt; X &lt; 5\)</span>.</p>
+<p>Determine : * <span class="math inline">\(P(X &lt; 4)\)</span> *
+<span class="math inline">\(P(X &gt; 3.5)\)</span> * <span
+class="math inline">\(P(4 &lt; X &lt; 5)\)</span> * <span
+class="math inline">\(P((X &lt; 3.5) \cup (X &gt; 4.5))\)</span> * el
+valor de <span class="math inline">\(Me\)</span></p>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 31
+</div>
+<p>Suponga que <span class="math inline">\(X\)</span> tiene una función
+de distribución acumulada :</p>
+<p><span class="math display">\[F_{_{X}}(x) = \left \{
+                \begin{matrix}
+                 0    &amp; \mbox{ , } x \leq 0\\
+                 2x   &amp; \mbox{, } x &lt; 0 &lt; x 5  \\
+                 1    &amp; \mbox{ , } 5 \leq 5
+                \end{matrix}\right.  
+                \]</span></p>
+<p>Determine: * <span class="math inline">\(P(X &lt; 4)\)</span> * <span
+class="math inline">\(P(X = 1.5)\)</span> * <span
+class="math inline">\(P(X &gt; 3)\)</span> * <span
+class="math inline">\(P(0.5 &lt; X &lt; 2.7\)</span></p>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 32
+</div>
+<p>Para la variable aleatoria que tiene la siguiente función de
+distribución de probabilidad :</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="center"><span class="math inline">\(-2\)</span></th>
+<th align="center"><span class="math inline">\(-1\)</span></th>
+<th align="center"><span class="math inline">\(0\)</span></th>
+<th align="center"><span class="math inline">\(1\)</span></th>
+<th align="center"><span class="math inline">\(2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(f(x)\)</span></td>
+<td align="center"><span class="math inline">\(1/8\)</span></td>
+<td align="center"><span class="math inline">\(2/8\)</span></td>
+<td align="center"><span class="math inline">\(2/8\)</span></td>
+<td align="center"><span class="math inline">\(2/8\)</span></td>
+<td align="center"><span class="math inline">\(1/8\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Determine: * <span class="math inline">\(P(X \leq 2)\)</span> * <span
+class="math inline">\(P(X &gt; 3)\)</span> * <span
+class="math inline">\(P(-1 \leq X \leq 1)\)</span> * <span
+class="math inline">\(P(X &lt; 3.5 ; X &gt; 4.5)\)</span> * El valor de
+<span class="math inline">\(Me\)</span></p>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 33
+</div>
+<p>Para una variable con función de distribución de probabilidad :</p>
+<p><span class="math display">\[f_{_{X}}(x) = \left \{
+                \begin{matrix}
+                \dfrac{2x + 1}{25} &amp; \mbox{ , } x=0, 1, 2, 3, 4\\
+                0  &amp; \mbox{en otro caso }
+                \end{matrix}\right.  
+                \]</span></p>
+<p>Determine: * <span class="math inline">\(P(X =1)\)</span> * <span
+class="math inline">\(P(X \leq 1)\)</span> * <span
+class="math inline">\(P(2 \leq X &lt; 4)\)</span></p>
+</div>
+<pre class="r"><code># Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_X(x)
+fx &lt;- function(x) {
+  ifelse(x %in% 0:4, (2*x + 1)/25, 0)
+}
+
+# Crear un rango de valores para x
+x_values &lt;- 0:4
+
+# Calcular los valores de f_X(x)
+fx_values &lt;- fx(x_values)
+
+# Crear un dataframe con los valores
+data_fx &lt;- data.frame(x = x_values, fx = fx_values)
+
+# Graficar usando ggplot2 en un diagrama de puntos
+ggplot(data_fx, aes(x = x, y = fx)) +
+  geom_point(color = c6, size = 2) +
+  #geom_line(color = &quot;blue&quot;, linetype = &quot;dashed&quot;) +
+  labs(x = &quot;x&quot;, y = &quot;f(x)&quot;, title = expression(f[X](x))) +
+  theme_minimal() +
+  ylim(0, 0.4) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  )</code></pre>
+<p><img src="monitoria2_files/figure-html/unnamed-chunk-6-1.png" width="384" style="display: block; margin: auto;" /></p>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 34
+</div>
+<p>Para una variable aleatoria con función de distribución de
+probabilidad: <span class="math inline">\(f(x)= (3/4)(1/4)^{x}\)</span>,
+para <span class="math inline">\(x=0, 1, 2, 3,...\)</span></p>
+<ul>
+<li><span class="math inline">\(P(X = 2)\)</span></li>
+<li><span class="math inline">\(P(X \leq 2)\)</span></li>
+<li><span class="math inline">\(P(2 \leq X\)</span></li>
+</ul>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 35
+</div>
+<p>Sponga que <span class="math inline">\(X\)</span> tiene una función
+de probabilidad acumulada:</p>
+<p><span class="math display">\[F_{_{X}}(x) = \left \{
+                \begin{matrix}
+                 0    &amp; \mbox{ , } x \leq 0\\
+                 0.2 x   &amp; \mbox{, } 0 &lt; x &lt; 5  \\
+                 1    &amp; \mbox{ , } x \geq 5
+                \end{matrix}\right.  
+                \]</span></p>
+<p>Determine: * <span class="math inline">\(P(X &lt; 2.8)\)</span></p>
+<pre class="r"><code>Fx=function(x){0.2*x }
+Fx(2.8)</code></pre>
+<pre><code>[1] 0.56</code></pre>
+<ul>
+<li><span class="math inline">\(P(X &gt; 1.5)\)</span></li>
+<li><span class="math inline">\(P(X &lt; -2)\)</span></li>
+<li>Determine <span class="math inline">\(f_{_{X}}(x)\)</span></li>
+</ul>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 36
+</div>
+<p>El tiempo de reparación (en minutos) de una máquina fotocopiadora
+tiene una función de densidad:</p>
+<p><span class="math display">\[f_{_{X}}(x) = \left \{
+                \begin{matrix}
+                \dfrac{1}{22} exp\{-x/22\} &amp; \mbox{ , } x &gt; 0\\
+                0  &amp; \mbox{en otro caso }
+                \end{matrix}\right.  
+                \]</span></p>
+<p>Cuando el profesor de Probabilidad y Estadística se preparaba para
+imprimir el cuestionario del segundo examen parcial, fue enterado por la
+secretaria del departamento que la máquina fotocopiadora se había
+averiado y que el técnico había acabado de llegar en ese instante y
+empezado a repararla. El profesor debe contar con por lo menos 10
+minutos extras - tiempo de fotocopiado de 35 exámenes, organizar sus
+respectivas hojas de respuestas, sumado tiempo de su desplazamiento
+hasta el salón de clase, arreglo de las mesas y entrega de los
+cuestionarios a los estudiantes. Al mirar el reloj, el profesor observa
+que faltan 20 minutos para la hora en que debe empezar el examen y
+decide esperar a que el técnico repare la fotocopiadora. ¿Es acertada o
+no la decisión que tomó el profesor? Justifique su respuesta.</p>
+</div>
+<!-- ```{r, echo=FALSE} -->
+<!-- library(downloadthis) -->
+<!-- download_link( -->
+<!--   link = "https://github.com/dgonxalex80/probabilidad20212.io/blob/main/talleres/Solucion_Taller_303.pdf", -->
+<!--   button_label = "Descarga: solución pdf ", -->
+<!--   button_type = "primary", -->
+<!--   has_icon = TRUE, -->
+<!--   icon = "fa fa-save", -->
+<!--   self_contained = FALSE -->
+<!-- ) -->
+<!-- ``` -->
+<p><br/><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 37
+</div>
+<p><strong>18.</strong> Suponga que <span
+class="math inline">\(f(x)=exp\{-x\}\)</span>, para <span
+class="math inline">\(0 \leq x \leq 1\)</span>, <span
+class="math inline">\(0\)</span> para cualquier otro caso.</p>
+<p>Determine : * <span class="math inline">\(E[X]\)</span> * <span
+class="math inline">\(V[X]\)</span> * <span
+class="math inline">\(P_{20}\)</span></p>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 38
+</div>
+<p>Para una variable aleatoria con función de densidad : <span
+class="math inline">\(f(x)= x/8\)</span> para <span
+class="math inline">\(3 &lt; X &lt; 5\)</span>.</p>
+<p>Determine : * <span class="math inline">\(\mu_{_{X}}\)</span> * <span
+class="math inline">\(\sigma_{_{X}}\)</span></p>
+</div>
+<div class="box2 with-label">
+<div class="label">
+Problema 39
+</div>
+<p>Suponga que <span class="math inline">\(X\)</span> tiene una función
+de distribución acumulada:</p>
+<p><span class="math display">\[F_{_{X}}(x) = \left \{
+                \begin{matrix}
+                 0    &amp; \mbox{ , } x \leq 0\\
+                 \dfrac{1}{5}x   &amp; \mbox{, }  0 \leq x \leq 5  \\
+                 1    &amp; \mbox{ , } x \geq 5
+                \end{matrix}\right.  
+                \]</span></p>
+<p>Determine : * <span class="math inline">\(E[X]\)</span> * <span
+class="math inline">\(V[X]\)</span> * <span
+class="math inline">\(P_{50}\)</span> * Se podría obtener el coeficiente
+de variación?. En caso afirmativo, ¿que valor tendría?</p>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 40
+</div>
+<p>Para la variable aleatoria que tiene la siguiente función de
+distribución de probabilidad :</p>
+<table>
+<thead>
+<tr class="header">
+<th align="center"><span class="math inline">\(x\)</span></th>
+<th align="center"><span class="math inline">\(-2\)</span></th>
+<th align="center"><span class="math inline">\(-1\)</span></th>
+<th align="center"><span class="math inline">\(0\)</span></th>
+<th align="center"><span class="math inline">\(1\)</span></th>
+<th align="center"><span class="math inline">\(2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(f(x)\)</span></td>
+<td align="center"><span class="math inline">\(1/8\)</span></td>
+<td align="center"><span class="math inline">\(2/8\)</span></td>
+<td align="center"><span class="math inline">\(2/8\)</span></td>
+<td align="center"><span class="math inline">\(2/8\)</span></td>
+<td align="center"><span class="math inline">\(1/8\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Determine : * <span class="math inline">\(E[X]\)</span> * <span
+class="math inline">\(V[X]\)</span></p>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 41
+</div>
+<p>Para una variable con función de distribución de probabilidad :</p>
+<p><span class="math display">\[f_{_{X}}(x) = \left \{
+                \begin{matrix}
+                \dfrac{2x * 1}{25} &amp; \mbox{ , } x=0, 1, 2, 3, 4\\
+                0  &amp; \mbox{en otro caso }
+                \end{matrix}\right.  
+                \]</span></p>
+<p>Determine :</p>
+<ul>
+<li><span class="math inline">\(E[X]\)</span></li>
+<li><span class="math inline">\(V[X]\)</span></li>
+<li>Coeficiente de variación</li>
+</ul>
+</div>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 42
+</div>
+<p>Para una variable aleatoria con función de distribución de
+probabilidad: <span class="math inline">\(f(x)= (3/4)(1/4)^{x}\)</span>,
+para $x=0, 1, 2, 3,… $</p>
+<p>Determine :</p>
+<ul>
+<li><span class="math inline">\(E[X]\)</span></li>
+<li><span class="math inline">\(V[X]\)</span></li>
+</ul>
+</div>
+<p>Problemas tomados de Mongomery(2003)</p>
+<p><br/><br/></p>
+<div class="box2 with-label">
+<div class="label">
+Problema 43
+</div>
+<p>Una de las preocupaciones que tienen los padres hoy en dia está
+relacionada con el tiempo que pasan sus hijos usando celular. Un estudio
+determinó que el número de llamadas que un joven realiza durante un dia
+es una variable aleatoria (<span class="math inline">\(X\)</span>) con
+función de distribución :</p>
+<p><span class="math display">\[f_{_{X}}(x) = \left \{
+                \begin{matrix}
+                \dfrac{8^{x}\hspace{.2cm} exp\{-8\}}{x!} &amp; \mbox{ ,
+para } \hspace{.3cm}    x = 0,1,2,3,4,5,.....\\
+                0  &amp; \mbox{en otro caso }
+                \end{matrix}\right.  
+                \]</span></p>
+<p>El estudio afirma también que los jóvenes en promedio reciben al
+rededor de 12 llamadas por día, valor que es considerado muy alto,
+debido a que a esa edad por lo regular no se tienen actividades
+económicas que lo ameriten. También mencionan que debido a que se ha
+logrado identificar la función de distribución de probabilidad es fácil
+establecer que se trata de una variable con un comportamiento homogéneo.
+¿Está de acuerdo con la información suministrada en el artículo? .
+Justifique su respuesta.</p>
+</div>
+<!-- <div class="box2 with-label"> -->
+<!-- <div class="label">Problema 2</div>  -->
+<!-- ```{r, echo=FALSE} -->
+<!-- library(downloadthis) -->
+<!-- download_link( -->
+<!--   link = "https://github.com/dgonxalex80/probabilidad20212.io/blob/main/talleres/Solucion_Taller_304.pdf", -->
+<!--   button_label = "Descarga: solución pdf ", -->
+<!--   button_type = "primary", -->
+<!--   has_icon = TRUE, -->
+<!--   icon = "fa fa-save", -->
+<!--   self_contained = FALSE -->
+<!-- ) -->
+<!-- ``` -->
+</div>
 
 
 
+</div>
+</div>
 
 </div>
 
@@ -972,6 +1724,35 @@ $(document).ready(function () {
 });
 </script>
 
+<script>
+$(document).ready(function ()  {
+
+    // temporarily add toc-ignore selector to headers for the consistency with Pandoc
+    $('.unlisted.unnumbered').addClass('toc-ignore')
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_');
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
 
 <!-- dynamically load mathjax for compatibility with self-contained -->
 <script>

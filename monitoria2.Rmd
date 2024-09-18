@@ -1,10 +1,10 @@
 ---
-title: <span style="color:#235784"> </span>  
+title: <span style="color:#235784">**Problemas**</span>  
 subtitle: <span style="color:#235784">**Módulo 2**</span> 
 author: "dgonzalez "
 output:
   html_document:
-    toc: no
+    toc: yes
     toc_depth: 2
     toc_float: yes
     code_folding: hide
@@ -42,11 +42,11 @@ knitr::include_graphics("img/monitorias2.png")
 
 </br></br></br>
 
-# <span style="color:#2C5697"> **Problemas**</span> 
+# **Unidad 2.1 y 2.2**
 
 <br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 1</div>  
 
 Suponga que el conjunto universal consta de los números enteros del 1 al 10. 
@@ -68,7 +68,7 @@ Determine los elementos de los siguientes conjuntos:
 
 </br></br></br>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 2</div>  
 
 Suponga que el conjunto $U$ está dado por $U = \{ x | 0 \leq x \leq 2 \}$ . Sean los conjuntos `A` y `B` definidos como: 
@@ -89,7 +89,7 @@ Describa los siguientes conjuntos:
 </br></br></br>
 
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 3</div>  
 
 
@@ -104,7 +104,7 @@ c. ¿ entre 50 y 60 artículos defectuosos?
 
 <br/><br/><br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 4</div>  
 
 Diez fichas numeradas del 1 al 10 se mezclan en una urna. Se sacan de la urna dos fichas numeradas `(X,Y)` una y otra a la vez sin sustitución. ¿Cuál es la probabilidad de que `X+Y=10` ?
@@ -115,7 +115,7 @@ Diez fichas numeradas del 1 al 10 se mezclan en una urna. Se sacan de la urna do
 
 
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 5</div>  
 
 
@@ -129,7 +129,7 @@ Un lote consta de 10 artículos buenos, 4 con pequeños defectos y 2 con defecto
 	
 <br/><br/><br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 6</div>  
 
 Un mecanismo puede ponerse en cuatro posiciones digamos `a`, `b`, `c` y `d` . Hay 8 de tales mecanismos en un sistema. 
@@ -142,7 +142,7 @@ Un mecanismo puede ponerse en cuatro posiciones digamos `a`, `b`, `c` y `d` . Ha
 
 <br/><br/><br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 7</div>  
 
 
@@ -152,7 +152,7 @@ Entre los números $1,2,3 .... 50$ se escoge un número al azar. ¿Cuál es la p
 	
 <br/><br/><br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 8</div>  
 
 
@@ -163,7 +163,7 @@ La urna 1 contiene `x` bolas blancas e `y` bolas rojas. La urna 2 contiene `z` b
 	
 <br/><br/><br/>
 
-<!-- <div class="box1 with-label"> -->
+<!-- <div class="box2 with-label"> -->
 <!-- <div class="label">Problema 9</div>   -->
 
 
@@ -181,7 +181,7 @@ La urna 1 contiene `x` bolas blancas e `y` bolas rojas. La urna 2 contiene `z` b
 
 <!-- <br/><br/><br/> -->
 
-<!-- <div class="box1 with-label"> -->
+<!-- <div class="box2 with-label"> -->
 <!-- <div class="label">Problema 10</div>   -->
 
 
@@ -192,7 +192,7 @@ La urna 1 contiene `x` bolas blancas e `y` bolas rojas. La urna 2 contiene `z` b
 
 <!-- <br/><br/><br/> -->
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 9</div>  
 
 
@@ -208,7 +208,7 @@ Suponga que una familia tiene cuatro hijos.
 
 <!-- <br/><br/><br/> -->
 
-<!-- <div class="box1 with-label"> -->
+<!-- <div class="box2 with-label"> -->
 <!-- <div class="label">Problema 12</div>   -->
 
 
@@ -223,7 +223,7 @@ Suponga que una familia tiene cuatro hijos.
 
 
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 10</div>  
 
 
@@ -235,7 +235,7 @@ Se cree que la distribución de los grupos sanguíneos en Estados Unidos en la S
 
 <br/><br/><br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 11</div>  
 
 
@@ -245,7 +245,7 @@ En el colegio Anglo-Frances se imparten sólo los idiomas inglés y francés. El
 
 <br/><br/><br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 12</div>  
 
 
@@ -266,7 +266,7 @@ Sandra prefiere que el grupo de estudiantes a su cargo sean estudiantes de prime
 
 <!-- <br/><br/><br/> -->
 
-<!-- <div class="box1 with-label"> -->
+<!-- <div class="box2 with-label"> -->
 <!-- <div class="label">Problema 16</div>   -->
 
 
@@ -279,7 +279,7 @@ Sandra prefiere que el grupo de estudiantes a su cargo sean estudiantes de prime
 
 <br/><br/><br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 13</div>  
 
 Se escogen al azar 5 lámparas de 25 de las cuales 8 son defectuosas. Hallar la probabilidad de que:
@@ -293,7 +293,7 @@ c. Por lo menos una de las lámparas seleccionadas no sea defectuosa
 
 <br/><br/><br/>
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 14</div>  
 
 Un estudiante realiza dos exámenes en un mismo día. La probabilidad de que apruebe el primer examen  es de 0.6 . La probabilidad de que apruebe el segundo examen es de 0.8; y la de que apruebe los dos exámenes es 0.5 :
@@ -314,7 +314,7 @@ b. Que es más probable que ocurra :
 <br/><br/><br/>
 
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 15</div>  
 
 El Departamento de crédito de una cadena de supermercados, informó que el 30% de sus ventas se pagan con efectivo o con cheque; 30% se paga con tarjeta de crédito y el resto con tarjeta débito. Veinte por ciento de las ventas realizadas con efectivo o cheque, noventa por ciento de las compras realizadas con tarjeta de crédito y el sesenta por ciento de las compras realizadas con tarjeta débito, son realizadas por más de  50.000. La señora Fatima acaba de comprar un vestido nuevo que le costó  120.000. ¿Que es más probable que halla pagado su vestido con tarjeta de crédito o que lo halla hecho con tarjeta débito?
@@ -325,7 +325,7 @@ El Departamento de crédito de una cadena de supermercados, informó que el 30% 
 <br/><br/><br/>
 
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 16</div>  
 
 
@@ -336,7 +336,7 @@ En una fábrica de artículos para protección biodegradables, cuatro operarios 
 <br/><br/><br/>
 
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 17</div>  
 
 Uno de los laboratorios de la universidad tiene un esquema para recibir sus pedidos de insumos para sus investigadores. El plan tiene dos etapas. Primero el laboratorista selecciona una caja de 15 artículos y luego en una segunda etapa, extrae una muestra de 3 de ellos y los examina en búsqueda de defectos. Si no se encuentran artículos defectuosos en la revisión, el pedido es aceptado y es recibido por los encargados de la oficina de compras. En caso contrario, se regresa a su proveedor con el fin de que revise la totalidad de los artículos y se cerciore que todos están buenos. Por experiencia se estima que por cada caja de 15 artículos, hay 3 defectuosos, debido a problemas en el transporte. Bajo este esquema, ¿qué tan probable es que un pedido sea aceptado?  
@@ -346,7 +346,7 @@ Uno de los laboratorios de la universidad tiene un esquema para recibir sus pedi
 <br/><br/><br/>
 
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 18</div>  
 
 Examen de drogas Muchas universidades aplican exámenes para detectar el uso de drogas en estudiantes, con la finalidad de mejorar la salud y el bienestar en el campus, y reducir el riesgo de comportamiento inapropiado, accidentes y problemas académicos. Las personas que se oponen a esta práctica argumentan que este procedimiento puede etiquetar injustamente a algunos estudiantes, dado que las pruebas no son 100% confiables. Supongamos que una universidad utiliza una prueba con un 98% de exactitud, la cual identifica a un estudiante como usuario o no usuario de drogas con una probabilidad de .98. Para reducir la posibilidad de error, se solicita a cada estudiante que realice dos pruebas. Si los resultados de las dos pruebas en el mismo estudiante son eventos independientes, ¿cuáles son las probabilidades de los siguientes eventos?
@@ -361,7 +361,7 @@ c. Un estudiante que consume drogas pase ambas pruebas.
 
 <br/><br/><br/>
 
-<!-- <div class="box1 with-label"> -->
+<!-- <div class="box2 with-label"> -->
 <!-- <div class="label">Problema 23</div>  -->
 
 <!-- Genética vegetal Gregor Mendel fue un monje que sugirió una teoría de la herencia en 1865 con base en la ciencia de la genética; identificó a los individuos heterocigotos por el color de la flor que tenían dos alelos (uno *r* = alelo recesivo color blanco y uno *𝑅* = alelo dominante color rojo). Cuando se acoplaron estas individuos, se observó que 3/4 de la descendencia tenía flores rojas y 1/4 flores blancas. En la tabla se resume este acoplamiento; cada padre da uno de sus alelos para formar el gen de la descendencia. -->
@@ -402,7 +402,7 @@ c. Un estudiante que consume drogas pase ambas pruebas.
 <!-- <br/><br/><br/> -->
 
 
-<div class="box1 with-label">
+<div class="box2 with-label">
 <div class="label">Problema 19</div> 
 
 
@@ -432,3 +432,631 @@ Sandra prefiere que el grupo de estudiantes a su cargo sean estudiantes de prime
 </div>
 
 <br/><br/><br/>
+
+# **Unidad 2.3**
+
+<div class="box2 with-label">
+<div class="label">Problema 20</div> 
+
+Clasifique las siguientes variables aleatorias como discretas o continuas:
+
+* $X$ : el número de accidentes automovilísticos que ocurren al año en una ciudad determinada
+* $Y$ : el tiempo que dura un partido de futbol - tiempo real de juego en minutos-
+* $M$ : la cantidad de leche que una vaca determinada produce anualmente
+* $N$ : el número de huevos que una gallina pone mensualmente
+* $P$ : el número de permisos para construcción que los funcionarios de una  ciudad emiten cada mes
+* $Q$ : el peso del grano maiz producido por hectarea
+* $R$ : la edad de un estudiante que ingresa a la universidad
+* $S$ : el número de zapatos que tiene un adolescente 
+* $T$ : el número de crias que tiene una tortuga
+* $U$ : el consumo mensual de energía de un hogar en Cali
+* $V$ : el número de hijos por hagar en Colombia
+* $W$ : el número de pasajeros de un bus de servicio publico MIO
+* $X$ : el gasto diario de un estudiante universitario de la Javeriana Cali
+* $Y$ : la cantidad de calorías que un adulto  con actividad moderada gasta diariamente
+* $Z$ : la utilidad mensual de una microempresa
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 21</div> 
+
+Una empresa de envíos de productos está interesada en medir el tiempo que pasa entre la recepción de pedidos urgentes (por ejemplo, pedidos que necesitan ser entregados en menos de 24 horas). El tiempo que pasa, en horas, entre la llegada de estos pedidos urgentes sigue una distribución de probabilidad con la siguiente función de distribución acumulada:
+
+$$F_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				 0  & \mbox{ , }	x \leq 0\\ 
+				 1-exp\{-8x \}  & x \geq 0 
+				\end{matrix}\right.  
+				$$
+				
+Calcule la probabilidad de que el tiempo que  transcurre entre la llegadas de dos pedidos urgentes consecutivos sea menor a 12 minutos.
+
+* usando la función de distribución de probabilidad acumulada de $X$
+* utilizando la función de densidad de probabilidad de $X$
+* Represente las función $f(x)$ gráficamente
+
+</div>
+
+```{r, fig.align='center'}
+# Cargar ggplot2
+library(ggplot2)
+
+# Definir la función F(x)
+Fx <- function(x) {
+  ifelse(x <= 0, 0, 1 - exp(-8 * x))
+}
+
+# Crear un rango de valores para x
+x_values <- seq(0, 1, length.out = 500)
+
+# Calcular los valores de F(x)
+Fx_values <- Fx(x_values)
+
+# Crear un dataframe con los valores
+data <- data.frame(x = x_values, Fx = Fx_values)
+
+# Graficar usando ggplot2
+ggplot(data, aes(x = x, y = Fx)) +
+  geom_line(color = c3, size = 1.2) +
+  labs(x = "x", y = "F(x)", title = expression(F[x](x))) +
+  theme_minimal() +
+  xlim(0, 1) +
+  ylim(0, 1) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = "dashed") + 
+  geom_vline(xintercept = 0, linetype = "dashed")
+
+
+```
+
+
+
+<br/><br/>
+
+
+<div class="box2 with-label">
+<div class="label">Problema 22</div> 
+
+Una variable aleatoria continua $X$, que puede tomar valores entre $x=2$ y $x=5$, tiene una función de densidad data por $f(x)=2(1*x)/27$.  
+ 
+ Calcule: 
+* $P(X < 4)$
+* $P(3 \leq X < 4)$
+* Represente la función $f(x)$ gráficamente
+ 
+ </div>
+ 
+ <br/><br/>
+ 
+ <div class="box2 with-label">
+<div class="label">Problema 23</div>
+
+Suponga que cierto tipo de pequeñas empresas de procesamiento de datos están tan especializadas que algunas tienen dificultades para obtener utilidades durante su primer año de operación. La función de densidad de probabilidad está dada por:
+ 
+ $$f_{_{Y}}(y) = \left \{ 
+				\begin{matrix} 
+				ky^4 (1-y)^3 & \mbox{ , }	0 \leq y \leq 1\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+ 
+ 
+* ¿Cuál es el valor de $k$ que hace de la anterior una función de densidad de probabilidad válida?
+* Calcule la probabilidad de que al menos 50% de las empresas tengan utilidades durante el primer año
+* Calcule la probabilidad de que al menos el 80% de las empresas tengan utilidad durante el primer año
+* Represente la función $f(x)$ gráficamente
+
+</div>
+
+ <br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 24</div> 
+ 
+Calcule la distribución de probabilidad par el número de discos compactos de jazz, de una colección que consta de  5 de jazz, 2 de música clásica y 3 de rock, al seleccionar de esta colección 4 de manera aleatoria. Explique sus resultados utilizando una fórmula.
+ 
+</div> 
+ 
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 25</div> 
+
+De una caja que contiene 4 monedad de 10 centavos y 2 monedas de 5 centavos se seleccionan 3 monedas de manera aleatoria  y sin reemplazo. calcule la distribución de probabilidad para el total $T$ de las 3 monedas .  Exprese la distribución de probabilidad de forma gráfica 
+
+</div>
+
+<br/><br/>
+
+
+<div class="box2 with-label">
+<div class="label">Problema 26</div> 
+
+Con base en las pruebas extensas, el fabricante de una lavadora determinó que el tiempo $Y$ (en años) para que el electrodoméstico requiera una reparación mayor se obtiene mediante la siguiente función de densidad de probabilidad :
+
+ 
+  $$f_{_{Y}}(y) = \left \{ 
+				\begin{matrix} 
+				\dfrac{1}{4} exp\{-y/4\} & \mbox{ , }	y \geq 0\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+ 
+* Los críticos considerarían que la lavadora es una ganga si no hay una probabilidad de que requiera una reparación mayor antes del sexto año. ¿Se puede considerar la lavadora como una ganga?
+
+* ¿Cuál es la probabilidad de que a lavadora requiera una reparación mayor durante el primer año?
+* Represente la función $f(x)$ gráficamente
+  
+</div>
+
+
+```{r, fig.align='center', fig.width=4, fig.height=3}
+# Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_Y(y)
+fy <- function(y) {
+  ifelse(y >= 0, (1 / 4) * exp(-y / 4), 0)
+}
+
+# Crear un rango de valores para y
+y_values <- seq(0, 20, length.out = 500)
+
+# Calcular los valores de f_Y(y)
+fy_values <- fy(y_values)
+
+# Crear un dataframe con los valores
+data_fy <- data.frame(y = y_values, fy = fy_values)
+
+# Graficar usando ggplot2
+ggplot(data_fy, aes(x = y, y = fy)) +
+  geom_line(color = c3, size = 1.2) +
+  labs(x = "y", y = "f(y)", title = expression(f[Y](y))) +
+  theme_minimal() +
+  xlim(0, 20) +
+  ylim(0, 0.3) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = "dashed") + 
+  geom_vline(xintercept = 0, linetype = "dashed")
+
+```
+
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 27</div>
+
+Sea el número de llamadas telefónicas que recibe un conmutador durante un intervalo de 5 minutos una variable aleatoria $X$ con la siguiente función de distribución de probabilidad:
+
+$$f(x)= \dfrac{exp\{-2\}\hspace{.2cm} 2^x}{x!}\hspace{.3cm} \mbox{ , para }\hspace{.3cm} x = 01,2,3,4,5.... $$
+
+* Determine la probabilidad de que $X$ sea igual a $0, 1, 2, 3, 4, 5$ y $6$
+* Grafique la función de distribución de probabilidad para estos valores de $X$
+* Determine la función de distribución acumulada para estos valores de $X$.
+* Represente la función $f(x)$ gráficamente
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 28</div> 
+
+El congestionamiento de pasajeros es un problema de servicio en los aeropuertos, en los cuales se instalan trenes para reducir la congestión.  cuando se usa el tren el tiempo $X$, en minutos, que toma viajar desde la terminal principal hasta una  explanada específica tiene la siguiente función de densidad:
+
+
+ $$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{1}{10} & \mbox{ , }	0 \leq y \leq 10\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+
+* Determine que la función de  densidad de probabilidad anterior es válida
+* Calcule la probabilidad de que el tiempo que le toma a un pasajero viajar desde la terminal principal hasta la explanada no exceda los 7 minutos
+* Represente la función $f(x)$ gráficamente
+
+</div>
+
+```{r, fig.align='center', fig.width=4, fig.height=3}
+# Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_X(x)
+fx <- function(x) {
+  ifelse(x >= 0 & x <= 10, 1/10, 0)
+}
+
+# Crear un rango de valores para x
+x_values <- seq(0, 10, length.out = 500)
+
+# Calcular los valores de f_X(x)
+fx_values <- fx(x_values)
+
+# Crear un dataframe con los valores
+data_fx <- data.frame(x = x_values, fx = fx_values)
+
+# Graficar usando ggplot2
+ggplot(data_fx, aes(x = x, y = fx)) +
+  geom_line(color = c6, size = 1.2) +
+  labs(x = "x", y = "f(x)", title = expression(f[X](x))) +
+  theme_minimal() +
+  xlim(0, 10) +
+  ylim(0, 0.12) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  ) +
+  geom_hline(yintercept = 0, linetype = "dashed") + 
+  geom_vline(xintercept = 0, linetype = "dashed")
+
+```
+
+
+
+
+<br/>
+
+Problemas tomado de walpole (2006)
+
+<br/><br/><br/>
+
+
+<div class="box2 with-label">
+<div class="label">Problema 29</div>
+
+**10.** Suponga que $f(x)=exp\{-x\}$, para $0 \leq x \leq 1$, $0$ para cualquier otro caso.
+
+Determine :
+* $P(1 < X)$
+* $P(1 < X < 2.5$
+* $P(X = 3$
+* $P(X < 4)$
+* Los valores de $Me$, $Q_{1}$ y $Q_{3}$
+
+</div>
+
+<br/><br/>
+
+
+<div class="box2 with-label">
+<div class="label">Problema 30</div>
+
+Para una variable aleatoria con función de densidad : $f(x)= x/8$ para $3 < X < 5$. 
+
+Determine :
+* $P(X < 4)$
+* $P(X > 3.5)$
+* $P(4 < X < 5)$
+* $P((X < 3.5) \cup (X > 4.5))$
+* el valor de $Me$
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 31</div> 
+
+Suponga que $X$ tiene una función de distribución acumulada :
+
+$$F_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				 0    & \mbox{ , } x \leq 0\\ 
+				 2x   & \mbox{, } x < 0 < x 5  \\
+				 1    & \mbox{ , } 5 \leq 5
+				\end{matrix}\right.  
+				$$
+
+Determine:
+* $P(X < 4)$
+* $P(X = 1.5)$
+* $P(X > 3)$
+* $P(0.5 < X < 2.7$
+
+</div>
+
+<br/><br/>
+
+
+<div class="box2 with-label">
+<div class="label">Problema 32</div>
+
+Para la variable aleatoria que tiene la siguiente función de distribución de probabilidad :
+
+| $x$  | $-2$ | $-1$   | $0$    |  $1$   | $2$    |
+|:----:|:----:|:------:|:------:|:------:|:------:|
+|$f(x)$|$1/8$ |$2/8$   |$2/8$   |$2/8$   | $1/8$  |
+
+Determine:
+* $P(X \leq 2)$
+* $P(X > 3)$
+* $P(-1 \leq X \leq 1)$
+* $P(X < 3.5 ; X > 4.5)$
+* El valor de $Me$
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 33</div>
+
+Para una variable con función de distribución de probabilidad : 
+
+ $$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{2x + 1}{25} & \mbox{ , }	x=0, 1, 2, 3, 4\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+
+Determine:
+* $P(X =1)$
+* $P(X \leq 1)$
+* $P(2 \leq X < 4)$
+
+</div>
+
+```{r, fig.align='center', fig.width=4, fig.height=3}
+# Cargar ggplot2
+library(ggplot2)
+
+# Definir la función f_X(x)
+fx <- function(x) {
+  ifelse(x %in% 0:4, (2*x + 1)/25, 0)
+}
+
+# Crear un rango de valores para x
+x_values <- 0:4
+
+# Calcular los valores de f_X(x)
+fx_values <- fx(x_values)
+
+# Crear un dataframe con los valores
+data_fx <- data.frame(x = x_values, fx = fx_values)
+
+# Graficar usando ggplot2 en un diagrama de puntos
+ggplot(data_fx, aes(x = x, y = fx)) +
+  geom_point(color = c6, size = 2) +
+  #geom_line(color = "blue", linetype = "dashed") +
+  labs(x = "x", y = "f(x)", title = expression(f[X](x))) +
+  theme_minimal() +
+  ylim(0, 0.4) +
+  theme(
+    plot.title = element_text(hjust = 0.5, size = 16),
+    axis.title = element_text(size = 14),
+    axis.text = element_text(size = 12)
+  )
+
+
+```
+
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 34</div> 
+
+Para una variable aleatoria con función de distribución de probabilidad: $f(x)= (3/4)(1/4)^{x}$, para $x=0, 1, 2, 3,...$
+
+* $P(X = 2)$
+* $P(X \leq 2)$
+* $P(2 \leq X$
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 35</div> 
+
+Sponga que $X$ tiene una función de probabilidad acumulada: 
+
+$$F_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				 0    & \mbox{ , } x \leq 0\\ 
+				 0.2 x   & \mbox{, } 0 < x < 5  \\
+				 1    & \mbox{ , } x \geq 5
+				\end{matrix}\right.  
+				$$
+
+Determine: 
+* $P(X < 2.8)$
+
+```{r}
+Fx=function(x){0.2*x }
+Fx(2.8)
+```
+
+* $P(X > 1.5)$
+* $P(X < -2)$
+* Determine $f_{_{X}}(x)$
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 36</div> 
+
+El tiempo de reparación (en minutos) de una máquina fotocopiadora tiene una función de densidad:
+
+
+ $$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{1}{22} exp\{-x/22\} & \mbox{ , }	x > 0\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+
+Cuando el profesor de Probabilidad y Estadística se preparaba para imprimir el cuestionario del segundo examen parcial, fue enterado por la secretaria del departamento que la máquina fotocopiadora se había averiado y que el técnico había acabado de llegar en ese instante y empezado a repararla. El profesor debe contar con por lo menos 10 minutos extras - tiempo de fotocopiado de 35 exámenes, organizar sus respectivas hojas de respuestas, sumado tiempo de su desplazamiento hasta el salón de clase, arreglo de las mesas y entrega de los cuestionarios a los estudiantes. Al mirar el reloj, el profesor observa que faltan 20 minutos para la hora en que debe empezar el examen y decide esperar a que el técnico repare la fotocopiadora. ¿Es acertada o no la decisión que tomó el profesor? Justifique su respuesta.   
+
+</div>
+
+<!-- ```{r, echo=FALSE} -->
+<!-- library(downloadthis) -->
+<!-- download_link( -->
+<!--   link = "https://github.com/dgonxalex80/probabilidad20212.io/blob/main/talleres/Solucion_Taller_303.pdf", -->
+<!--   button_label = "Descarga: solución pdf ", -->
+<!--   button_type = "primary", -->
+<!--   has_icon = TRUE, -->
+<!--   icon = "fa fa-save", -->
+<!--   self_contained = FALSE -->
+<!-- ) -->
+<!-- ``` -->
+
+<br/><br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 37</div>
+
+**18.** Suponga que $f(x)=exp\{-x\}$, para $0 \leq x \leq 1$, $0$ para cualquier otro caso.
+
+Determine :
+* $E[X]$
+* $V[X]$
+* $P_{20}$
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 38</div>
+
+Para una variable aleatoria con función de densidad : $f(x)= x/8$ para $3 < X < 5$. 
+
+Determine :
+* $\mu_{_{X}}$
+* $\sigma_{_{X}}$
+
+</div>
+
+<div class="box2 with-label">
+<div class="label">Problema 39</div>
+
+Suponga que $X$ tiene una función de distribución acumulada:
+
+$$F_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				 0    & \mbox{ , } x \leq 0\\ 
+				 \dfrac{1}{5}x   & \mbox{, }  0 \leq x \leq 5  \\
+				 1    & \mbox{ , } x \geq 5
+				\end{matrix}\right.  
+				$$
+
+Determine : 
+* $E[X]$
+* $V[X]$
+* $P_{50}$
+* Se podría obtener el coeficiente de variación?. En caso afirmativo, ¿que valor tendría?
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 40</div>
+
+Para la variable aleatoria que tiene la siguiente función de distribución de probabilidad :
+
+| $x$  | $-2$ | $-1$   | $0$    |  $1$   | $2$    |
+|:----:|:----:|:------:|:------:|:------:|:------:|
+|$f(x)$|$1/8$ |$2/8$   |$2/8$   |$2/8$   | $1/8$  |
+
+Determine : 
+* $E[X]$
+* $V[X]$
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 41</div> 
+
+Para una variable con función de distribución de probabilidad : 
+
+ $$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{2x * 1}{25} & \mbox{ , }	x=0, 1, 2, 3, 4\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+
+Determine : 
+
+* $E[X]$
+* $V[X]$
+* Coeficiente de variación
+
+</div>
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 42</div>
+
+Para una variable aleatoria con función de distribución de probabilidad: $f(x)= (3/4)(1/4)^{x}$, para $x=0, 1, 2, 3,... $
+
+Determine : 
+
+* $E[X]$
+* $V[X]$
+
+</div>
+
+Problemas tomados de Mongomery(2003)
+
+<br/><br/>
+
+<div class="box2 with-label">
+<div class="label">Problema 43</div> 
+
+Una de las preocupaciones que tienen los padres hoy en dia está relacionada con el tiempo que pasan sus hijos usando celular. Un estudio determinó que el número de llamadas que un joven realiza durante un dia es una variable aleatoria ($X$) con función de distribución :
+
+ $$f_{_{X}}(x) = \left \{ 
+				\begin{matrix} 
+				\dfrac{8^{x}\hspace{.2cm} exp\{-8\}}{x!} & \mbox{ , para } \hspace{.3cm}	x = 0,1,2,3,4,5,.....\\ 
+				0  & \mbox{en otro caso }
+				\end{matrix}\right.  
+				$$
+
+El estudio afirma también que los jóvenes en promedio reciben al rededor de 12 llamadas por día, valor que es considerado muy alto, debido a que a esa edad por lo regular no se tienen actividades económicas que lo ameriten. También mencionan que debido a que se ha logrado identificar la función de distribución de probabilidad es fácil establecer que se trata de una variable con un comportamiento homogéneo. ¿Está de acuerdo con la información suministrada en el artículo? . Justifique su respuesta. 
+
+</div>
+
+<!-- <div class="box2 with-label"> -->
+<!-- <div class="label">Problema 2</div>  -->
+
+
+
+
+<!-- ```{r, echo=FALSE} -->
+<!-- library(downloadthis) -->
+<!-- download_link( -->
+<!--   link = "https://github.com/dgonxalex80/probabilidad20212.io/blob/main/talleres/Solucion_Taller_304.pdf", -->
+<!--   button_label = "Descarga: solución pdf ", -->
+<!--   button_type = "primary", -->
+<!--   has_icon = TRUE, -->
+<!--   icon = "fa fa-save", -->
+<!--   self_contained = FALSE -->
+<!-- ) -->
+<!-- ``` -->
+
+
+
+

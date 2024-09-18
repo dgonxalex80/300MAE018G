@@ -164,7 +164,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Definir una clase para la caja de contenido */
 .box1 {
-    border: 2px solid #33667D; /* Color azul del borde */
+    border: 2px solid #2C5697; /* Color azul del borde */
     padding: 15px; /* Espaciado interior */
     margin: 15px 0; /* Espaciado exterior */
     border-radius: 5px; /* Esquinas redondeadas opcional */
@@ -173,12 +173,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Opcional: estilizar el texto dentro de la caja */
 .box1 h2, .box1 p {
-    color: #33667D; /* Color del texto */
+    color: #6495ED; /* Color del texto */
 }
 
 /* Definir una clase para la caja de contenido */
         .box1 {
-            border: 2px solid #33667D; /* Color azul del borde */
+            border: 2px solid #6495ED; /* Color azul del borde */
             padding: 15px; /* Espaciado interior */
             margin: 15px 0; /* Espaciado exterior */
             border-radius: 5px; /* Esquinas redondeadas opcional */
@@ -187,7 +187,7 @@ h1, h2, h3, h4, h5, h6 {
 
         /* Opcional: estilizar el texto dentro de la caja */
         .box1 h2, .box1 p {
-            color: #33667D; /* Color del texto */
+            color: #6495ED; /* Color del texto */
         }
 
         /* Estilo para la etiqueta */
@@ -195,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
             position: absolute; /* Posiciona la etiqueta dentro de la caja */
             top: -10px; /* Ajusta la posición vertical de la etiqueta */
             left: 10px; /* Ajusta la posición horizontal de la etiqueta */
-            background-color: #33667D; /* Color de fondo de la etiqueta */
+            background-color: #6495ED; /* Color de fondo de la etiqueta */
             color: #ffffff; /* Color del texto de la etiqueta */
             padding: 5px 10px; /* Espaciado interior de la etiqueta */
             border-radius: 5px; /* Esquinas redondeadas de la etiqueta */
@@ -314,7 +314,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Definir una clase para la caja de contenido */
 .box2 {
-    border: 2px solid #347EBE; /* Color azul del borde */
+    border: 2px solid #1F5591; /* Color azul del borde */
     padding: 15px; /* Espaciado interior */
     margin: 15px 0; /* Espaciado exterior */
     border-radius: 5px; /* Esquinas redondeadas opcional */
@@ -323,12 +323,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Opcional: estilizar el texto dentro de la caja */
 .box2 h2, .box2 p {
-    color: #347EBE; /* Color del texto */
+    color: #1F5591; /* Color del texto */
 }
 
 /* Definir una clase para la caja de contenido */
         .box2 {
-            border: 2px solid #347EBE; /* Color azul del borde */
+            border: 2px solid #1F5591; /* Color azul del borde */
             padding: 15px; /* Espaciado interior */
             margin: 15px 0; /* Espaciado exterior */
             border-radius: 5px; /* Esquinas redondeadas opcional */
@@ -337,7 +337,7 @@ h1, h2, h3, h4, h5, h6 {
 
   /* Opcional: estilizar el texto dentro de la caja */
         .box2 h2, .box2 p {
-            color: #347EBE; /* Color del texto */
+            color: #1F5591; /* Color del texto */
         }
 
         /* Estilo para la etiqueta */
@@ -345,7 +345,7 @@ h1, h2, h3, h4, h5, h6 {
             position: absolute; /* Posiciona la etiqueta dentro de la caja */
             top: -10px; /* Ajusta la posición vertical de la etiqueta */
             left: 10px; /* Ajusta la posición horizontal de la etiqueta */
-            background-color: #347EBE; /* Color de fondo de la etiqueta */
+            background-color:#1F5591; /* Color de fondo de la etiqueta */
             color: #ffffff; /* Color del texto de la etiqueta */
             padding: 5px 10px; /* Espaciado interior de la etiqueta */
             border-radius: 5px; /* Esquinas redondeadas de la etiqueta */
