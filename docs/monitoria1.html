@@ -395,6 +395,16 @@ $(document).ready(function () {
     </li>
     <li class="divider"></li>
     <li>
+      <a href="guia24.html">Guía 2.4</a>
+    </li>
+    <li>
+      <a href="recurso24.html">Modelos de probabilidad</a>
+    </li>
+    <li>
+      <a href="codigo24.html">Código 2.4</a>
+    </li>
+    <li class="divider"></li>
+    <li>
       <a href="monitoria2.html">Monitoria 2</a>
     </li>
   </ul>
@@ -816,11 +826,11 @@ etiquetadas por día. A partir de los resultados procesados en R presente
 un análisis estadístico para el número de botellas etiquetadas por
 día</p>
 <pre class="r"><code>summarytools::descr(x)  </code></pre>
-<pre><code>Descriptive Statistics  
-value  
-N: 40  
+<pre><code>Descriptive Statistics   
+x     
+**N:** 40   
 
-                     value
+                         x
 ----------------- --------
              Mean    76.08
           Std.Dev     7.82
@@ -859,23 +869,25 @@ Jun = c(12.0, 12.0, 12.0, 12.7, 12.8, 12.9, 8.0, 8.0, 13.2, 13.3, 13.5, 13.6, 11
 comportamiento tomados en el estudio</p>
 <p><img src="monitoria1_files/figure-html/unnamed-chunk-5-1.png" width="672" /></p>
 <p><br/><br/></p>
-<pre><code>Descriptive Statistics  
+<pre><code>Descriptive Statistics     
+**Data Frame:** datos     
+**N:** 30   
 
-                       Jun      May
+                       May      Jun
 ----------------- -------- --------
-             Mean    11.34    10.84
-          Std.Dev     2.65     2.22
-              Min     5.90     6.20
+             Mean    10.84    11.34
+          Std.Dev     2.22     2.65
+              Min     6.20     5.90
                Q1     9.20     9.20
-           Median    11.95    10.90
-               Q3    13.30    12.30
-              Max    15.20    15.00
-              MAD     2.37     2.30
-              IQR     3.80     3.03
-               CV     0.23     0.20
-         Skewness    -0.48    -0.07
+           Median    10.90    11.95
+               Q3    12.30    13.30
+              Max    15.00    15.20
+              MAD     2.30     2.37
+              IQR     3.03     3.80
+               CV     0.20     0.23
+         Skewness    -0.07    -0.48
       SE.Skewness     0.43     0.43
-         Kurtosis    -0.87    -0.66
+         Kurtosis    -0.66    -0.87
           N.Valid    30.00    30.00
         Pct.Valid   100.00   100.00</code></pre>
 <p><br/><br/></p>
@@ -1260,26 +1272,7 @@ y = c(28.6, 25.1, 26.4, 34.9, 29.3, 28.4, 38.5, 30.2, 30.6, 31.8, 41.6, 21.1, 36
 cat(&quot;y = &quot;,y, &quot;\n&quot;)</code></pre>
 <pre><code>y =  28.6 25.1 26.4 34.9 29.3 28.4 38.5 30.2 30.6 31.8 41.6 21.1 36 37.9 13.9 </code></pre>
 <pre class="r"><code>cat(&quot;\n&quot;)</code></pre>
-<pre class="r"><code>summarytools::descr(data.frame(x,y))</code></pre>
-<pre><code>Descriptive Statistics  
-
-                         x        y
------------------ -------- --------
-             Mean    46.22    30.29
-          Std.Dev    13.14     7.13
-              Min    22.10    13.90
-               Q1    34.40    26.40
-           Median    48.10    30.20
-               Q3    55.20    36.00
-              Max    69.30    41.60
-              MAD    10.53     6.97
-              IQR    15.10     8.05
-               CV     0.28     0.24
-         Skewness    -0.37    -0.49
-      SE.Skewness     0.58     0.58
-         Kurtosis    -0.75    -0.27
-          N.Valid    15.00    15.00
-        Pct.Valid   100.00   100.00</code></pre>
+<pre class="r"><code>#summarytools::descr(data.frame(x,y))</code></pre>
 <p>De a cuerdo con los valoresa obtenidos es posible afirmar que existen
 diferencias en los dos grupos observados con referencia al tiempo que se
 requiere para quedarse dormido?</p>
@@ -1413,25 +1406,27 @@ estrato =c(5, 3, 3, 3, 5, 4, 2, 4, 5, 2, 2, 3, 3, 4, 6, 6, 6, 3, 5, 5, 2, 5, 4, 
 
 datosENE =data.frame(id=1:100,ventas,costos,utilidad,empleados, estrato)
 summarytools::descr(datosENE[,2:6])</code></pre>
-<pre><code>Descriptive Statistics  
+<pre><code>Descriptive Statistics     
+**Data Frame:** datosENE     
+**N:** 100   
 
-                    costos   empleados   estrato   utilidad   ventas
------------------ -------- ----------- --------- ---------- --------
-             Mean    35.78       15.85      3.85      24.89    61.07
-          Std.Dev     5.49        5.14      1.40       6.96     9.76
-              Min    25.50        2.00      2.00       5.90    39.20
-               Q1    31.10       13.00      3.00      20.10    54.40
-           Median    35.60       16.00      4.00      24.40    60.85
-               Q3    39.85       20.00      5.00      30.60    66.70
-              Max    49.30       26.00      6.00      36.90    95.20
-              MAD     6.38        4.45      1.48       8.08     9.12
-              IQR     8.67        7.00      2.00      10.40    12.10
-               CV     0.15        0.32      0.36       0.28     0.16
-         Skewness     0.13       -0.06      0.09      -0.34     0.73
-      SE.Skewness     0.24        0.24      0.24       0.24     0.24
-         Kurtosis    -0.70       -0.15     -1.31      -0.56     1.58
-          N.Valid   100.00      100.00    100.00     100.00   100.00
-        Pct.Valid   100.00      100.00    100.00     100.00   100.00</code></pre>
+                    ventas   costos   utilidad   empleados   estrato
+----------------- -------- -------- ---------- ----------- ---------
+             Mean    61.07    35.78      24.89       15.85      3.85
+          Std.Dev     9.76     5.49       6.96        5.14      1.40
+              Min    39.20    25.50       5.90        2.00      2.00
+               Q1    54.40    31.10      20.10       13.00      3.00
+           Median    60.85    35.60      24.40       16.00      4.00
+               Q3    66.70    39.85      30.60       20.00      5.00
+              Max    95.20    49.30      36.90       26.00      6.00
+              MAD     9.12     6.38       8.08        4.45      1.48
+              IQR    12.10     8.67      10.40        7.00      2.00
+               CV     0.16     0.15       0.28        0.32      0.36
+         Skewness     0.73     0.13      -0.34       -0.06      0.09
+      SE.Skewness     0.24     0.24       0.24        0.24      0.24
+         Kurtosis     1.58    -0.70      -0.56       -0.15     -1.31
+          N.Valid   100.00   100.00     100.00      100.00    100.00
+        Pct.Valid   100.00   100.00     100.00      100.00    100.00</code></pre>
 </div>
 </div>
 <p><br/><br/><br/></p>
@@ -1586,27 +1581,27 @@ tiempos</code></pre>
 plot(tiempos, type = &quot;b&quot;, main = &quot;Distribución de Tiempos de Procesamiento de Préstamos&quot;, xlab = &quot;Número de Solicitud&quot;, ylab = &quot;Tiempo de Procesamiento (horas)&quot;)</code></pre>
 <p><img src="monitoria1_files/figure-html/unnamed-chunk-17-1.png" width="672" /></p>
 <pre class="r"><code>summarytools::descr(tiempos)</code></pre>
-<pre><code>Descriptive Statistics  
-value  
-N: 100  
+<pre><code>Descriptive Statistics   
+tiempos     
+**N:** 100   
 
-                     value
------------------ --------
-             Mean    18.36
-          Std.Dev     3.65
-              Min     8.80
-               Q1    16.00
-           Median    18.25
-               Q3    20.80
-              Max    26.70
-              MAD     3.56
-              IQR     4.80
-               CV     0.20
-         Skewness     0.06
-      SE.Skewness     0.24
-         Kurtosis    -0.22
-          N.Valid   100.00
-        Pct.Valid   100.00</code></pre>
+                    tiempos
+----------------- ---------
+             Mean     18.36
+          Std.Dev      3.65
+              Min      8.80
+               Q1     16.00
+           Median     18.25
+               Q3     20.80
+              Max     26.70
+              MAD      3.56
+              IQR      4.80
+               CV      0.20
+         Skewness      0.06
+      SE.Skewness      0.24
+         Kurtosis     -0.22
+          N.Valid    100.00
+        Pct.Valid    100.00</code></pre>
 <p>Criterios establecidos por el banco:</p>
 <ul>
 <li>No poseer tiempos de procesamiento extremadamente largos

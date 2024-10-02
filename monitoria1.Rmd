@@ -515,7 +515,7 @@ cat("x = ", x, "\n")
 y = c(28.6, 25.1, 26.4, 34.9, 29.3, 28.4, 38.5, 30.2, 30.6, 31.8, 41.6, 21.1, 36.0, 37.9, 13.9)
 cat("y = ",y, "\n")
 cat("\n")
-summarytools::descr(data.frame(x,y))
+#summarytools::descr(data.frame(x,y))
 ```
 
 

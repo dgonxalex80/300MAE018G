@@ -90,7 +90,14 @@ navbar:
           href: codigo23.html  
         - text: "Taller 231"
           href: taller231.html          
-        - text: "--------"            
+        - text: "--------"   
+        - text: "Guía 2.4"
+          href: guia24.html        
+        - text: "Modelos de probabilidad"
+          href: recurso24.html
+        - text: "Código 2.4"
+          href: codigo24.html  
+        - text: "--------"           
         - text: "Monitoria 2"
           href: monitoria2.html
           
