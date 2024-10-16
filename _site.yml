@@ -106,6 +106,24 @@ navbar:
         - text: "Módulo 3"
           href: modulo3.html
         - text: "---------" 
+        - text: "Guía 3.1"
+          href: guia31.html        
+        - text: "Inferencia Estadística"
+          href: recurso31.html
+        - text: "Código 3.1"
+          href: codigo31.html
+        - text: "--------"   
+        - text: "Guía 3.2"
+          href: guia32.html        
+        - text: "Intervalos de confianza"
+          href: recurso32.html
+        - text: "Código 3.2"
+          href: codigo32.html
+        - text: "Taller 321"
+          href: taller321.html       
+        - text: "--------"       
+        - text: "Monitoria 3"
+          href: monitoria3.html     
   
     - text: "Módulo 4"
       menu:
