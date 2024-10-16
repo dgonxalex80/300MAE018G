@@ -634,13 +634,62 @@ confianza para la media, varianza, proporción, diferencia de
 medias,diferencia de proporciones y razón de varianzas</p></li>
 <li><p>Para el desarrollo de este taller se recomienda:</p>
 <ul>
-<li>Ver los videos contenidos recursos 3.1</li>
-<li>Realizar los tutoriales con tenidos en el paquete
-<code>paqueteDEG</code>, revisar indicaciones en
-<code>recursos 3.2</code></li>
-<li></li>
+<li>Ver los videos contenidos <code>recursos 3.2</code></li>
+<li>Realizar los <strong>tutoriales</strong> con tenidos en el paquete
+<code>paqueteDEG</code>- revisar indicaciones en
+<code>recursos 3.2</code> -</li>
 </ul></li>
 </ul>
+<p>Los tutoriales conforma una herramienta de apoyo al aprendizaje,
+mediante el desarrollo de problemas utilizando para ello código R para
+luego realizar la interpretacón de los resulados.</p>
+<p>Para trabajar los tutoriales se deben seguir los siguientes
+pasos:</p>
+<ol style="list-style-type: decimal">
+<li>Instala el paquete <code>learnr</code></li>
+</ol>
+<pre>
+        install.packages("learnr") # solo una vez
+</pre>
+<ol start="2" style="list-style-type: decimal">
+<li>Instala el paquete `remotes``</li>
+</ol>
+<pre>
+        install.packages('remotes')  # solo una vez
+</pre>
+<ol start="3" style="list-style-type: decimal">
+<li>Activa el paquiete <code>remotes</code></li>
+</ol>
+<pre>
+        library(remotes) # solo una vez
+</pre>
+<ol start="4" style="list-style-type: decimal">
+<li>Instala el paquete <code>paqueteDEG</code></li>
+</ol>
+<pre>
+        install_github("dgonxalex80/paqueteDEG", force = TRUE) # solo una vez
+</pre>
+<ol start="5" style="list-style-type: decimal">
+<li>Activa el tutorial <code>Taller-Intervalos1</code></li>
+</ol>
+<pre>
+         learnr::run_tutorial("Taller-Intervalos1", "paqueteDEG")
+</pre>
+<div class="box3 with-label">
+<div class="label">
+Resumen de código
+</div>
+<pre>
+install.packages("learnr") # solo una vez
+install.packages('remotes')  # solo una vez
+library(remotes) # solo una vez
+install_github("dgonxalex80/paqueteDEG", force = TRUE) # solo una vez
+
+learnr::run_tutorial("Taller-Intervalos1", "paqueteDEG") # para correr el tutorial1
+
+learnr::run_tutorial("Taller-Intervalos2", "paqueteDEG") # para correr el tutorial2
+</pre>
+</div>
 </div>
 </div>
 

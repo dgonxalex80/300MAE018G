@@ -107,13 +107,61 @@ La unidad 3.2 contará con los siguientes recursos para su desarrollo:
 
 * Para el desarrollo de este taller se recomienda: 
 
-  * Ver los videos contenidos recursos 3.1
-  * Realizar los tutoriales con tenidos en el paquete `paqueteDEG`, revisar indicaciones en `recursos 3.2`
-  *    
+  * Ver los videos contenidos `recursos 3.2`
+  * Realizar los **tutoriales** con tenidos en el paquete `paqueteDEG`- revisar indicaciones en `recursos 3.2` -
+    
+
+Los tutoriales conforma una herramienta de apoyo al aprendizaje, mediante el desarrollo de problemas utilizando para ello código R para luego realizar la interpretacón de los resulados.
+
+Para trabajar los tutoriales se deben seguir los siguientes pasos:
+
+1. Instala el paquete `learnr`
+
+<pre>
+        install.packages("learnr") # solo una vez
+</pre>
+
+2. Instala el paquete `remotes``
+
+<pre>
+        install.packages('remotes')  # solo una vez
+</pre>
+
+3. Activa el paquiete `remotes`
+
+<pre>
+        library(remotes) # solo una vez
+</pre>
+
+4. Instala el paquete `paqueteDEG`
+
+<pre>
+        install_github("dgonxalex80/paqueteDEG", force = TRUE) # solo una vez
+</pre>
+
+5. Activa el tutorial `Taller-Intervalos1`
+
+<pre>
+         learnr::run_tutorial("Taller-Intervalos1", "paqueteDEG")
+</pre>
 
 
 
+<div class="box3 with-label">
+<div class="label">Resumen de código</div>
 
+<pre>
+install.packages("learnr") # solo una vez
+install.packages('remotes')  # solo una vez
+library(remotes) # solo una vez
+install_github("dgonxalex80/paqueteDEG", force = TRUE) # solo una vez
+
+learnr::run_tutorial("Taller-Intervalos1", "paqueteDEG") # para correr el tutorial1
+
+learnr::run_tutorial("Taller-Intervalos2", "paqueteDEG") # para correr el tutorial2
+</pre>
+
+</div>
 
 
 

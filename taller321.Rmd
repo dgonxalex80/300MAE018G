@@ -61,12 +61,17 @@ knitr::include_graphics("img/banner003.png")
 <div class="box2 with-label">
 <div class="label">Problema 1</div>
 
-Un ingeniero está analizando la resistencia a la compresión de piezas que son utilizadas en la fabricación de motores para vehículos. La resistencia a la compresión se distribuye normalmente con $\sigma^2 = 1000 \, (psi)^2$. Una muestra aleatoria de 12 piezas presenta una media en la resistencia de compresión $\bar{x} = 3250 \, psi$.
+La Cámara de Comercio de Cali está interesada en estimar la cantidad promedio de dinero que gasta la gente que asiste a convenciones, calculando comidas, alojamiento y entretenimiento por día. De las distintas convenciones que se han realizado en Cali durante el último mes fueron seleccionadas 16 personas a las que se les pregunto la cantidad de dinero que habían gastado por día. El resultado en dólares fueron los siguientes: 
+<pre>
+gastos <- c(150,175, 163, 148, 142, 189, 135, 174, 168, 152, 158, 184, 134, 146, 155, 163) 
+</pre>
 
-a. Construir un intervalo de confianza del 95% de la media de la resistencia a la compresión.
-b. Construir intervalos de confianza del 90% y del 99% para la media resistencia a la compresión. Comparar los anchos de estos intervalos.
-c. Si se desea estimar la resistencia a la compresión con un error de muestreo menor a 15 psi y una confianza del 99%, ¿qué tamaño de muestra se requiere?
+Si se supone que la cantidad de dinero gastada en un día es una variable aleatoria con distribución aproximadamente normal. 
+Obtenga los intervalos de confianza estimados del 90\%, 95\% 98\% y 99\% para la cantidad promedio real. 
+Analice los resultados y a partir de ellos concluya sobre el efecto que genera un aumento en el nivel de confianza.
 
+
+Obtenga un intervalo de confianza del 95% para la varianza de los gastos diarios. 
 </div>
 
 </br></br>
@@ -93,13 +98,24 @@ b. Calcular un intervalo de confianza del 99% sobre la media $\mu$ e interpretar
 <div class="box2 with-label">
 <div class="label">Problema 3</div>
 
-El porcentaje de titanio contenido en una aleación utilizada en artículos para escalar fue medido en 51 partes seleccionadas aleatoriamente. La desviación estándar muestral es $s = 0.37$.
+El propietario de un prestigioso gimnasio quiere determinar si un instructor de ejercicio debe ser contratado o no para su campaña estrella **Rebaje mas de 5 kg de peso en un solo mes**.
 
-a.  Construir un intervalo de confianza del 95% para $\sigma$. 
-b. Analizar qué ocurre con el intervalo si se aumenta el tamaño de la muestra manteniendo el resto de la información constante.
+Para tomar la decisión le dice a un de los candidatos que pruebe con 16 de las personas que habitualmente concurren al gimnasio tomadas al azar. Los datos que se tomaron antes y después de haber realizado un mes de ejercicios a cargo del candidato son los siguientes: 
+
+
+|id      |  1    |   2  |   3  |   4   |   5  |  6    |   7  |   8  |   9  |  10  |  11  |  12  |  13   |  14  | 15    | 16   |
+|:-------|------:|-----:|-----:|------:|-----:|------:|-----:|-----:|-----:|-----:|-----:|-----:|------:|-----:|------:|-----:|
+|antes   | 104.5 | 89.3 | 84.5 | 106.8 | 90.1 |  96.5 | 79.5 | 90.4 | 85.2 | 76.5 | 91.5 | 82.5 | 100.5 | 89.5 | 121.6 | 72.0 | 
+|despues |  98.6 | 85.5 | 85.6 | 103.0 | 88.5 |  95.6 | 79.5 | 90.3 | 82.6 | 76.0 | 89.5 | 81.5 |  99.4 | 86.5 | 115.2 | 70.1 |
 
 
 </div>
+```{r}
+antes <- c(104.5,  89.3, 84.5, 106.8, 90.1,  96.5, 79.5, 90.4, 85.2, 76.5, 91.5, 82.5, 100.5 , 89.5, 121.6, 72.0)
+despues<- c(98.6,  85.5, 85.6, 103.0, 88.5,  95.6, 79.5, 90.3, 82.6, 76.0, 89.5, 81.5,  99.4,  86.5, 115.2, 70.1)
+```
+
+Estime un intervalo de confianza del 95% para la diferencia de peso perdidos y analice los resultados obtenidos
 
 
 </br></br>
@@ -147,7 +163,7 @@ b. Calcular un intervalo de confianza del 99% para la media del contenido de alq
 <div class="box2 with-label">
 <div class="label">Problema 6</div>
 
-Los siguientes datos corresponden al tiempo de secado (en horas) de una nueva pintura:
+Una de las variables mas importantes en la producción de muebles para camedor corresponde al tiempo de secado de la pintura. Con el fin de establecer una medida confiable el administrador de una fabrica de muebles ha recogido  información sobre el tiempo de secado (en horas) de una nueva pintura que le han ofrecido a buen precio:
 
 ```{r}
 x <- c(3,4, 2,5, 4,8, 2,9, 3,6, 2,8, 3,3, 5,6, 3,7, 2,8, 4,4, 4,0, 5,2, 3,0, 4,8)
@@ -159,6 +175,7 @@ x <- c(3,4, 2,5, 4,8, 2,9, 3,6, 2,8, 3,3, 5,6, 3,7, 2,8, 4,4, 4,0, 5,2, 3,0, 4,8
 </pre>
 
 a. Calcular un intervalo de confianza del 95% para la media del tiempo de secado.
+
 b. Calcular un intervalo de confianza del 98% para su varianza. Interpretar los resultados.
 
 
@@ -170,8 +187,11 @@ b. Calcular un intervalo de confianza del 98% para su varianza. Interpretar los 
 <div class="box2 with-label">
 <div class="label">Problema 7</div>
 
-El director de una fábrica desea estimar el tiempo promedio que toma perforar tres agujeros en una placa metálica utilizada para mesas. ¿Cuál debe ser el tamaño de la muestra para que el intervalo de confianza del 95% esté dentro de 15 segundos de la media real, sabiendo que $\sigma = 40$?
+El director de una entidad financiera desea estimar el tiempo promedio que toma la ejecución de un proceso de cobre a clientes morosos. Con este fin desea recoger una muestra dentro de los prodesos que ser realizan diariamente. ¿Cuál debe ser el tamaño de la muestra para que el intervalo de confianza del 95% esté dentro de 0.5 minutos de la media real, sabiendo que $\sigma = 40$ minutos?
 
+```{r}
+# paqueteDEG::sizemu(0.975, 40, 0.5)
+```
 
 
 </div>
@@ -181,13 +201,14 @@ El director de una fábrica desea estimar el tiempo promedio que toma perforar t
 
 <div class="box2 with-label">
 <div class="label">Problema 8</div>
-En un proceso de fabricación se compara la tensión de ruptura de dos métodos: estándar y con aleación. Las tensiones son las siguientes:
+En un proceso de fabricación se compara el número de artículos producidos diarimante por dos equipos de trabajo que realizan dos procedimientos diferentes en la fabricación de pantalones para hombre, los valores alcanzados durante 12 dias de trabajo son:  
+ son las siguientes:
 
 ```{r}
 # Proceso estándar: 
-proc_est <- c(428, 419, 458, 439, 441, 456, 463, 429, 438, 445, 441, 463)  
+equipo1<- c(428, 419, 458, 439, 441, 456, 463, 429, 438, 445, 441, 463)  
 #Proceso nuevo: 
-proc_nue <- c(462, 448, 435, 465, 429, 472, 453, 459, 427, 468, 452, 447)  
+equipo2 <- c(462, 448, 435, 465, 429, 472, 453, 459, 427, 468, 452, 447)  
 ```
 
 
@@ -200,8 +221,9 @@ Proceso nuevo:
 
 </pre>
 
-a. Obtener un intervalo de confianza del 95% para la diferencia de medias.
-b. Determinar si existe una diferencia real entre los dos procesos. ¿Cuál es más conveniente?
+a. Obtener un intervalo de confianza del 95% para la diferencia de medias del número de prendas fabricadas por dia.
+
+b. Determinar si existe una diferencia real entre los procesos realaizados por los dos equipos. ¿Cuál proceso es más conveniente?
 
 
 </div>
@@ -212,9 +234,10 @@ b. Determinar si existe una diferencia real entre los dos procesos. ¿Cuál es m
 <div class="box2 with-label">
 <div class="label">Problema 9</div>
 
-De una muestra aleatoria de 87 estaciones de gasolina, 13 tenían al menos un tanque subterráneo con fuga.
+De una muestra aleatoria de 87 locales de ropa, 13 han presentado situaciones de robo durante el último mes.
 
-a. Determinar un intervalo de confianza del 95% para la proporción de estaciones con fugas.
+a. Determinar un intervalo de confianza del 95% para la proporción de locales que han presentado situaciones de robo durante el último mes.
+
 b. Calcular el tamaño de muestra necesario para que un intervalo del 95% especifique la proporción dentro de mas o menos $0.03$. En caso de no tener información previa, discutir cómo calcular el tamaño muestral y si es necesario hacer ajustes por población finita.
 
 </div>

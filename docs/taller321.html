@@ -521,23 +521,24 @@ $(document).ready(function () {
 <div class="label">
 Problema 1
 </div>
-<p>Un ingeniero está analizando la resistencia a la compresión de piezas
-que son utilizadas en la fabricación de motores para vehículos. La
-resistencia a la compresión se distribuye normalmente con <span
-class="math inline">\(\sigma^2 = 1000 \, (psi)^2\)</span>. Una muestra
-aleatoria de 12 piezas presenta una media en la resistencia de
-compresión <span class="math inline">\(\bar{x} = 3250 \,
-psi\)</span>.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Construir un intervalo de confianza del 95% de la media de la
-resistencia a la compresión.</li>
-<li>Construir intervalos de confianza del 90% y del 99% para la media
-resistencia a la compresión. Comparar los anchos de estos
-intervalos.</li>
-<li>Si se desea estimar la resistencia a la compresión con un error de
-muestreo menor a 15 psi y una confianza del 99%, ¿qué tamaño de muestra
-se requiere?</li>
-</ol>
+La Cámara de Comercio de Cali está interesada en estimar la cantidad
+promedio de dinero que gasta la gente que asiste a convenciones,
+calculando comidas, alojamiento y entretenimiento por día. De las
+distintas convenciones que se han realizado en Cali durante el último
+mes fueron seleccionadas 16 personas a las que se les pregunto la
+cantidad de dinero que habían gastado por día. El resultado en dólares
+fueron los siguientes:
+<pre>
+gastos <- c(150,175, 163, 148, 142, 189, 135, 174, 168, 152, 158, 184, 134, 146, 155, 163) 
+</pre>
+<p>Si se supone que la cantidad de dinero gastada en un día es una
+variable aleatoria con distribución aproximadamente normal. Obtenga los
+intervalos de confianza estimados del 90%, 95% 98% y 99% para la
+cantidad promedio real. Analice los resultados y a partir de ellos
+concluya sobre el efecto que genera un aumento en el nivel de
+confianza.</p>
+<p>Obtenga un intervalo de confianza del 95% para la varianza de los
+gastos diarios.</p>
 </div>
 <p></br></br></p>
 <div class="box2 with-label">
@@ -561,17 +562,100 @@ class="math inline">\(\mu\)</span> e interpretar el resultado.</li>
 <div class="label">
 Problema 3
 </div>
-<p>El porcentaje de titanio contenido en una aleación utilizada en
-artículos para escalar fue medido en 51 partes seleccionadas
-aleatoriamente. La desviación estándar muestral es <span
-class="math inline">\(s = 0.37\)</span>.</p>
-<ol style="list-style-type: lower-alpha">
-<li>Construir un intervalo de confianza del 95% para <span
-class="math inline">\(\sigma\)</span>.</li>
-<li>Analizar qué ocurre con el intervalo si se aumenta el tamaño de la
-muestra manteniendo el resto de la información constante.</li>
-</ol>
+<p>El propietario de un prestigioso gimnasio quiere determinar si un
+instructor de ejercicio debe ser contratado o no para su campaña
+estrella <strong>Rebaje mas de 5 kg de peso en un solo mes</strong>.</p>
+<p>Para tomar la decisión le dice a un de los candidatos que pruebe con
+16 de las personas que habitualmente concurren al gimnasio tomadas al
+azar. Los datos que se tomaron antes y después de haber realizado un mes
+de ejercicios a cargo del candidato son los siguientes:</p>
+<table>
+<colgroup>
+<col width="7%" />
+<col width="6%" />
+<col width="5%" />
+<col width="5%" />
+<col width="6%" />
+<col width="5%" />
+<col width="6%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="5%" />
+<col width="6%" />
+<col width="5%" />
+<col width="6%" />
+<col width="5%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">id</th>
+<th align="right">1</th>
+<th align="right">2</th>
+<th align="right">3</th>
+<th align="right">4</th>
+<th align="right">5</th>
+<th align="right">6</th>
+<th align="right">7</th>
+<th align="right">8</th>
+<th align="right">9</th>
+<th align="right">10</th>
+<th align="right">11</th>
+<th align="right">12</th>
+<th align="right">13</th>
+<th align="right">14</th>
+<th align="right">15</th>
+<th align="right">16</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">antes</td>
+<td align="right">104.5</td>
+<td align="right">89.3</td>
+<td align="right">84.5</td>
+<td align="right">106.8</td>
+<td align="right">90.1</td>
+<td align="right">96.5</td>
+<td align="right">79.5</td>
+<td align="right">90.4</td>
+<td align="right">85.2</td>
+<td align="right">76.5</td>
+<td align="right">91.5</td>
+<td align="right">82.5</td>
+<td align="right">100.5</td>
+<td align="right">89.5</td>
+<td align="right">121.6</td>
+<td align="right">72.0</td>
+</tr>
+<tr class="even">
+<td align="left">despues</td>
+<td align="right">98.6</td>
+<td align="right">85.5</td>
+<td align="right">85.6</td>
+<td align="right">103.0</td>
+<td align="right">88.5</td>
+<td align="right">95.6</td>
+<td align="right">79.5</td>
+<td align="right">90.3</td>
+<td align="right">82.6</td>
+<td align="right">76.0</td>
+<td align="right">89.5</td>
+<td align="right">81.5</td>
+<td align="right">99.4</td>
+<td align="right">86.5</td>
+<td align="right">115.2</td>
+<td align="right">70.1</td>
+</tr>
+</tbody>
+</table>
 </div>
+<pre class="r"><code>antes &lt;- c(104.5,  89.3, 84.5, 106.8, 90.1,  96.5, 79.5, 90.4, 85.2, 76.5, 91.5, 82.5, 100.5 , 89.5, 121.6, 72.0)
+despues&lt;- c(98.6,  85.5, 85.6, 103.0, 88.5,  95.6, 79.5, 90.3, 82.6, 76.0, 89.5, 81.5,  99.4,  86.5, 115.2, 70.1)</code></pre>
+<p>Estime un intervalo de confianza del 95% para la diferencia de peso
+perdidos y analice los resultados obtenidos</p>
 <p></br></br></p>
 <div class="box2 with-label">
 <div class="label">
@@ -611,18 +695,21 @@ contenido de alquitrán.</li>
 <div class="label">
 Problema 6
 </div>
-<p>Los siguientes datos corresponden al tiempo de secado (en horas) de
-una nueva pintura:</p>
+<p>Una de las variables mas importantes en la producción de muebles para
+camedor corresponde al tiempo de secado de la pintura. Con el fin de
+establecer una medida confiable el administrador de una fabrica de
+muebles ha recogido información sobre el tiempo de secado (en horas) de
+una nueva pintura que le han ofrecido a buen precio:</p>
 <pre class="r"><code>x &lt;- c(3,4, 2,5, 4,8, 2,9, 3,6, 2,8, 3,3, 5,6, 3,7, 2,8, 4,4, 4,0, 5,2, 3,0, 4,8)</code></pre>
 <pre>
 3, 4, 2, 5, 4, 8, 2, 9, 3, 6, 2, 8, 3, 3, 5, 6, 3, 7, 2, 8, 4, 4, 4, 0,
 5, 2, 3, 0, 4, 8
 </pre>
 <ol style="list-style-type: lower-alpha">
-<li>Calcular un intervalo de confianza del 95% para la media del tiempo
-de secado.</li>
-<li>Calcular un intervalo de confianza del 98% para su varianza.
-Interpretar los resultados.</li>
+<li><p>Calcular un intervalo de confianza del 95% para la media del
+tiempo de secado.</p></li>
+<li><p>Calcular un intervalo de confianza del 98% para su varianza.
+Interpretar los resultados.</p></li>
 </ol>
 </div>
 <p></br></br></p>
@@ -630,23 +717,29 @@ Interpretar los resultados.</li>
 <div class="label">
 Problema 7
 </div>
-<p>El director de una fábrica desea estimar el tiempo promedio que toma
-perforar tres agujeros en una placa metálica utilizada para mesas. ¿Cuál
-debe ser el tamaño de la muestra para que el intervalo de confianza del
-95% esté dentro de 15 segundos de la media real, sabiendo que <span
-class="math inline">\(\sigma = 40\)</span>?</p>
+<p>El director de una entidad financiera desea estimar el tiempo
+promedio que toma la ejecución de un proceso de cobre a clientes
+morosos. Con este fin desea recoger una muestra dentro de los prodesos
+que ser realizan diariamente. ¿Cuál debe ser el tamaño de la muestra
+para que el intervalo de confianza del 95% esté dentro de 0.5 minutos de
+la media real, sabiendo que <span class="math inline">\(\sigma =
+40\)</span> minutos?</p>
+<pre class="r"><code># paqueteDEG::sizemu(0.975, 40, 0.5)</code></pre>
 </div>
 <p></br></br></p>
 <div class="box2 with-label">
 <div class="label">
 Problema 8
 </div>
-<p>En un proceso de fabricación se compara la tensión de ruptura de dos
-métodos: estándar y con aleación. Las tensiones son las siguientes:</p>
+<p>En un proceso de fabricación se compara el número de artículos
+producidos diarimante por dos equipos de trabajo que realizan dos
+procedimientos diferentes en la fabricación de pantalones para hombre,
+los valores alcanzados durante 12 dias de trabajo son:<br />
+son las siguientes:</p>
 <pre class="r"><code># Proceso estándar: 
-proc_est &lt;- c(428, 419, 458, 439, 441, 456, 463, 429, 438, 445, 441, 463)  
+equipo1&lt;- c(428, 419, 458, 439, 441, 456, 463, 429, 438, 445, 441, 463)  
 #Proceso nuevo: 
-proc_nue &lt;- c(462, 448, 435, 465, 429, 472, 453, 459, 427, 468, 452, 447)  </code></pre>
+equipo2 &lt;- c(462, 448, 435, 465, 429, 472, 453, 459, 427, 468, 452, 447)  </code></pre>
 <pre>
 proceso estandar
 428, 419, 458, 439, 441, 456, 463, 429, 438, 445, 441, 463  
@@ -656,10 +749,11 @@ Proceso nuevo:
 
 </pre>
 <ol style="list-style-type: lower-alpha">
-<li>Obtener un intervalo de confianza del 95% para la diferencia de
-medias.</li>
-<li>Determinar si existe una diferencia real entre los dos procesos.
-¿Cuál es más conveniente?</li>
+<li><p>Obtener un intervalo de confianza del 95% para la diferencia de
+medias del número de prendas fabricadas por dia.</p></li>
+<li><p>Determinar si existe una diferencia real entre los procesos
+realaizados por los dos equipos. ¿Cuál proceso es más
+conveniente?</p></li>
 </ol>
 </div>
 <p></br></br></p>
@@ -667,16 +761,17 @@ medias.</li>
 <div class="label">
 Problema 9
 </div>
-<p>De una muestra aleatoria de 87 estaciones de gasolina, 13 tenían al
-menos un tanque subterráneo con fuga.</p>
+<p>De una muestra aleatoria de 87 locales de ropa, 13 han presentado
+situaciones de robo durante el último mes.</p>
 <ol style="list-style-type: lower-alpha">
-<li>Determinar un intervalo de confianza del 95% para la proporción de
-estaciones con fugas.</li>
-<li>Calcular el tamaño de muestra necesario para que un intervalo del
+<li><p>Determinar un intervalo de confianza del 95% para la proporción
+de locales que han presentado situaciones de robo durante el último
+mes.</p></li>
+<li><p>Calcular el tamaño de muestra necesario para que un intervalo del
 95% especifique la proporción dentro de mas o menos <span
 class="math inline">\(0.03\)</span>. En caso de no tener información
 previa, discutir cómo calcular el tamaño muestral y si es necesario
-hacer ajustes por población finita.</li>
+hacer ajustes por población finita.</p></li>
 </ol>
 </div>
 <p></br></br></p>
