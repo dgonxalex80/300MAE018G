@@ -109,7 +109,6 @@ Para tomar la decisión le dice a un de los candidatos que pruebe con 16 de las 
 |despues |  98.6 | 85.5 | 85.6 | 103.0 | 88.5 |  95.6 | 79.5 | 90.3 | 82.6 | 76.0 | 89.5 | 81.5 |  99.4 | 86.5 | 115.2 | 70.1 |
 
 
-</div>
 ```{r}
 antes <- c(104.5,  89.3, 84.5, 106.8, 90.1,  96.5, 79.5, 90.4, 85.2, 76.5, 91.5, 82.5, 100.5 , 89.5, 121.6, 72.0)
 despues<- c(98.6,  85.5, 85.6, 103.0, 88.5,  95.6, 79.5, 90.3, 82.6, 76.0, 89.5, 81.5,  99.4,  86.5, 115.2, 70.1)
@@ -117,6 +116,8 @@ despues<- c(98.6,  85.5, 85.6, 103.0, 88.5,  95.6, 79.5, 90.3, 82.6, 76.0, 89.5,
 
 Estime un intervalo de confianza del 95% para la diferencia de peso perdidos y analice los resultados obtenidos
 
+
+</div>
 
 </br></br>
 
