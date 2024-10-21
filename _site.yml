@@ -120,7 +120,16 @@ navbar:
         - text: "Código 3.2"
           href: codigo32.html
         - text: "Taller 321"
-          href: taller321.html       
+          href: taller321.html   
+        - text: "--------"    
+        - text: "Guía 3.3"
+          href: guia33.html        
+        - text: "Pruebas de hipótesis"
+          href: recurso33.html
+        - text: "Código 3.3"
+          href: codigo32.html
+        - text: "Taller 331"
+          href: taller331.html                
         - text: "--------"       
         - text: "Monitoria 3"
           href: monitoria3.html     
