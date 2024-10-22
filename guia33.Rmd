@@ -74,7 +74,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 |Actividad         | Descripción                    | 
 |:-----------------|:-----------------------------  |
-|**Actividad 431** | Resuelva las preguntas y problemas planteadas en el **Taller 431** y entregue su solución  en formato  pdf en el enlace correspondiente de  Brightspace   |
+|**Actividad 331** | Resuelva las preguntas y problemas planteadas en el **Taller 331** y entregue su solución  en formato  pdf en el enlace correspondiente de  Brightspace   |
 |Trabajo individual|                                |
 |Fecha             | octubre 31  de 2024            |
 |Hora              | 23:59 hora local               |
@@ -94,7 +94,7 @@ Para alcanzar los objetivos planteados se propone realizar las siguientes activi
 
 |Actividad         | Descripción                    | 
 |:--------------|:-----------------------------|
-| Actividad 431 | Solucionario taller 431 de problemas sobre pruebas de hipótesis| 
+| Actividad 331 | Solucionario taller 331 de problemas sobre pruebas de hipótesis| 
 | Fecha         | 31 de octubre de 2024 |
 | Hora          | 23:59 hora local       |
 
