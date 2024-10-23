@@ -873,7 +873,7 @@ prueba de normalidad de Shapiro Wilk</p>
 norm\)</span> <br/></p>
 <pre class="r"><code>precio=c(165.1, 91.8, 128.3, 160.3, 103.6, 153.2, 50.7, 150.3, 160.8, 38.1, 98.8, 88.7, 123.1, 106.5, 79.5, 84.1, 216.1, 139.8, 98.4, 127.1, 103.0, 83.7, 158.8, 126.1, 113.4, 61.3, 79.8, 121.8, 89.9, 97.4, 134.0, 141.2, 154.3, 122.4, 107.6, 137.7, 121.0, 187.7, 56.8, 79.5, 183.8, 114.7, 80.2, 97.3, 113.8, 92.4, 123.5, 138.4, 114.7, 48.8, 178.1, 106.0, 103.1, 100.8,180.7,113.1,121.4,163.0,51.4,135.5,104.5,202.1,171.0,100.7, 56.4, 99.7, 93.0, 118.3, 110.4, 136.9, 112.3, 69.8, 138.3, 87.2, 121.8, 118.6, 174.5, 77.7, 158.5, 85.3, 71.4, 63.0, 140.9, 126.9, 194.2, 136.7, 98.8, 222.5, 131.3, 175.0, 127.7, 88.5, 104.5, 144.7, 73.0, 97.2, 131.0, 120.5, 166.6, 96.0)
 boxplot(precio, horizontal = TRUE, col = c2, xlab=&quot;precio ($000)&quot;)</code></pre>
-<p><img src="recurso43_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-7-1.png" width="672" /></p>
 <p><br/><br/></p>
 <pre class="r"><code>shapiro.test(precio)</code></pre>
 <pre><code>
@@ -1416,7 +1416,7 @@ grupo2=c(8.8, 8.5, 8.4, 8.5, 7.6, 8.7, 8.0, 7.9, 8.2, 8.0, 7.8, 8.6,
 par(mfrow = c(1, 2))
 boxplot(grupo1, las=1, col=c2, ylim=c(5,10))
 boxplot(grupo2, las=1, col=c3, ylim=c(5,10))</code></pre>
-<p><img src="recurso43_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-18-1.png" width="672" /></p>
 </div>
 <p><br/><br/></p>
 <p>Iniciaremos con una prueba de hipótesis para la comparación de
@@ -1505,7 +1505,7 @@ grupo2=c(8.8, 8.5, 8.4, 8.5, 7.6, 8.7, 8.0, 7.9, 8.2, 8.0, 7.8, 8.6, 8.5, 7.9,
 par(mfrow = c(1, 2))
 boxplot(grupo3, las=1, col=c2, ylim=c(5,10))
 boxplot(grupo2, las=1, col=c3, ylim=c(5,10))</code></pre>
-<p><img src="recurso43_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-21-1.png" width="672" /></p>
 <pre class="r"><code>var.test(grupo3,grupo2)</code></pre>
 <pre><code>
     F test to compare two variances
@@ -1933,7 +1933,7 @@ estándar 0.7 puntos. Los datos se resumen en la siguiente tabla: |</p>
 <pre class="r"><code>nf=c(4.1, 2.7, 3.1, 3.2, 3.0, 3.2, 2.0, 2.4, 1.6, 3.2, 3.1, 2.6, 2.0, 2.4, 2.8, 3.3, 4.0, 3.4, 3.0, 3.1, 2.7, 2.7, 3.0, 3.8, 3.2, 2.2, 3.5, 3.5, 3.8, 3.5, 3.9, 4.2, 4.3, 3.9, 3.2, 3.5, 3.5, 3.7, 4.1, 3.7, 3.5, 3.6, 3.2, 3.1, 3.4, 3.0, 3.0, 3.0, 2.7, 1.7, 3.6, 2.1, 2.4, 3.0, 3.1, 2.5, 2.5, 3.6, 2.2, 2.4, 3.1, 3.3, 2.7, 3.7, 3.0, 2.7, 3.0, 3.2, 3.1, 2.4, 3.0, 2.7, 2.5, 3.0, 3.0, 3.0, 3.2, 3.1, 3.8, 4.1, 3.7, 3.5, 3.0, 3.7, 3.7, 4.1, 3.7, 3.9, 3.7, 2.0)
 
 h=hist(nf, las=1, col=c2, main=&quot; &quot;, xlab=&quot; &quot;, ylab=&quot; &quot;)</code></pre>
-<p><img src="recurso43_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-27-1.png" width="672" /></p>
 <pre class="r"><code>lim.nf=h$breaks # cortes de los intervalos
 obs.nf=h$counts   # valores observados 
 mx=mean(nf)     # media
@@ -2305,7 +2305,7 @@ datos obtenidos son los siguientes: |</p>
 <pre class="r"><code>x=c(21,18,15,17,18,25,18,4,6,5)
 y=c(4,4,4,3,3,5,3,1,1,2)
 plot(x,y, las=1, pch=19, col=c4)</code></pre>
-<p><img src="recurso43_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-31-1.png" width="672" /></p>
 <pre class="r"><code>cor.test(x,y, method = &quot;spearman&quot;,continuity = FALSE,conf.level = 0.95)</code></pre>
 <pre><code>
     Spearman&#39;s rank correlation rho
@@ -2393,7 +2393,7 @@ continuación relacionamos algunas de ellas</p>
 <pre class="r"><code># se genera una variable aleatoria normal
 x=rnorm(200,1000,50)
 plot(density(x), main=&quot; &quot;, las=1, xlab = &quot; &quot;, ylab=&quot; &quot;, col=c3, lwd=4)</code></pre>
-<p><img src="recurso43_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
+<p><img src="recurso33_files/figure-html/unnamed-chunk-33-1.png" width="672" /></p>
 <pre class="r"><code>shapiro.test(x)</code></pre>
 <pre><code>
     Shapiro-Wilk normality test
