@@ -245,21 +245,26 @@ Utilice un nivel de significancia de 0.05 para probar si el programa de segurida
 <div class="box2 with-label">
 <div class="label">Problema 9</div>
 
-La compañía de dulces Mars publica en su sitio web información relacionada con los porcentajes de los distintos colores de sus dulces M\|M para la variedad de chocolate con leche.
+La compañía de dulces Mars publica en su sitio web información relacionada con los porcentajes de los distintos colores de sus dulces **m&m** para la variedad de chocolate con leche.
 
 <br/><br/>
 
+
+```{r, echo=FALSE, out.width="40%", fig.align = "center"}
+knitr::include_graphics("img/peanutmm.png")
+```
+
 ```{r, echo=FALSE, out.width="60%", fig.align = "center"}
-knitr::include_graphics("img/tabla_p10.png")
+# knitr::include_graphics("img/tabla_p10.png")
 ```
 
 <br/><br/>
 
-<!-- |Color contenido en la bolsa | café       | amarillo  | rojo    | azul     | naranja  | verde     | -->
-<!-- |:---------------------------|:----------:|:---------:|:-------:|:--------:|:---------|:---------:| -->
-<!-- |Porcentaje (\%)             | 13         | 14        | 13      | 24       | 20       | 16        | -->
+|Color contenido en la bolsa | café       | amarillo  | rojo    | azul     | naranja  | verde     |
+|:---------------------------|:----------:|:---------:|:-------:|:--------:|:---------|:---------:|
+|Porcentaje (\%)             | 13         | 14        | 13      | 24       | 20       | 16        |
 
-	
+
 Se realiza una verificación mediante el conteo delos dulces contenidos e n una bolsa de 14 onzas de dulces M\|M, obteniendo los siguientes resultados: 70 duces cafés, 72 amarillos, 61 rojos, 118 azules, 108 naranjas y 85 verdes. 
 	
 Se podria afirmar que los datos anteriores respaldan la información suministrada por la compañía en su sitio web? Sustente su respuesta.

@@ -457,7 +457,7 @@ El sitio web de la compañía Mars publica los siguientes porcentajes de los dis
 
 
 ```{r, echo=FALSE, out.width="40%", fig.align = "center"}
-knitr::include_graphics("img/peanutmm.jpg")
+knitr::include_graphics("img/peanutmm.png")
 ```
 
 <br/>
