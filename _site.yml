@@ -132,7 +132,10 @@ navbar:
           href: taller331.html                
         - text: "--------"       
         - text: "Monitoria 3"
-          href: monitoria3.html     
+          href: monitoria3.html    
+        - text: "Problemas resueltos"
+          href: pruebaAudio.html    
+          
   
     - text: "Módulo 4"
       menu:

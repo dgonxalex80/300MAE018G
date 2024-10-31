@@ -459,6 +459,9 @@ $(document).ready(function () {
     <li>
       <a href="monitoria3.html">Monitoria 3</a>
     </li>
+    <li>
+      <a href="pruebaAudio.html">Problemas resueltos</a>
+    </li>
   </ul>
 </li>
 <li class="dropdown">
@@ -553,6 +556,10 @@ o la marca KT. Con el fin de tomar una decisión basada en evidencias
 estadísticas, deciden realizar un experimento en el que usan 12
 neumáticos de cada marca. Los neumáticos se utilizan hasta su
 terminación. Los resultados obtenidos son los siguientes:</p>
+<pre>
+FB =c(41.8, 41.6, 31.5, 48.7, 40.8, 31.2, 36.5, 36.2, 32.8, 36.3, 38.6, 30.5)
+KT =c(40.5, 38.4, 44.0, 34.9, 44.0, 44.7, 44.0, 47.1, 39.8, 43.9, 44.2, 40.2)
+</pre>
 <pre class="r"><code>library(ggplot2)
 FB =c(41.8, 41.6, 31.5, 48.7, 40.8, 31.2, 36.5, 36.2, 32.8, 36.3, 38.6, 30.5)
 KT =c(40.5, 38.4, 44.0, 34.9, 44.0, 44.7, 44.0, 47.1, 39.8, 43.9, 44.2, 40.2)
@@ -582,6 +589,10 @@ Problema 3
 métodos diferentes de realizar el ensamble de una casa prefabricada.
 Para comprobarlo recoge información la producción de ambos métodos que
 se presentan a continuación: \</p>
+<pre>
+x1 = c(32, 37, 35, 28, 41, 44, 35, 31, 34) # Procedimiento estándar
+x2 = c(35, 31, 29, 25, 34, 40, 27, 32, 31) # Nuevo procedimiento
+</pre>
 <pre class="r"><code>x1 = c(32, 37, 35, 28, 41, 44, 35, 31, 34) # Procedimiento estándar:
 x2 = c(35, 31, 29, 25, 34, 40, 27, 32, 31) # Nuevo procedimiento:
 
@@ -712,18 +723,37 @@ de códigos de barra de 7 pulgadas que pueden leerse por segundo. Sea
 segundo con el dispositivo nuevo y <span
 class="math inline">\(X_{2}\)</span> el correspondiente al dispositivo
 antiguo.</p>
-<p><span class="math inline">\(n_{1}=61\)</span> ; <span
-class="math inline">\(\bar{x}_{1}=40\)</span> ; <span
-class="math inline">\(s^{2}_{1}=24.9\)</span> <span
-class="math inline">\(n_{2}=61\)</span> ; <span
-class="math inline">\(\bar{x}_{2}=29\)</span> ; <span
-class="math inline">\(s^{2}_{2}=22.7\)</span></p>
+<table>
+<thead>
+<tr class="header">
+<th align="center">Dispositivo 1</th>
+<th align="left">Dispositivo 2</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="center"><span class="math inline">\(n_{1}=61\)</span></td>
+<td align="left"><span class="math inline">\(n_{2}=61\)</span></td>
+</tr>
+<tr class="even">
+<td align="center"><span
+class="math inline">\(\bar{x}_{1}=40\)</span></td>
+<td align="left"><span
+class="math inline">\(\bar{x}_{2}=29\)</span></td>
+</tr>
+<tr class="odd">
+<td align="center"><span
+class="math inline">\(s^{2}_{1}=24.9\)</span></td>
+<td align="left"><span
+class="math inline">\(s^{2}_{2}=22.7\)</span></td>
+</tr>
+</tbody>
+</table>
 <p>De acuerdo con la información suministrada, es posible preferir
 alguno de ellos?. En caso de poderlo realizar con cual se quedaría?
 Justifique su respuesta. En cada caso determine las pruebas de
-hipótesis, el estadístico de prueba apropiado, el <span
-class="math inline">\(valor-p\)</span> obtenido y las conclusiones
-resultantes.</p>
+hipótesis, el estadístico de prueba apropiado, el <code>valor-p</code>
+obtenido y las conclusiones resultantes.</p>
 <p><br/><br/></p>
 <div id="ayuda" class="section level3">
 <h3><strong>Ayuda</strong></h3>
@@ -754,7 +784,7 @@ Problema 6
 días, para un grupo de 15 obreros que trabajaban con base en un salario
 fijo (Grupo 1). El industrial introdujo un plan de incentivos para otros
 15 obreros y registro su producción durante otros 10 días (Grupo 2). El
-número de artículos producidos por cada uno de los grupos fue : \</p>
+número de artículos producidos por cada uno de los grupos fue :</p>
 <table>
 <tbody>
 <tr class="odd">
@@ -807,8 +837,9 @@ campaña publicitaria no fue efectiva?</p>
 Problema 8
 </div>
 <p>Los siguientes son los datos de las horas hombre que se pierden en
-promedio por accidentes en 10 plantas industriales antes (A) y después
-(D) de la implantación de un programa de seguridad industrial:\</p>
+promedio por accidentes en 10 plantas industriales antes
+(<code>A</code>) y después (<code>D</code>) de la implantación de un
+programa de seguridad industrial:\</p>
 <table>
 <thead>
 <tr class="header">
@@ -904,8 +935,9 @@ relacionada con los porcentajes de los distintos colores de sus dulces
 </table>
 <p>Se realiza una verificación mediante el conteo delos dulces
 contenidos e n una bolsa de 14 onzas de dulces M|M, obteniendo los
-siguientes resultados: 70 duces cafés, 72 amarillos, 61 rojos, 118
-azules, 108 naranjas y 85 verdes.</p>
+siguientes resultados: 70 duces <code>cafés</code>, 72
+<code>amarillos</code>, 61 <code>rojos</code>, 118 <code>azules</code>,
+108 <code>naranjas</code> y 85 <code>verdes</code>.</p>
 <p>Se podria afirmar que los datos anteriores respaldan la información
 suministrada por la compañía en su sitio web? Sustente su respuesta.</p>
 </div>
@@ -916,13 +948,23 @@ Problema 10
 </div>
 <p>En una línea de producción los artículos se inspeccionan en forma
 periódica con el fin de detectar defectos. La siguiente secuencia de
-artículos defectuosos (D) y no defectuosos (N) corresponde a la
-producción de uno de los turnos.</p>
-<pre class="r"><code>inspeccion = sample(c(&quot;D&quot;, &quot;N&quot;), 50, replace = TRUE)
+artículos defectuosos (<code>D</code>) y no defectuosos (<code>N</code>)
+corresponde a la producción de uno de los turnos.</p>
+<pre>
+"D" "D" "D" "N" "D" "N" "N" "N" "D" "D" "N" "N" "N" "D" "N" "D" "N" "D" "D" "D" "D" "N" "D" "D" "D" "D" "N" "N" "D" "N"
+"D" "N" "D" "N" "N" "D" "D" "D" "D" "N" "D" "N" "N" "D" "D" "D" "D" "N" "D" "D" "N" "D" "D" "D" "D" "N" "N" "D" "N" "D"
+"D" "N" "N" "D" "D" "N" "D" "D" "D" "D" "N" "D" "D" "D" "D" "N" "N" "D" "N" "N" "N" "N" "D" "N" "N" "N" "D" "D" "N" "D"
+"N" "N" "D" "N" "N" "D" "D" "N" "D" "D"
+</pre>
+<pre class="r"><code>set.seed(123)
+inspeccion = sample(c(&quot;D&quot;, &quot;N&quot;), 100, replace = TRUE)
 inspeccion</code></pre>
-<pre><code>##  [1] &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot;
-## [20] &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot;
-## [39] &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot;</code></pre>
+<pre><code>##   [1] &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot;
+##  [19] &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot;
+##  [37] &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;D&quot;
+##  [55] &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot;
+##  [73] &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot;
+##  [91] &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot;</code></pre>
 <p>Se puede afirmar que los datos no presentan patrón alguno y que la
 generación de artículos defectuosos se debe al azar? . Utilice un <span
 class="math inline">\(\alpha= 0.05\)</span>.</p>

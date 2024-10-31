@@ -74,6 +74,11 @@ Suponga que se estudia la compra de una nueva maquina para una empresa. Se compr
 
 Los ingenieros de una ensambladora de automóviles requieren decidir sobre cuál de dos de las marcas de neumáticos deben comprar. La marca FB o la marca KT. Con el fin de tomar una decisión basada en evidencias estadísticas, deciden realizar un experimento en el que usan 12 neumáticos de cada marca. Los neumáticos se utilizan hasta su terminación. Los resultados obtenidos son los siguientes:
 
+<pre>
+FB =c(41.8, 41.6, 31.5, 48.7, 40.8, 31.2, 36.5, 36.2, 32.8, 36.3, 38.6, 30.5)
+KT =c(40.5, 38.4, 44.0, 34.9, 44.0, 44.7, 44.0, 47.1, 39.8, 43.9, 44.2, 40.2)
+</pre>
+
 ```{r}
 library(ggplot2)
 FB =c(41.8, 41.6, 31.5, 48.7, 40.8, 31.2, 36.5, 36.2, 32.8, 36.3, 38.6, 30.5)
@@ -108,6 +113,10 @@ Cuál marca de neumáticos recomendaría comprar. Justifique su respuesta. Supon
 
 Un ingeniero desea establecer si existen diferencias entre dos métodos diferentes de realizar el ensamble de una casa prefabricada. Para comprobarlo recoge información la producción de ambos métodos que se presentan a continuación: \\
 
+<pre>
+x1 = c(32, 37, 35, 28, 41, 44, 35, 31, 34) # Procedimiento estándar
+x2 = c(35, 31, 29, 25, 34, 40, 27, 32, 31) # Nuevo procedimiento
+</pre>
 ```{r}
 
 x1 = c(32, 37, 35, 28, 41, 44, 35, 31, 34) # Procedimiento estándar:
@@ -163,12 +172,14 @@ Emplee y realice las pruebas de hipótesis a un nivel de significancia del 0.01 
 
 Se realizan pruebas de un nuevo lector láser manual para uso en inventarios y el lector utilizado actualmente, con el fin de decidir si se adquiere el primero. Se obtienen los datos siguientes sobre el número de códigos de barra de 7 pulgadas que pueden leerse por segundo. Sea $X_{1}$: número de códigos leído por segundo con el dispositivo nuevo y $X_{2}$ el correspondiente al dispositivo antiguo.
 
-	
-$n_{1}=61$ ;\hspace{1cm} $\bar{x}_{1}=40$ ;\hspace{1cm} $s^{2}_{1}=24.9$ 
-$n_{2}=61$ ; \hspace{1cm}$\bar{x}_{2}=29$ ;\hspace{1cm} $s^{2}_{2}=22.7$ 
+|Dispositivo 1         | Dispositivo 2                 |	
+|:--------------------:|:------------------------------|
+| $n_{1}=61$           | $n_{2}=61$   |       
+| $\bar{x}_{1}=40$     | $\bar{x}_{2}=29$ |
+| $s^{2}_{1}=24.9$     | $s^{2}_{2}=22.7$   |
 
 	
-De acuerdo con la información suministrada, es posible preferir alguno de ellos?. En caso de poderlo realizar con cual se quedaría? Justifique su respuesta. En cada caso determine las pruebas de hipótesis, el estadístico de prueba apropiado, el $valor-p$ obtenido y las conclusiones resultantes.
+De acuerdo con la información suministrada, es posible preferir alguno de ellos?. En caso de poderlo realizar con cual se quedaría? Justifique su respuesta. En cada caso determine las pruebas de hipótesis, el estadístico de prueba apropiado, el `valor-p` obtenido y las conclusiones resultantes.
 	
 	
 <br/><br/>
@@ -200,7 +211,7 @@ qt(c(0.025,0.975), n1+n2-2)
 <div class="box2 with-label">
 <div class="label">Problema 6</div>
 
-Un empresario registro el número de artículos producidos durante 10 días, para un grupo de 15 obreros que trabajaban con base en un salario fijo (Grupo 1). El industrial introdujo un plan de incentivos para otros 15 obreros y registro su producción durante otros 10 días (Grupo 2). El número de artículos producidos por cada uno de los grupos fue :   \\
+Un empresario registro el número de artículos producidos durante 10 días, para un grupo de 15 obreros que trabajaban con base en un salario fijo (Grupo 1). El industrial introdujo un plan de incentivos para otros 15 obreros y registro su producción durante otros 10 días (Grupo 2). El número de artículos producidos por cada uno de los grupos fue :  
 
 |    |     |     |     |     |     |     |     |     |    |     |	
 |:---|----:|----:|----:|----:|----:|----:|----:|----:|---:|----:|
@@ -228,7 +239,7 @@ En una muestra de 200 clientes, el 20\% indica una preferencia por tamaño espec
 <div class="box2 with-label">
 <div class="label">Problema 8</div>
 
-Los siguientes son los datos de las horas hombre que se pierden en promedio por accidentes en 10 plantas industriales antes (A) y después (D) de la implantación de un programa de seguridad industrial:\\
+Los siguientes son los datos de las horas hombre que se pierden en promedio por accidentes en 10 plantas industriales antes (`A`) y después (`D`) de la implantación de un programa de seguridad industrial:\\
 	
 |id  | 1  |  2 | 3  | 4  |  5  | 6  | 7  | 8  | 9  | 10 | 
 |:---|---:|---:|---:|---:|----:|---:|---:|---:|---:|---:|
@@ -265,7 +276,7 @@ knitr::include_graphics("img/peanutmm.png")
 |Porcentaje (\%)             | 13         | 14        | 13      | 24       | 20       | 16        |
 
 
-Se realiza una verificación mediante el conteo delos dulces contenidos e n una bolsa de 14 onzas de dulces M\|M, obteniendo los siguientes resultados: 70 duces cafés, 72 amarillos, 61 rojos, 118 azules, 108 naranjas y 85 verdes. 
+Se realiza una verificación mediante el conteo delos dulces contenidos e n una bolsa de 14 onzas de dulces M\|M, obteniendo los siguientes resultados: 70 duces `cafés`, 72 `amarillos`, 61 `rojos`, 118 `azules`, 108 `naranjas` y 85 `verdes`. 
 	
 Se podria afirmar que los datos anteriores respaldan la información suministrada por la compañía en su sitio web? Sustente su respuesta.
 	
@@ -278,9 +289,17 @@ Se podria afirmar que los datos anteriores respaldan la información suministrad
 <div class="box2 with-label">
 <div class="label">Problema 10</div>
 
-En una línea de producción los artículos se inspeccionan en forma periódica con el fin de detectar defectos. La siguiente secuencia de artículos defectuosos (D) y no defectuosos (N) corresponde a la producción de uno de los turnos. 
+En una línea de producción los artículos se inspeccionan en forma periódica con el fin de detectar defectos. La siguiente secuencia de artículos defectuosos (`D`) y no defectuosos (`N`) corresponde a la producción de uno de los turnos. 
+
+<pre>
+"D" "D" "D" "N" "D" "N" "N" "N" "D" "D" "N" "N" "N" "D" "N" "D" "N" "D" "D" "D" "D" "N" "D" "D" "D" "D" "N" "N" "D" "N"
+"D" "N" "D" "N" "N" "D" "D" "D" "D" "N" "D" "N" "N" "D" "D" "D" "D" "N" "D" "D" "N" "D" "D" "D" "D" "N" "N" "D" "N" "D"
+"D" "N" "N" "D" "D" "N" "D" "D" "D" "D" "N" "D" "D" "D" "D" "N" "N" "D" "N" "N" "N" "N" "D" "N" "N" "N" "D" "D" "N" "D"
+"N" "N" "D" "N" "N" "D" "D" "N" "D" "D"
+</pre>
 ```{r}
-inspeccion = sample(c("D", "N"), 50, replace = TRUE)
+set.seed(123)
+inspeccion = sample(c("D", "N"), 100, replace = TRUE)
 inspeccion
 ```
 
