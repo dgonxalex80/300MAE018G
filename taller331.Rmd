@@ -43,7 +43,7 @@ library(lubridate)
 library(ggplot2)
 library(gridExtra)
 library(cowplot)
-library(summarytools)
+#library(summarytools)
 
 #library(dviz.supp)
 ```
@@ -297,10 +297,21 @@ En una línea de producción los artículos se inspeccionan en forma periódica 
 "D" "N" "N" "D" "D" "N" "D" "D" "D" "D" "N" "D" "D" "D" "D" "N" "N" "D" "N" "N" "N" "N" "D" "N" "N" "N" "D" "D" "N" "D"
 "N" "N" "D" "N" "N" "D" "D" "N" "D" "D"
 </pre>
+
 ```{r}
 set.seed(123)
 inspeccion = sample(c("D", "N"), 100, replace = TRUE)
 inspeccion
+```
+
+```{r}
+library("randtests")
+y = sample(c("D", "N"), 50, replace = TRUE)
+y1 = as.factor(y)
+tseries::runs.test(y1)
+
+
+
 ```
 
 
@@ -308,6 +319,19 @@ Se puede afirmar que los datos no presentan patrón alguno y que la generación 
 
 
 </div>
+
+
+```{r}
+library("randtests")
+y = sample(c("D", "N"), 50, replace = TRUE)
+y1 = as.factor(y)
+tseries::runs.test(y1)
+
+```
+
+
+
+
 
 <br/><br/><br/>
 
@@ -360,6 +384,22 @@ x=c(3.4, 2.8, 4.2, 2.1, 2.8, 2.4, 3.5, 4.2, 3.1, 4.1, 2.4, 3.4, 4.1, 4.0, 2.4,
     3.8, 4.4, 3.9, 2.8, 3.7)
 ```
 	
+
+
+
+```{r}
+
+x=c(3.4, 2.8, 4.2, 2.1, 2.8, 2.4, 3.5, 4.2, 3.1, 4.1, 2.4, 3.4, 4.1, 4.0, 2.4, 
+    4.1, 3.4, 4.4, 3.8, 3.7, 2.2, 3.6, 2.3, 3.7, 2.8, 4.1, 2.3, 4.6, 4.6, 5.2, 
+    2.4, 2.4, 2.7, 3.8, 4.6, 4.4, 4.2, 4.4, 2.4, 3.3, 3.8, 2.9, 3.1, 2.7, 3.6, 
+    3.8, 4.4, 3.9, 2.8, 3.7)
+
+shapiro.test(x)
+
+plot(density(x))
+
+t.test(x, mu=3.3, alternative="greater")
+```
 
 </div>
 

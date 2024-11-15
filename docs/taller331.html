@@ -965,10 +965,30 @@ inspeccion</code></pre>
 ##  [55] &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot;
 ##  [73] &quot;D&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot;
 ##  [91] &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;N&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot; &quot;N&quot; &quot;D&quot; &quot;D&quot;</code></pre>
+<pre class="r"><code>library(&quot;randtests&quot;)
+y = sample(c(&quot;D&quot;, &quot;N&quot;), 50, replace = TRUE)
+y1 = as.factor(y)
+tseries::runs.test(y1)</code></pre>
+<pre><code>## 
+##  Runs Test
+## 
+## data:  y1
+## Standard Normal = -0.17003, p-value = 0.865
+## alternative hypothesis: two.sided</code></pre>
 <p>Se puede afirmar que los datos no presentan patrón alguno y que la
 generación de artículos defectuosos se debe al azar? . Utilice un <span
 class="math inline">\(\alpha= 0.05\)</span>.</p>
 </div>
+<pre class="r"><code>library(&quot;randtests&quot;)
+y = sample(c(&quot;D&quot;, &quot;N&quot;), 50, replace = TRUE)
+y1 = as.factor(y)
+tseries::runs.test(y1)</code></pre>
+<pre><code>## 
+##  Runs Test
+## 
+## data:  y1
+## Standard Normal = -0.52928, p-value = 0.5966
+## alternative hypothesis: two.sided</code></pre>
 <p><br/><br/><br/></p>
 <div class="box2 with-label">
 <div class="label">
@@ -1019,6 +1039,31 @@ x=c(3.4, 2.8, 4.2, 2.1, 2.8, 2.4, 3.5, 4.2, 3.1, 4.1, 2.4, 3.4, 4.1, 4.0, 2.4,
     4.1, 3.4, 4.4, 3.8, 3.7, 2.2, 3.6, 2.3, 3.7, 2.8, 4.1, 2.3, 4.6, 4.6, 5.2, 
     2.4, 2.4, 2.7, 3.8, 4.6, 4.4, 4.2, 4.4, 2.4, 3.3, 3.8, 2.9, 3.1, 2.7, 3.6, 
     3.8, 4.4, 3.9, 2.8, 3.7)</code></pre>
+<pre class="r"><code>x=c(3.4, 2.8, 4.2, 2.1, 2.8, 2.4, 3.5, 4.2, 3.1, 4.1, 2.4, 3.4, 4.1, 4.0, 2.4, 
+    4.1, 3.4, 4.4, 3.8, 3.7, 2.2, 3.6, 2.3, 3.7, 2.8, 4.1, 2.3, 4.6, 4.6, 5.2, 
+    2.4, 2.4, 2.7, 3.8, 4.6, 4.4, 4.2, 4.4, 2.4, 3.3, 3.8, 2.9, 3.1, 2.7, 3.6, 
+    3.8, 4.4, 3.9, 2.8, 3.7)
+
+shapiro.test(x)</code></pre>
+<pre><code>## 
+##  Shapiro-Wilk normality test
+## 
+## data:  x
+## W = 0.95071, p-value = 0.03649</code></pre>
+<pre class="r"><code>plot(density(x))</code></pre>
+<p><img src="taller331_files/figure-html/unnamed-chunk-12-1.png" width="100%" /></p>
+<pre class="r"><code>t.test(x, mu=3.3, alternative=&quot;greater&quot;)</code></pre>
+<pre><code>## 
+##  One Sample t-test
+## 
+## data:  x
+## t = 1.416, df = 49, p-value = 0.08155
+## alternative hypothesis: true mean is greater than 3.3
+## 95 percent confidence interval:
+##  3.270562      Inf
+## sample estimates:
+## mean of x 
+##      3.46</code></pre>
 </div>
 <p><br/><br/><br/></p>
 <div class="box3 with-label">
